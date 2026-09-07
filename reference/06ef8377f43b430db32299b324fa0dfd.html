@@ -1,0 +1,853 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed": "#251a00",
+          "inverse-surface": "#30312e",
+          "primary-fixed-dim": "#abcfb8",
+          "surface-container": "#efeeea",
+          "on-tertiary-fixed-variant": "#43474b",
+          "surface-bright": "#fbf9f5",
+          "linen-border": "#E5DED5",
+          "on-surface": "#1b1c1a",
+          "surface-tint": "#456553",
+          "on-secondary-container": "#735700",
+          "surface-variant": "#e4e2de",
+          "on-error": "#ffffff",
+          "secondary-fixed-dim": "#eec14b",
+          "linen-base": "#FBF9F5",
+          "on-tertiary-container": "#9a9da1",
+          "on-secondary-fixed-variant": "#5a4300",
+          "surface-container-high": "#eae8e4",
+          "on-error-container": "#93000a",
+          "primary-container": "#1b3b2b",
+          "tertiary-container": "#313538",
+          "on-primary": "#ffffff",
+          "error": "#ba1a1a",
+          "surface-container-low": "#f5f3ef",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed-variant": "#2d4d3c",
+          "tertiary-fixed": "#e0e3e7",
+          "linen-subtle": "#F4EFEA",
+          "on-surface-variant": "#424843",
+          "primary": "#032517",
+          "surface-container-highest": "#e4e2de",
+          "surface-container-lowest": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "background": "#fbf9f5",
+          "pine-deep": "#1B3B2B",
+          "on-tertiary-fixed": "#181c1f",
+          "mist-silver": "#8C928E",
+          "inverse-primary": "#abcfb8",
+          "on-primary-container": "#83a590",
+          "surface-dim": "#dbdad6",
+          "pine-muted": "#2C4C3A",
+          "slate-charcoal": "#161A1D",
+          "secondary-container": "#fece57",
+          "on-primary-fixed": "#002113",
+          "cedar-gold": "#C59B27",
+          "amber-gold-bright": "#D4AF37",
+          "tertiary": "#1c2023",
+          "surface": "#fbf9f5",
+          "inverse-on-surface": "#f2f0ed",
+          "outline": "#727973",
+          "tertiary-fixed-dim": "#c4c7cb",
+          "outline-variant": "#c1c8c2",
+          "primary-fixed": "#c7ebd4",
+          "secondary": "#775a00",
+          "secondary-fixed": "#ffdf98",
+          "on-background": "#1b1c1a",
+          "error-container": "#ffdad6"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-sm": "0.75rem",
+          "space-xs": "0.5rem",
+          "space-4xl": "6rem",
+          "space-3xl": "4.5rem",
+          "space-lg": "1.5rem",
+          "gutter-desktop": "2rem",
+          "space-2xl": "3rem",
+          "space-2xs": "0.25rem",
+          "gutter-tablet": "1.5rem",
+          "space-md": "1rem",
+          "gutter-mobile": "1rem",
+          "container-max": "1320px",
+          "space-xl": "2rem",
+          "space-5xl": "8rem"
+        },
+        "fontFamily": {
+          "headline-md-mobile": [
+            "EB Garamond"
+          ],
+          "headline-md": [
+            "EB Garamond"
+          ],
+          "headline-lg-mobile": [
+            "EB Garamond"
+          ],
+          "title-md": [
+            "Manrope"
+          ],
+          "title-lg": [
+            "Manrope"
+          ],
+          "body-sm": [
+            "Manrope"
+          ],
+          "display-mobile": [
+            "EB Garamond"
+          ],
+          "headline-lg": [
+            "EB Garamond"
+          ],
+          "body-lg": [
+            "EB Garamond"
+          ],
+          "body-md": [
+            "Manrope"
+          ],
+          "display": [
+            "EB Garamond"
+          ],
+          "label-lg": [
+            "Manrope"
+          ],
+          "label-md": [
+            "Manrope"
+          ],
+          "label-sm": [
+            "Manrope"
+          ],
+          "headline-sm": [
+            "EB Garamond"
+          ]
+        },
+        "fontSize": {
+          "headline-md-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "30px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-lg": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-mobile": [
+            "38px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "20px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "display": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.12em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.16em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.2em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      }
+    }
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 inset-x-0 z-50"><div class="bg-primary-container text-on-primary-container text-label-sm font-label-sm uppercase tracking-wider py-2 px-6"><div class="max-w-[1320px] mx-auto flex flex-wrap items-center justify-between gap-4"> <div class="flex flex-wrap items-center gap-6"><span class="flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">call</span>+91-9068555303</span><span class="hidden sm:flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">mail</span>namaste@lightoflandour.com</span><span class="hidden md:flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">location_on</span>Char Dukan, Landour, Mussoorie</span></div><div class="flex items-center gap-4 text-on-primary-container"><span class="hidden lg:inline text-label-sm font-label-sm text-cedar-gold">Sanctuary Elevation: 7,500 FT</span><div class="flex items-center gap-3"><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">photo_camera</span></a><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">travel_explore</span></a><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">share</span></a></div></div></div></div><div class="bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1320px] mx-auto px-6 flex items-center justify-between gap-6"><div class="flex items-center gap-3"><img alt="Image from https://lightoflandour.com/wp-content/uploads/2020/08/light-of-landour-logo-3.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XQzYiqt0Yqab9JRWvFRsn6Dg7pirdLB49SJfx4eeIH2KkleDWLsS2M5Xzw_PBd3CD3_FTuYEOfukpbSm4jON5CEb4fmbuvs2fEa7lJfIVUXvctZBTqMn1NsKuSkqpbx1TNykXowA7dx6RLl57q1WGwMOKC2td_p2XX49htzsqs8-vMlarUBnX5PwLQobjoEosJOEOcaa1A9fCcpwbHdQcHmgsziYN57NOHACWieZgjv7scyssCHZtFOnk8"><span class="font-headline-sm text-headline-sm text-primary tracking-normal">Light of Landour</span></div><nav class="hidden xl:flex items-center gap-1" data-active-classes="bg-primary-container text-on-primary rounded-lg"><a aria-current="page" class="px-3 py-1.5 font-label-lg transition-colors bg-primary-container text-on-primary rounded-lg" data-path="home" href="#">Home</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="accommodation" href="#">Accommodation</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="dining" href="#">Dining</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="experiences-and-wellness" href="#">Experiences &amp; Wellness</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="packages" href="#">Packages</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="location" href="#">Location</a></nav><div class="flex items-center gap-4"><a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-wider rounded-lg hover:bg-pine-muted hover:text-on-primary transition-all" data-path="reservation" href="#">Book Your Stay</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO & SANCTUARY ELEVATION -->
+<section class="relative w-full overflow-hidden bg-linen-base py-12 lg:py-20">
+<div class="max-w-[1320px] mx-auto px-6">
+<!-- Top Badges & Meta -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high text-primary font-label-md text-label-md tracking-wider uppercase">
+<span class="w-2 h-2 rounded-full bg-cedar-gold animate-pulse"></span>
+<span>Accommodation • The Seven Energy Centers • 7,500 FT Elevation</span>
+</div>
+<div class="flex items-center gap-3 text-pine-muted font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-cedar-gold">filter_hdr</span>
+<span>Garhwal Range View • Snow Crest North</span>
+</div>
+</div>
+<!-- Main Heading with Sliding Editorial Reveal -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
+<div class="lg:col-span-8">
+<span class="text-cedar-gold font-label-lg text-label-lg tracking-widest uppercase block mb-3">Sahasrara &amp; Anahata Sanctuary</span>
+<h1 class="font-headline-lg text-headline-lg lg:text-[52px] lg:leading-[60px] text-primary max-w-4xl tracking-tight">
+            Celebrating the unity that lies within, forever entwined and inseparable.
+          </h1>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Inspired by the body’s seven energy centers “CHAKRAS”, we here at Light of Landour want to create an atmosphere of harmony and balance for all who visit. Experience the energy of divinity by surrendering identity.
+          </p>
+<div class="flex items-center gap-4 pt-2">
+<a class="inline-flex items-center justify-center px-6 py-3 bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-wider rounded-lg shadow-sm hover:bg-pine-muted transition-all duration-300" href="#reservation-suite">
+              Check Availability
+            </a>
+<button class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-surface-container text-primary font-label-md text-label-md tracking-wider uppercase hover:bg-surface-container-high transition-colors" onclick="document.getElementById('video-sanctuary').scrollIntoView({behavior: 'smooth'})" type="button">
+<span class="material-symbols-outlined text-[18px] text-cedar-gold" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span>Watch Suite Tour</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Floating Architectural Specs Bar -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-[0_12px_32px_-12px_rgba(22,26,29,0.06)] p-5 lg:p-6">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 divide-y lg:divide-y-0 lg:divide-x divide-transparent">
+<div class="flex flex-col gap-1 pr-4">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-mist-silver">Occupancy</span>
+<span class="font-title-md text-title-md text-slate-charcoal">2 Adults &amp; Children</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Attic extra bedding on request</span>
+</div>
+<div class="flex flex-col gap-1 pt-4 md:pt-0 lg:px-4">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-mist-silver">Master Bed</span>
+<span class="font-title-md text-title-md text-slate-charcoal">1 King Size Cedar Bed</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Heated woolen spread</span>
+</div>
+<div class="flex flex-col gap-1 pt-4 md:pt-0 lg:px-4">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-mist-silver">Suite Geometry</span>
+<span class="font-title-md text-title-md text-slate-charcoal">Bedroom + Attic Nook</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12 x 20 sq. ft. living area</span>
+</div>
+<div class="flex flex-col gap-1 pt-4 lg:pt-0 lg:px-4">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-mist-silver">Outdoor Living</span>
+<span class="font-title-md text-title-md text-slate-charcoal">Courtyard &amp; Balcony</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">10x10 Courtyard + 6x10 Balcony</span>
+</div>
+<div class="flex flex-col gap-1 pt-4 lg:pt-0 lg:pl-4">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-mist-silver">Nightly Offering</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-pine-deep font-semibold">₹11,500</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ night + taxes</span>
+</div>
+<span class="font-label-sm text-label-sm text-cedar-gold uppercase tracking-wider">Breakfast Included</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: AUDIO-VISUAL SANCTUARY & 4K TOUR PREVIEW -->
+<section class="w-full bg-surface py-16 lg:py-24" id="video-sanctuary">
+<div class="max-w-[1320px] mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<span class="text-label-md font-label-md uppercase tracking-widest text-cedar-gold block mb-2">Cinematic Preview</span>
+<h2 class="font-headline-md text-headline-md text-primary">The Mist, The Chimes &amp; Prana — Audio-Visual Sanctuary</h2>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 bg-surface-container rounded-full text-label-sm font-label-sm uppercase tracking-wider text-pine-muted flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-cedar-gold">surround_sound</span>
+            432Hz Himalayan Singing Bowls
+          </span>
+<span class="px-3 py-1 bg-pine-deep text-linen-base rounded-full text-label-sm font-label-sm tracking-wider uppercase font-semibold">4K HDR</span>
+</div>
+</div>
+<!-- Video Player Frame with Realistic Himalayan Ambience -->
+<div class="relative w-full aspect-[16/9] max-h-[640px] rounded-2xl overflow-hidden shadow-2xl bg-slate-charcoal group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="Expansive panoramic view of Landour deodar forest and mist creeping through the pine valley under soft warm golden hour light with majestic snow peaks of Garhwal Himalayas in background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1-uvzqDPe4bTsGFO1CfPSAkA8VwJHNC1-1beXOcb92ubYdTci2EJX3JLwCy-IP5b0E1I1WxtJ7tcurWyTDjQcLcpE9-M8jchM7p6-AQeARI2tgUR_wKj43P4qTPG1mzTPAXTyxbLxHZ6sfApxT15yQM2H3v1huHewAClkDYqoBv2swCp7i3ZYpH4SrTSYdx-l92Tma47rRLBmbScL79msX9SZPqFyRg8n8DY-_R0PfR4DWsBbtK55zg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-charcoal via-slate-charcoal/30 to-transparent opacity-80"></div>
+<!-- Center Play Button with Pulsing Wave -->
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<div class="w-20 h-20 rounded-full bg-linen-base/90 backdrop-blur-md shadow-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 pointer-events-auto cursor-pointer">
+<span class="material-symbols-outlined text-primary text-[36px] ml-1" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<span class="mt-4 font-label-md text-label-md uppercase tracking-widest text-linen-base text-shadow">Chakra Rooms at Dawn — 7,500 ft Above Sea Level</span>
+</div>
+<!-- Custom Video Player Controller Bar -->
+<div class="absolute bottom-0 inset-x-0 p-6 flex flex-col gap-3 bg-gradient-to-t from-slate-charcoal/90 to-transparent">
+<div class="w-full h-1 bg-linen-base/20 rounded-full overflow-hidden cursor-pointer">
+<div class="h-full bg-cedar-gold w-[38%] rounded-full"></div>
+</div>
+<div class="flex items-center justify-between text-linen-base">
+<div class="flex items-center gap-4">
+<button class="hover:text-amber-gold-bright transition-colors"><span class="material-symbols-outlined text-[20px]">pause</span></button>
+<button class="hover:text-amber-gold-bright transition-colors"><span class="material-symbols-outlined text-[20px]">volume_up</span></button>
+<span class="font-body-sm text-body-sm text-linen-base/80">01:42 / 04:30</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="hidden sm:inline font-label-sm text-label-sm uppercase tracking-widest text-linen-base/70">Char Dukan Ridge Soundscape</span>
+<button class="hover:text-amber-gold-bright transition-colors"><span class="material-symbols-outlined text-[20px]">closed_caption</span></button>
+<button class="hover:text-amber-gold-bright transition-colors"><span class="material-symbols-outlined text-[20px]">fullscreen</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: FEATURED CHAKRA SUITE ARCHITECTURE & DUAL PANELS -->
+<section class="w-full bg-linen-subtle py-16 lg:py-24">
+<div class="max-w-[1320px] mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Visual Gallery Mosaic -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="relative rounded-2xl overflow-hidden shadow-xl aspect-[16/10] bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Chakra Room suite at Light of Landour with expansive panoramic glass wall framing snow peaks, warm timber walls, Tibetan chakra wall hanging, plush bed with ochre and turquoise throws, cane armchair and morning tea table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzcTQ2c7IHpC5XifpxsBhgLHk5FqFy8OndzZoGCm9G7BuwV1TkmDT9Ga5AsicuPadSSS0qa7NAmtMiR8ietRLRxt7XoR4zgIEn3CCfI3X_-B8T7iwmUc9XjG91GhSXO6_KZdBLLVW3IiohILwKIgdENZUAYSmJNX6qaHMGt1M0WioZI49mp4eYMYfgDxRvlOcolgAsEneDJiwvHTVntlvj9KxYt_Bx2-7rxym4L5JYT_fVqsByJ9cuVg">
+<div class="absolute top-4 left-4 bg-linen-base/90 backdrop-blur-md px-4 py-1.5 rounded-full text-label-sm font-label-sm uppercase tracking-wider text-pine-deep font-semibold">
+              Master Chamber • Sahasrara Aura
+            </div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="relative rounded-xl overflow-hidden shadow-md aspect-[4/3] bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Cozy Himalayan reading attic and sitting courtyard with reclaimed cedar wood, leather armchair, brass singing bowl, and soft mountain light filtering through pine trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbatb967gGfDL32pNmU2RUh7yhTs2CVVt2kCEy3Q9RSSGNYHT_Rs96Io96gYHcm_SH_JLRh71oA0ri3mjPp9wZRHFkO8mu00X3B7O1N2CGs5P7_oFcucsifzEnmz91D-J3Ey1NZw447vv8aSBuc_WyP8Vn0hlaWkqGeNkLtUOYhDBSzJUSZI2MRMiVOXbzqM1iRw8bflgoZEXV-0DNGIJs-Zx-xEGfClBBkDLfpdaTYuOFBtPK0rEiJQ">
+<div class="absolute bottom-3 left-3 bg-slate-charcoal/80 text-linen-base px-3 py-1 rounded-md text-label-sm font-label-sm">Private Attic Nook</div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-md aspect-[4/3] bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Porcelain cup of hot masala chai resting on a wooden balcony railing overlooking misty rolling pine trees and Himalayan hillside of Landour Char Dukan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClqWMtyaLCE2jyI0jPVK10LerX7BT0PSk3eewhZ4hm43_DoEVQHT1FNceaS8JRnW352bsQR5HS4hdH0iviLKQWLaqgeUVWUh_L5axQzDtS65T2XrTjrINFk_Slj4LMCxOhGOqf8-8JzsefHm-j2IKf3opez5toim66MLMBhAA-PjCouMGFkFtkCkceucji2j_2LR-uQJ83nX-s3TKqlT8P2nuZQB65Hs2sOv3oa-cB42JrJzwlWRk8UQ">
+<div class="absolute bottom-3 left-3 bg-slate-charcoal/80 text-linen-base px-3 py-1 rounded-md text-label-sm font-label-sm">Morning Tea on Balcony</div>
+</div>
+</div>
+</div>
+<!-- Suite Story & Architectural Specifications -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<span class="text-cedar-gold font-label-lg text-label-lg uppercase tracking-widest">Sanctuary Architecture</span>
+<h2 class="font-headline-lg text-headline-lg text-primary leading-tight">Unparalleled Seclusion &amp; Privacy with Himalayan Vistas</h2>
+<div class="flex flex-col gap-3 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+              Experience a level of privacy that exceeds expectations, accompanied by unparalleled spaciousness, all within the breathtaking embrace of nature's wonders. Whether you seek solitude for personal reflection or a serene environment for cherished moments with loved ones, our sanctuary offers a sanctuary of peace.
+            </p>
+<p>
+              Each room on this floor is designed and dedicated to one of the energy chakras as you walk past the centralized balcony you experience the heightened need to explore self.
+            </p>
+</div>
+<!-- Dimension Matrix Cards -->
+<div class="grid grid-cols-2 gap-3 pt-2">
+<div class="bg-linen-base p-4 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] mb-1">aspect_ratio</span>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-mist-silver">Master Suite</div>
+<div class="font-title-md text-title-md text-primary">12 × 20 sq. ft.</div>
+</div>
+<div class="bg-linen-base p-4 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] mb-1">deck</span>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-mist-silver">Courtyard Space</div>
+<div class="font-title-md text-title-md text-primary">10 × 10 sq. ft.</div>
+</div>
+<div class="bg-linen-base p-4 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] mb-1">balcony</span>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-mist-silver">Valley Balcony</div>
+<div class="font-title-md text-title-md text-primary">6 × 10 sq. ft.</div>
+</div>
+<div class="bg-linen-base p-4 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] mb-1">bathtub</span>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-mist-silver">Ensuite Bath</div>
+<div class="font-title-md text-title-md text-primary">6 × 9 sq. ft.</div>
+</div>
+</div>
+<!-- Creature Comforts -->
+<div class="p-4 rounded-xl bg-surface-container-high text-on-surface">
+<div class="font-label-md text-label-md uppercase tracking-wider text-pine-deep mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+              In-Room Ergonomics &amp; Comfort
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-normal">
+              Flat-screen television, accessible multi-pin device charging ports, bespoke timber wardrobe, luggage rack, and artisanal chest of drawers. Spacious attached restrooms on both levels maintained with organic forest botanicals.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-mist-silver block">Tariff</span>
+<span class="font-headline-sm text-headline-sm text-pine-deep">From ₹11,500 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">/ night</span></span>
+</div>
+<a class="px-6 py-3 bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-wider rounded-lg shadow hover:bg-pine-muted transition-colors" href="#reservation-suite">
+              Reserve Chakra Suite
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: THE SEVEN ENERGY CENTERS (CHAKRA EXPLORATION GRID) -->
+<section class="w-full bg-linen-base py-16 lg:py-24">
+<div class="max-w-[1320px] mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-label-md font-label-md uppercase tracking-widest text-cedar-gold block mb-2">Explore For Inspiration</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">The Seven Energy Centers of Landour</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Each suite corridor and meditative vantage point is oriented along the seven energy vortexes, designed to evoke tranquility, balance, and mindful presence.
+        </p>
+</div>
+<!-- 7 Chakra Energy Bento Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- 1. Muladhara -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 rounded-full bg-error-container/30 text-error flex items-center justify-center font-headline-sm text-headline-sm">
+                १
+              </span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-label-sm font-label-sm text-on-surface-variant uppercase">Earth</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Muladhara</h3>
+<span class="text-label-md font-label-md text-cedar-gold uppercase tracking-wider block mb-3">Root Chakra</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Embracing the red hue, feel grounded and secure, both physically and emotionally. Anchored by the subterranean cedar foundations of Char Dukan.
+            </p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between text-body-sm text-pine-muted">
+<span>Grounding Suite</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 2. Svadhishthana -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 rounded-full bg-secondary-fixed/50 text-secondary flex items-center justify-center font-headline-sm text-headline-sm">
+                २
+              </span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-label-sm font-label-sm text-on-surface-variant uppercase">Water</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Svadhishthana</h3>
+<span class="text-label-md font-label-md text-cedar-gold uppercase tracking-wider block mb-3">Sacral Chakra</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Observing the orange hue, enhance self-worth, feel more vibrant, satisfied, compassionate, and intuitive. Oriented toward warm dawn horizons.
+            </p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between text-body-sm text-pine-muted">
+<span>Creative Flow</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 3. Manipura -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 rounded-full bg-secondary-container/40 text-on-secondary-container flex items-center justify-center font-headline-sm text-headline-sm">
+                ३
+              </span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-label-sm font-label-sm text-on-surface-variant uppercase">Fire</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Manipura</h3>
+<span class="text-label-md font-label-md text-cedar-gold uppercase tracking-wider block mb-3">Solar Plexus Chakra</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Reflecting the hue of yellow, balancing self-esteem, being productive and focused. Infused with noon Himalayan sun on the courtyard stone.
+            </p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between text-body-sm text-pine-muted">
+<span>Vitality Room</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 4. Anahata -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 rounded-full bg-primary-fixed text-pine-deep flex items-center justify-center font-headline-sm text-headline-sm">
+                ४
+              </span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-label-sm font-label-sm text-on-surface-variant uppercase">Air</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Anahata</h3>
+<span class="text-label-md font-label-md text-cedar-gold uppercase tracking-wider block mb-3">Heart Chakra</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Posing the green hue, harmonizing empathy, love, care for all and self. Opens wide to the endless emerald deodar pine canopies.
+            </p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between text-body-sm text-pine-muted">
+<span>Harmonious Center</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 5. Vishuddha -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 rounded-full bg-surface-tint/20 text-pine-deep flex items-center justify-center font-headline-sm text-headline-sm">
+                ५
+              </span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-label-sm font-label-sm text-on-surface-variant uppercase">Ether</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Vishuddha</h3>
+<span class="text-label-md font-label-md text-cedar-gold uppercase tracking-wider block mb-3">Throat Chakra</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Representing the blue tinge of space, enabling creativity, self-expression and contemplative communication. Equipped with antique writing desk.
+            </p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between text-body-sm text-pine-muted">
+<span>Expression Nook</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 6. Ajna -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center font-headline-sm text-headline-sm">
+                ६
+              </span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-label-sm font-label-sm text-on-surface-variant uppercase">Light</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Ajna</h3>
+<span class="text-label-md font-label-md text-cedar-gold uppercase tracking-wider block mb-3">Third Eye Chakra</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Focusing with the shade indigo, experience freedom emotionally, spiritually and physically. Perched in the loft attic for night stargazing.
+            </p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between text-body-sm text-pine-muted">
+<span>Vision Loft</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 7. Sahasrara (Double Span / Highlight) -->
+<div class="md:col-span-2 lg:col-span-3 xl:col-span-2 p-6 rounded-2xl bg-pine-deep text-linen-base shadow-lg flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-10 h-10 rounded-full bg-linen-base/10 text-cedar-gold flex items-center justify-center font-headline-sm text-headline-sm">
+                ७
+              </span>
+<span class="px-3 py-1 rounded-full bg-linen-base/10 text-label-sm font-label-sm text-linen-base uppercase tracking-wider">Zenith • Consciousness</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-linen-base mb-2">Sahastrara Chakra</h3>
+<span class="text-label-md font-label-md text-amber-gold-bright uppercase tracking-wider block mb-3">Crown Pinnacle (7,500 FT)</span>
+<p class="font-body-sm text-body-sm text-linen-base/80 leading-relaxed max-w-xl">
+              Bring conscious awareness to your energy centers and encourage an open flow of energy. Experience silence hours, mountain winds, and seamless oneness with the Garhwal peaks.
+            </p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between text-body-sm text-amber-gold-bright">
+<span>Summit Flow Suite</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">north_east</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: ALL SPACES INCLUDE (VERBATIM INCLUSIONS) -->
+<section class="w-full bg-surface-container-low py-16 lg:py-24">
+<div class="max-w-[1320px] mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<div>
+<span class="text-label-md font-label-md uppercase tracking-widest text-cedar-gold block mb-2">Thoughtful Hospitality</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">All Spaces Include</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Curated sanctuary standards meticulously prepared for holistic restoration, creative quietude, and seamless Himalayan living.
+        </p>
+</div>
+<!-- Inclusions Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-4">
+<div class="p-3 rounded-lg bg-surface-container text-cedar-gold shrink-0">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-slate-charcoal mb-1">Readers Corner Access</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Complimentary use of Readers Corner featuring Ruskin Bond classics, Himalayan folklore, and wellness philosophy.
+            </p>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-4">
+<div class="p-3 rounded-lg bg-surface-container text-cedar-gold shrink-0">
+<span class="material-symbols-outlined text-[24px]">fitness_center</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-slate-charcoal mb-1">Fitness &amp; Yoga Center</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Complimentary use of the fitness space, mountain-facing yoga mats, and meditation singing bowls.
+            </p>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-4">
+<div class="p-3 rounded-lg bg-surface-container text-cedar-gold shrink-0">
+<span class="material-symbols-outlined text-[24px]">local_parking</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-slate-charcoal mb-1">Private Secure Parking</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Complimentary private parking during your stay on the tranquil Upper Mall ridge road.
+            </p>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-4">
+<div class="p-3 rounded-lg bg-surface-container text-cedar-gold shrink-0">
+<span class="material-symbols-outlined text-[24px]">coffee</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-slate-charcoal mb-1">In-Room Food &amp; Beverage</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Artisanal dining service straight from Glass Box Cafe and LOL Bakery delivered to your balcony or private room.
+            </p>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-4">
+<div class="p-3 rounded-lg bg-surface-container text-cedar-gold shrink-0">
+<span class="material-symbols-outlined text-[24px]">heat</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-slate-charcoal mb-1">Tea Kettle &amp; Winter Care</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Amenities like tea kettle with hand-picked herbal infusions, electric room heater, and heated woolen bedspreads.
+            </p>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-4">
+<div class="p-3 rounded-lg bg-surface-container text-cedar-gold shrink-0">
+<span class="material-symbols-outlined text-[24px]">bed</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-slate-charcoal mb-1">Extra Mattresses on Request</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Ask for an extra mattress for accompanying children, tailored with hypoallergenic linen in the cozy attic loft.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: PERSONALIZED HIMALAYAN PACKAGE & RESERVATION INQUIRY -->
+<section class="w-full bg-linen-base py-16 lg:py-24" id="reservation-suite">
+<div class="max-w-[1320px] mx-auto px-6">
+<div class="bg-surface-container-lowest rounded-3xl p-8 lg:p-14 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Philosophy & Guarantee -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 text-cedar-gold font-label-md text-label-md uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">nature_people</span>
+            Make Your Custom Stay
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-primary leading-tight">Ready to book your Himalayan alignment?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Choose from a room of your liking or write to us to create an immersive experience. Tell us your retreat dates and let us tailor morning forest meditations, bakery treats, and private reading solitude.
+          </p>
+<div class="flex flex-col gap-4 pt-2">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-pine-deep">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface">Guaranteed Snow Crest or Deodar Forest views</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-pine-deep">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface">Strict 10:00 PM sanctuary silence hours for deep sleep</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-pine-deep">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface">Instant confirmation with personalized Himalayan concierge</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-linen-subtle text-pine-deep mt-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-cedar-gold block mb-1">Direct Booking Assistance</span>
+<div class="flex flex-wrap items-center gap-4 font-body-sm text-body-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">call</span>+91-9068555303</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">mail</span>namaste@lightoflandour.com</span>
+</div>
+</div>
+</div>
+<!-- Right Inquiry Form -->
+<div class="lg:col-span-7 bg-surface-container-low p-8 rounded-2xl">
+<form class="flex flex-col gap-5">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-slate-charcoal">
+                  Your Name <span class="text-cedar-gold">*</span>
+</label>
+<input class="h-12 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline-variant shadow-sm" placeholder="e.g. Arundhati Sharma" required="" type="text">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-slate-charcoal">
+                  Email Address <span class="text-cedar-gold">*</span>
+</label>
+<input class="h-12 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline-variant shadow-sm" placeholder="name@domain.com" required="" type="email">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-slate-charcoal">
+                  Phone Number
+                </label>
+<input class="h-12 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline-variant shadow-sm" placeholder="+91 98765 43210" type="tel">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-slate-charcoal">
+                  Length of Stay
+                </label>
+<select class="h-12 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm">
+<option>2 Nights (Weekend Solitude)</option>
+<option>3 to 5 Nights (Chakra Rebalance)</option>
+<option>7+ Nights (Creative Writing Sabbatical)</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-slate-charcoal">
+                Preferred Chakra Orientation
+              </label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest cursor-pointer font-body-sm text-body-sm hover:bg-surface-container">
+<input checked="" class="accent-pine-deep" name="chakra-pref" type="radio">
+<span>Sahasrara</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest cursor-pointer font-body-sm text-body-sm hover:bg-surface-container">
+<input class="accent-pine-deep" name="chakra-pref" type="radio">
+<span>Anahata</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest cursor-pointer font-body-sm text-body-sm hover:bg-surface-container">
+<input class="accent-pine-deep" name="chakra-pref" type="radio">
+<span>Ajna Loft</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest cursor-pointer font-body-sm text-body-sm hover:bg-surface-container">
+<input class="accent-pine-deep" name="chakra-pref" type="radio">
+<span>Open Choice</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-slate-charcoal">
+                Paint a picture of what you want to explore
+              </label>
+<textarea class="p-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline-variant shadow-sm resize-none" placeholder="Share your intentions — writing, quiet walks, tea tastings, or special anniversary arrangements..." rows="3"></textarea>
+</div>
+<button class="w-full h-12 mt-2 bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-wider rounded-lg shadow-md hover:bg-pine-muted transition-colors flex items-center justify-center gap-2" type="submit">
+<span>Get A Personalized Plan</span>
+<span class="material-symbols-outlined text-[18px] text-cedar-gold">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: HISTORIC CHAR DUKAN & LANDOUR MAP INTEGRATION -->
+<section class="w-full bg-surface-container-high py-16">
+<div class="max-w-[1320px] mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-5 flex flex-col gap-4">
+<span class="text-label-md font-label-md uppercase tracking-widest text-cedar-gold">Historic Ridge Geography</span>
+<h3 class="font-headline-md text-headline-md text-primary">Char Dukan &amp; The Upper Mall Heritage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Perched serenely adjacent to Char Dukan, Light of Landour provides unhurried pedestrian access to Mussoorie's quietest colonial walking loops.
+          </p>
+<div class="grid grid-cols-2 gap-4 pt-2">
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-cedar-gold uppercase tracking-wider block">Historic St. Paul’s</span>
+<span class="font-title-md text-title-md text-slate-charcoal">Adjacent (1839)</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-cedar-gold uppercase tracking-wider block">Lal Tibba Viewpoint</span>
+<span class="font-title-md text-title-md text-slate-charcoal">0.8 KM Walk</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-cedar-gold uppercase tracking-wider block">Sister's Bazaar</span>
+<span class="font-title-md text-title-md text-slate-charcoal">1.2 KM Walk</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-cedar-gold uppercase tracking-wider block">Dehradun Airport</span>
+<span class="font-title-md text-title-md text-slate-charcoal">64 KM (2.5 Hrs)</span>
+</div>
+</div>
+</div>
+<!-- Google Maps Static Pipeline Map View -->
+<div class="lg:col-span-7">
+<div class="w-full h-80 rounded-2xl bg-cover bg-center shadow-lg relative overflow-hidden" data-location="Char Dukan, Landour, Mussoorie, Uttarakhand" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCiov95sHzx3MJT6yXMunOI1SB3bjvtZXmXd7NAfW4D8_Fh4NHbugiJLYGRzBXyyQKSL97i_GOWRKvbKpyBXdV9GUrbUL-RfX00kFlZ_YuWKWRg7NZZef-6S42ShOXQUesi0yA62vjs88Z3BbcxQkpMV7uFvasaGF4lfv9IhZVgOSrFYUIcmzfK4TC5vPBScydr12c-TrvC52iNSjcsDbXoHtwO-yunngqJrs-Y6G0POFGaF8lIF7HNKw')">
+<div class="absolute bottom-4 left-4 bg-slate-charcoal/90 text-linen-base px-4 py-2 rounded-lg backdrop-blur-md flex items-center gap-2">
+<span class="material-symbols-outlined text-cedar-gold text-[18px]">location_on</span>
+<span class="font-body-sm text-body-sm">Elevation: 7,500 ft • Char Dukan, Upper Mall, Landour</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface pt-16 pb-12 mt-20"><div class="max-w-[1320px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12"><div class="lg:col-span-2 flex flex-col gap-4"><div class="flex items-center gap-3"><img alt="Image from https://lightoflandour.com/wp-content/uploads/2020/08/light-of-landour-logo-3.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XQzYiqt0Yqab9JRWvFRsn6Dg7pirdLB49SJfx4eeIH2KkleDWLsS2M5Xzw_PBd3CD3_FTuYEOfukpbSm4jON5CEb4fmbuvs2fEa7lJfIVUXvctZBTqMn1NsKuSkqpbx1TNykXowA7dx6RLl57q1WGwMOKC2td_p2XX49htzsqs8-vMlarUBnX5PwLQobjoEosJOEOcaa1A9fCcpwbHdQcHmgsziYN57NOHACWieZgjv7scyssCHZtFOnk8"><span class="font-headline-sm text-headline-sm text-primary">Light of Landour</span></div><p class="text-body-sm font-body-sm text-on-surface-variant max-w-md">An alpine sanctuary nestled high amidst deodar forests in Landour, Mussoorie. A space for deceleration, curated Himalayan living, contemplative literature, and restorative wellness overlooking the Doon Valley.</p><div class="flex flex-col gap-1.5 text-body-sm font-body-sm text-on-surface-variant mt-2"><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">near_me</span>Char Dukan, Upper Mall, Landour, Mussoorie, Uttarakhand 248179</span><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">call</span>+91-9068555303</span><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">mail</span>namaste@lightoflandour.com</span></div></div><div class="flex flex-col gap-3"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">Sanctuary</span><div class="flex flex-col gap-2"><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="accommodation" href="#">Mudra, Chakra &amp; Element Rooms</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="dining" href="#">Glass Box Cafe &amp; LOL Bakery</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="experiences-and-wellness" href="#">Forest Walks &amp; Meditation</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="packages" href="#">Curated Stay Packages</a></div></div><div class="flex flex-col gap-3"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">Guest Information</span><div class="flex flex-col gap-2"><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="location" href="#">Location &amp; Himalayan Reach</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="stay-policies" href="#">Stay &amp; Silence Policies</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservation" href="#">Reservation Guide</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="cancellation-terms" href="#">Cancellation Terms</a></div></div><div class="flex flex-col gap-4"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">The Landour Dispatch</span><p class="text-body-sm font-body-sm text-on-surface-variant">Receive seasonal notes on Himalayan blooms, winter lines, and private retreat offerings.</p><form class="flex flex-col gap-2"><input class="px-3 py-2 text-body-sm font-body-sm bg-surface-container text-on-surface rounded-lg focus:outline-none placeholder:text-outline" placeholder="Your email address" type="email"><button class="px-4 py-2 bg-primary text-on-primary text-label-sm font-label-sm uppercase tracking-wider rounded-lg hover:bg-pine-muted hover:text-on-primary transition-colors" type="button">Subscribe</button></form></div></div><div class="max-w-[1320px] mx-auto px-6 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-on-surface-variant"><p>© 2025 Light of Landour. All rights reserved. Nestled in the Garhwal Himalayas.</p><div class="flex items-center gap-6"><a class="hover:text-on-surface transition-colors" data-path="stay-policies" href="#">Guest Protocol</a><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy</a><a class="hover:text-on-surface transition-colors" data-path="location" href="#">Arrival</a></div></div></footer></body></html>

@@ -1,0 +1,917 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed": "#251a00",
+          "inverse-surface": "#30312e",
+          "primary-fixed-dim": "#abcfb8",
+          "surface-container": "#efeeea",
+          "on-tertiary-fixed-variant": "#43474b",
+          "surface-bright": "#fbf9f5",
+          "linen-border": "#E5DED5",
+          "on-surface": "#1b1c1a",
+          "surface-tint": "#456553",
+          "on-secondary-container": "#735700",
+          "surface-variant": "#e4e2de",
+          "on-error": "#ffffff",
+          "secondary-fixed-dim": "#eec14b",
+          "linen-base": "#FBF9F5",
+          "on-tertiary-container": "#9a9da1",
+          "on-secondary-fixed-variant": "#5a4300",
+          "surface-container-high": "#eae8e4",
+          "on-error-container": "#93000a",
+          "primary-container": "#1b3b2b",
+          "tertiary-container": "#313538",
+          "on-primary": "#ffffff",
+          "error": "#ba1a1a",
+          "surface-container-low": "#f5f3ef",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed-variant": "#2d4d3c",
+          "tertiary-fixed": "#e0e3e7",
+          "linen-subtle": "#F4EFEA",
+          "on-surface-variant": "#424843",
+          "primary": "#032517",
+          "surface-container-highest": "#e4e2de",
+          "surface-container-lowest": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "background": "#fbf9f5",
+          "pine-deep": "#1B3B2B",
+          "on-tertiary-fixed": "#181c1f",
+          "mist-silver": "#8C928E",
+          "inverse-primary": "#abcfb8",
+          "on-primary-container": "#83a590",
+          "surface-dim": "#dbdad6",
+          "pine-muted": "#2C4C3A",
+          "slate-charcoal": "#161A1D",
+          "secondary-container": "#fece57",
+          "on-primary-fixed": "#002113",
+          "cedar-gold": "#C59B27",
+          "amber-gold-bright": "#D4AF37",
+          "tertiary": "#1c2023",
+          "surface": "#fbf9f5",
+          "inverse-on-surface": "#f2f0ed",
+          "outline": "#727973",
+          "tertiary-fixed-dim": "#c4c7cb",
+          "outline-variant": "#c1c8c2",
+          "primary-fixed": "#c7ebd4",
+          "secondary": "#775a00",
+          "secondary-fixed": "#ffdf98",
+          "on-background": "#1b1c1a",
+          "error-container": "#ffdad6"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-sm": "0.75rem",
+          "space-xs": "0.5rem",
+          "space-4xl": "6rem",
+          "space-3xl": "4.5rem",
+          "space-lg": "1.5rem",
+          "gutter-desktop": "2rem",
+          "space-2xl": "3rem",
+          "space-2xs": "0.25rem",
+          "gutter-tablet": "1.5rem",
+          "space-md": "1rem",
+          "gutter-mobile": "1rem",
+          "container-max": "1320px",
+          "space-xl": "2rem",
+          "space-5xl": "8rem"
+        },
+        "fontFamily": {
+          "headline-md-mobile": [
+            "EB Garamond"
+          ],
+          "headline-md": [
+            "EB Garamond"
+          ],
+          "headline-lg-mobile": [
+            "EB Garamond"
+          ],
+          "title-md": [
+            "Manrope"
+          ],
+          "title-lg": [
+            "Manrope"
+          ],
+          "body-sm": [
+            "Manrope"
+          ],
+          "display-mobile": [
+            "EB Garamond"
+          ],
+          "headline-lg": [
+            "EB Garamond"
+          ],
+          "body-lg": [
+            "EB Garamond"
+          ],
+          "body-md": [
+            "Manrope"
+          ],
+          "display": [
+            "EB Garamond"
+          ],
+          "label-lg": [
+            "Manrope"
+          ],
+          "label-md": [
+            "Manrope"
+          ],
+          "label-sm": [
+            "Manrope"
+          ],
+          "headline-sm": [
+            "EB Garamond"
+          ]
+        },
+        "fontSize": {
+          "headline-md-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "30px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-lg": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-mobile": [
+            "38px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "20px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "display": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.12em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.16em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.2em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      }
+    }
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 inset-x-0 z-50"><div class="bg-primary-container text-on-primary-container text-label-sm font-label-sm uppercase tracking-wider py-2 px-6"><div class="max-w-[1320px] mx-auto flex flex-wrap items-center justify-between gap-4"> <div class="flex flex-wrap items-center gap-6"><span class="flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">call</span>+91-9068555303</span><span class="hidden sm:flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">mail</span>namaste@lightoflandour.com</span><span class="hidden md:flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">location_on</span>Char Dukan, Landour, Mussoorie</span></div><div class="flex items-center gap-4 text-on-primary-container"><span class="hidden lg:inline text-label-sm font-label-sm text-cedar-gold">Sanctuary Elevation: 7,500 FT</span><div class="flex items-center gap-3"><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">photo_camera</span></a><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">travel_explore</span></a><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">share</span></a></div></div></div></div><div class="bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1320px] mx-auto px-6 flex items-center justify-between gap-6"><div class="flex items-center gap-3"><img alt="Image from https://lightoflandour.com/wp-content/uploads/2020/08/light-of-landour-logo-3.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XQzYiqt0Yqab9JRWvFRsn6Dg7pirdLB49SJfx4eeIH2KkleDWLsS2M5Xzw_PBd3CD3_FTuYEOfukpbSm4jON5CEb4fmbuvs2fEa7lJfIVUXvctZBTqMn1NsKuSkqpbx1TNykXowA7dx6RLl57q1WGwMOKC2td_p2XX49htzsqs8-vMlarUBnX5PwLQobjoEosJOEOcaa1A9fCcpwbHdQcHmgsziYN57NOHACWieZgjv7scyssCHZtFOnk8"><span class="font-headline-sm text-headline-sm text-primary tracking-normal">Light of Landour</span></div><nav class="hidden xl:flex items-center gap-1" data-active-classes="bg-primary-container text-on-primary rounded-lg"><a aria-current="page" class="px-3 py-1.5 font-label-lg transition-colors bg-primary-container text-on-primary rounded-lg" data-path="home" href="#">Home</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="accommodation" href="#">Accommodation</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="dining" href="#">Dining</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="experiences-and-wellness" href="#">Experiences &amp; Wellness</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="packages" href="#">Packages</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="location" href="#">Location</a></nav><div class="flex items-center gap-4"><a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-wider rounded-lg hover:bg-pine-muted hover:text-on-primary transition-all" data-path="reservation" href="#">Book Your Stay</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Immersive Mountain Hero Section -->
+<section class="relative w-full -mt-28 min-h-[92vh] flex flex-col justify-between overflow-hidden bg-primary">
+<!-- Hero Scrim & Generated Background Image -->
+<div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-1000 ease-out scale-105" data-alt="An expansive panoramic high-altitude Himalayan luxury outdoor spa deck at Light of Landour, featuring a steaming cedarwood hot tub, brass singing bowls on raw slate, a glass spa pavilion with warm interior glow, and majestic snowcapped Himalayan peaks under a radiant golden sunrise mist in pine tones #1B3B2B and warm linen #FBF9F5." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCr-lN5A9vHUZpJYg864BSIrppaMb_MCaYP5ZEsAtBh6WmwY_PwU1nRgMi3kSAXwi-23UDkVbKbe-eDlML23NpkQjaFvW-7soBTHNN9ddhnrYrxDRgOX-jXCqH2ZYb6d6zRr9OQYKlpTmJXoc1wrZ8o5QdTJKNxrLyUCIe8syembRDjjOV0DiTniIXs6i54y6UsCErfZeCdtspXILRj7CfGW4OebrSnd5zObrls7OGByTeiECrXtCRaLA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/40 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-transparent to-primary/50"></div>
+<!-- Hero Content Overlay clearing shell header -->
+<div class="relative z-10 max-w-[1320px] w-full mx-auto px-6 pt-44 pb-16 flex flex-col justify-end flex-grow">
+<!-- Top Sanctuary Location Pills -->
+<div class="flex flex-wrap items-center gap-3 mb-8">
+<span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-bright/15 backdrop-blur-md text-linen-base font-label-md text-label-md tracking-widest uppercase border-none shadow-sm">
+<span class="w-2 h-2 rounded-full bg-cedar-gold animate-pulse"></span>
+          Sanctuary Elevation: 7,500 FT
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-bright/10 backdrop-blur-md text-linen-base/90 font-label-md text-label-md tracking-wider uppercase">
+<span class="material-symbols-outlined text-[14px] text-cedar-gold">location_on</span>
+          Char Dukan Ridge
+        </span>
+<span class="inline-flex items-center px-3 py-1.5 rounded-full bg-cedar-gold text-on-secondary-fixed font-label-sm text-label-sm tracking-widest uppercase font-bold">
+          Coming Soon — Summer 2025 Unveiling
+        </span>
+</div>
+<!-- Headline Typography Hierarchy -->
+<div class="max-w-4xl space-y-4">
+<span class="font-display italic text-headline-md text-amber-gold-bright block tracking-wide">
+          The Himalayan Spa &amp; Restorative Sanctuary
+        </span>
+<h1 class="font-headline-lg text-display text-on-primary tracking-tight leading-[1.05]">
+          Awaken the Sacred Prana
+        </h1>
+<p class="font-body-lg text-body-lg text-surface-container-low max-w-2xl leading-relaxed pt-2">
+          Rising above the daily mayhem, feeling the pulse of pure deodar woodland, breathing crisp high-altitude air. An intimate Himalayan sanctuary where ancient Ayurvedic science, Tibetan singing bowl acoustics, and wild alpine botanicals harmonize to restore spirit, mind, and earthly vitality.
+        </p>
+</div>
+<!-- Hero Actions & Waitlist Trigger -->
+<div class="flex flex-wrap items-center gap-4 pt-8">
+<a class="inline-flex items-center gap-3 px-8 py-3.5 bg-cedar-gold text-on-secondary-fixed font-label-lg text-label-lg uppercase tracking-wider rounded-lg shadow-lg hover:bg-amber-gold-bright transition-all duration-300" href="#waitlist">
+<span>Priority Sanctuary Waitlist</span>
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</a>
+<a class="inline-flex items-center gap-3 px-7 py-3.5 bg-surface-bright/10 hover:bg-surface-bright/20 backdrop-blur-md text-linen-base font-label-lg text-label-lg uppercase tracking-wider rounded-lg transition-all duration-300" href="#rituals">
+<span>Explore Preview Rituals</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+</div>
+</div>
+<!-- Sanctuary Quick Metrics Horizontal Strip -->
+<div class="relative z-10 w-full bg-slate-charcoal/90 backdrop-blur-xl py-6">
+<div class="max-w-[1320px] mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-cedar-gold">Sanctuary Altitude</span>
+<span class="font-title-lg text-title-lg text-linen-base">7,500 FT Above Clouds</span>
+<span class="font-body-sm text-body-sm text-mist-silver">Overlooking Doon Valley &amp; Pines</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-cedar-gold">Ancient Healing</span>
+<span class="font-title-lg text-title-lg text-linen-base">12 Signature Modalities</span>
+<span class="font-body-sm text-body-sm text-mist-silver">Garhwal Stones &amp; Tibetan Bowls</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-cedar-gold">Thermal Architecture</span>
+<span class="font-title-lg text-title-lg text-linen-base">Heated Cedar Hot Tubs</span>
+<span class="font-body-sm text-body-sm text-mist-silver">Wild Rhododendron &amp; Pine Infusions</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-cedar-gold">VIP Access</span>
+<span class="font-title-lg text-title-lg text-linen-base">Solstice 2025 Opening</span>
+<span class="font-body-sm text-body-sm text-mist-silver">Curated Stays &amp; Silent Lodging</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Narrative Poetics / Sanctuary Philosophy -->
+<section class="w-full py-24 bg-linen-base">
+<div class="max-w-[1320px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 flex flex-col space-y-6">
+<div class="flex items-center gap-3">
+<span class="h-[1px] w-8 bg-cedar-gold"></span>
+<span class="font-label-md text-label-md uppercase tracking-widest text-pine-deep font-semibold">Living Stillness</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-slate-charcoal">
+          A temple of deceleration framed by clouds and century-old deodars.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          At Landour’s highest crest, silence is an acoustic medicine. The Light of Landour Himalayan Sanctuary has been envisioned as an oasis of sensory surrender. Every treatment pavilion is crafted using reclaimed pine, sun-warmed slate, and uninterrupted floor-to-ceiling vistas of the snow-clad Kedarnath and Chaukhamba range.
+        </p>
+<div class="p-6 bg-linen-subtle rounded-xl shadow-sm flex flex-col space-y-3">
+<div class="flex items-center gap-3 text-pine-deep">
+<span class="material-symbols-outlined text-cedar-gold">self_improvement</span>
+<span class="font-title-md text-title-md font-semibold">The Sattvic Alpine Standard</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Zero chemical synthesis. Cold-pressed Himalayan cedarwood, pure stone salt harvested from Tehri waters, and seasonal infusions prepared fresh each dawn by our resident Vaidya.
+          </p>
+</div>
+</div>
+<!-- Architectural Showcase Grid -->
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="relative rounded-xl overflow-hidden shadow-md group">
+<img alt="Duplex suite overlooking misty mountains" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1XPgwvjitfhKvtv-lPXlldJDvRe_P2BTu2iX_AlfBsxV86qWXTQKaL_qW0bQFWUxGIyS0V24fmGhL51OnAdriZx40L7sA_xY19fplmC17E0lbOFiDCEJ_-pInHChzqU91ptIuRtNOVaXsgzBdhwPqRFMAuKIAYn0oVmDEaKiUn8oLNdq3FX4fTZVHMYp3tlJ7l1LlrvYOjrUgexAyzLrZio3DuUBUJxaF9mU1Ge7hQFrOmoYb1SDbtjZ3o">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-charcoal/90 via-transparent to-transparent flex flex-col justify-end p-6">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-cedar-gold">Restorative Quarters</span>
+<span class="font-headline-sm text-headline-sm text-linen-base">Duplex Meditation Lounges</span>
+<span class="font-body-sm text-body-sm text-mist-silver">Private timber balconies facing snow lines</span>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-md group md:translate-y-8">
+<img alt="Warm timber interior sanctuary with expansive panoramic glass" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1UJWHVP2H8PrJBvKefwR56IvuZkYM1XI2PM8NwSa4DonVdzfIMBSMSBb6OQMdZaleDODVgdb_eFg9T2z54MkTeOP7dlPXyps9uHpj0oIzQVk5ArTt4C7LjRH0McGWmw5G2nxQj31kYK1wu6tdzA-mhalZePa08D0brZd4R3n60HYKyoznWydkNRx2NAAEmf_zbl3u2m_sATWcaysFzBmzkQc0K0fW_jVFuF5Pj-DOWJsu6TURLtG02To_Sa">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-charcoal/90 via-transparent to-transparent flex flex-col justify-end p-6">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-cedar-gold">Chakra &amp; Mudra Design</span>
+<span class="font-headline-sm text-headline-sm text-linen-base">Glass-Walled Healing Suites</span>
+<span class="font-body-sm text-body-sm text-mist-silver">Warm pine paneling &amp; pure morning solar warmth</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Acoustic & Sensory Immersion — The Breath of the Pines Video/Audio Module -->
+<section class="w-full py-20 bg-primary-container text-on-primary">
+<div class="max-w-[1320px] mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="space-y-3 max-w-2xl">
+<span class="font-label-md text-label-md uppercase tracking-widest text-cedar-gold">Auditory Resonance</span>
+<h2 class="font-headline-lg text-headline-lg text-linen-base">
+            The Breath of the Pines: Acoustic Immersion
+          </h2>
+<p class="font-body-md text-body-md text-on-primary-container">
+            Preview the tranquility awaiting your senses. Tuned to 528Hz Solfeggio frequency and blended with natural deodar breezes, Himalayan wind chimes, and flowing spring waters.
+          </p>
+</div>
+<div class="flex items-center gap-2 bg-slate-charcoal/60 px-4 py-2 rounded-full">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-linen-base">4K HDR • 528Hz Solfeggio Soundscape</span>
+</div>
+</div>
+<!-- Cinematic Mountain Video Player Container -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-slate-charcoal aspect-video max-h-[580px] group">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-102" data-alt="Cinematic frame showing tranquil mist weaving through emerald green deodar pine trees in Landour with golden mountain sunshine reflecting on a stone water feature, meditative serene mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAK3v2C5KbMxWzeWliQpJj1fwxcmKByGaNeWmkDDXcfHfZFxHvwMY9lWsJ6TLi7g2yiv5h7AJ4cP8RaVL9RuRypffqMblFAwQ_r2u0mfbVkrc-Ry41KAu-cL7uABwnWtVUsu7tPsxG4IzBcDjbC9A9oRWKZBwGnd16jFJESxJmYDzKu3l8k5lsDug_M-AuwZ3GuUjmjHAyBajjC32MFT-37-YA6kuOfRZMcyPtqnff7CExb1fsX7Qy4oQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-charcoal via-slate-charcoal/40 to-transparent"></div>
+<!-- Center Glowing Play Button -->
+<div class="absolute inset-0 flex items-center justify-center">
+<button aria-label="Play Himalayan Soundscape" class="relative flex items-center justify-center w-24 h-24 rounded-full bg-cedar-gold text-slate-charcoal shadow-2xl hover:scale-110 hover:bg-amber-gold-bright transition-all duration-300 group-hover:ring-8 group-hover:ring-cedar-gold/20" id="audio-preview-btn">
+<span class="material-symbols-outlined text-[44px] ml-1" id="play-icon" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<!-- Custom Player Bottom Bar -->
+<div class="absolute bottom-0 inset-x-0 p-6 md:p-8 flex flex-col gap-4 bg-gradient-to-t from-slate-charcoal via-slate-charcoal/80 to-transparent">
+<!-- Sound wave graphic bar -->
+<div class="w-full flex items-center gap-1.5 h-8">
+<span class="w-1.5 h-3 bg-cedar-gold/60 rounded-full animate-[pulse_1.2s_infinite]"></span>
+<span class="w-1.5 h-5 bg-cedar-gold/80 rounded-full animate-[pulse_0.9s_infinite]"></span>
+<span class="w-1.5 h-8 bg-cedar-gold rounded-full animate-[pulse_1.4s_infinite]"></span>
+<span class="w-1.5 h-4 bg-cedar-gold/70 rounded-full animate-[pulse_1.1s_infinite]"></span>
+<span class="w-1.5 h-6 bg-cedar-gold/90 rounded-full animate-[pulse_1.3s_infinite]"></span>
+<span class="w-1.5 h-2 bg-cedar-gold/40 rounded-full animate-[pulse_0.8s_infinite]"></span>
+<div class="flex-grow h-1.5 bg-surface-container-high/30 rounded-full overflow-hidden mx-2">
+<div class="w-2/5 h-full bg-cedar-gold rounded-full transition-all duration-300" id="playback-bar"></div>
+</div>
+<span class="font-label-sm text-label-sm text-linen-base font-mono">02:45 / 06:10</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cedar-gold">graphic_eq</span>
+<span class="font-body-sm text-body-sm text-linen-base">Tibetan Bell Resonance &amp; Dawn Valley Chorus</span>
+</div>
+<div class="flex items-center gap-4 text-linen-base">
+<button class="hover:text-cedar-gold transition-colors" title="Audio Stream"><span class="material-symbols-outlined text-[20px]">volume_up</span></button>
+<button class="hover:text-cedar-gold transition-colors" title="Full Frame"><span class="material-symbols-outlined text-[20px]">fullscreen</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Signature Himalayan Wellness Offerings (Preview Rituals) -->
+<section class="w-full py-28 bg-surface" id="rituals">
+<div class="max-w-[1320px] mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="space-y-3 max-w-2xl">
+<span class="font-label-md text-label-md uppercase tracking-widest text-cedar-gold">Curated Modalities</span>
+<h2 class="font-headline-lg text-headline-lg text-slate-charcoal">
+            Signature Himalayan Rituals
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Each restorative offering channels mountain elements: wild cedar resins, heated river rocks, vibrational singing bowls, and the pure breath of deodar canopies.
+          </p>
+</div>
+<div class="hidden sm:flex items-center gap-3">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">4 Modalities Available for Preview Booking</span>
+</div>
+</div>
+<!-- 4-Card Luxury Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Ritual Card 1 -->
+<div class="group bg-linen-subtle rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+<div>
+<div class="relative aspect-[4/3] overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="An Ayurvedic hot stone massage in a luxury Himalayan timber room with mountain views, warm polished Garhwal river rocks, fragrant steaming herbal oils, fresh rhododendron petals, soft candle glow, serene atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcCxrOWVAOOO3otyILuUPHV8rYESy81nf_KJWTv831zOt-_p0kJnY7UZW8_r3C0Z2HLm8udXoRI48k1pizjEwNGCiPhYntn2uEQ33TAN4vyVQKfAJJ-klH_YiN_YNHP72RP4n2XGIvWZcqpL-LxYf0WFhmxmT6CpaQnefBnM6wof4DgJYGU0s9ed6vwWwhvqEkshjF2EtjEUzjbX9tyhwdgCpDUyZtPEHqJr7RE69TiUO9LbxbWuOHNA')"></div>
+<span class="absolute top-4 left-4 px-3 py-1 bg-slate-charcoal/80 backdrop-blur-md rounded-full text-linen-base font-label-sm text-label-sm uppercase tracking-wider">
+                Earth &amp; Heat
+              </span>
+</div>
+<div class="p-6 space-y-3">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-cedar-gold">Signature Body Therapy</span>
+<h3 class="font-headline-md text-headline-sm text-slate-charcoal group-hover:text-pine-deep transition-colors">
+                Himalayan Cedar &amp; Hot Stone Prana
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Deep somatic release utilizing hand-picked smooth stones from the pristine Garhwal riverbeds, infused with wild Himalayan cedarwood resin and warm sesame oil.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2 flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-pine-deep">90 Minutes</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm uppercase tracking-wider text-cedar-gold hover:text-pine-deep transition-colors" href="#waitlist">
+              Reserve First <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Ritual Card 2 -->
+<div class="group bg-linen-subtle rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+<div>
+<div class="relative aspect-[4/3] overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="Handcrafted Tibetan brass singing bowls lined along an aged cedarwood deck in the Himalayas with morning mist and soft ambient light, spiritual meditation setup." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFvsMISGwY3de_X35SWZXWdHD7ME0QOk08fCJJXNuXMOkEapQ60catx39TQbYIkAgbYldhtDxZq4eVHoY9MPH4ADrnbpRxVLl40vx9JCNluLrPSZ_cS2u7Ve4iwzjDjat4jvIRHZnpILVuUXETje2zwYLSCiiAHEu_yWv7iTybkrkZaSZOFZ6upIZPpXZXsjOqbqxVSappCR_D4yGF9XIqr4CsIKnvuTqRl--Ex6K2QXsCwSIO8Q7XBw')"></div>
+<span class="absolute top-4 left-4 px-3 py-1 bg-slate-charcoal/80 backdrop-blur-md rounded-full text-linen-base font-label-sm text-label-sm uppercase tracking-wider">
+                Akasha &amp; Vibration
+              </span>
+</div>
+<div class="p-6 space-y-3">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-cedar-gold">Acoustic Alignment</span>
+<h3 class="font-headline-md text-headline-sm text-slate-charcoal group-hover:text-pine-deep transition-colors">
+                Dawn Tibetan Singing Bowl Bath
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Seven chakra multi-metal bowls struck at golden hour overlooking the Chaukhamba peaks. Harmonic frequencies penetrate deep cellular frequencies to clear stagnant prana.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2 flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-pine-deep">75 Minutes</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm uppercase tracking-wider text-cedar-gold hover:text-pine-deep transition-colors" href="#waitlist">
+              Reserve First <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Ritual Card 3 -->
+<div class="group bg-linen-subtle rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+<div>
+<div class="relative aspect-[4/3] overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="Ancient deodar pine forest trail in Landour with dappled morning sunlight filtering through misty tall trees and stone walking path, silent contemplative nature atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfOdazU465nYqICC0XAadsFV1sT2EV6L4N83EQk2pNLa1X8uMoIrMnpFd0_30EN2URATR7Wb6YTxMUb4yxJNSJtxcYuF6K9zofJE2OP0IfuccxRwBcB1MAB1MRP1wvBQWtgOT_Q6aCocCGFv_WbjKlGsIdnNXCABDTKF4se7MP-4OlKmGTk2L1L5cA-95CHfj1BAIV-n2KaVWB2nyGgES6roZTYxLc4iL48KAcDdXHwnKUUK57JS4D-g')"></div>
+<span class="absolute top-4 left-4 px-3 py-1 bg-slate-charcoal/80 backdrop-blur-md rounded-full text-linen-base font-label-sm text-label-sm uppercase tracking-wider">
+                Vayu &amp; Mindfulness
+              </span>
+</div>
+<div class="p-6 space-y-3">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-cedar-gold">Forest Immersion</span>
+<h3 class="font-headline-md text-headline-sm text-slate-charcoal group-hover:text-pine-deep transition-colors">
+                Shinrin-Yoku Forest Bathing
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Mindful, silent botanical walks through Jabarkhet Reserve and Char Dukan forest ridges with botanist-curated herbal tisanes and grounding sensory techniques.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2 flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-pine-deep">120 Minutes</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm uppercase tracking-wider text-cedar-gold hover:text-pine-deep transition-colors" href="#waitlist">
+              Reserve First <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Ritual Card 4 -->
+<div class="group bg-linen-subtle rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+<div>
+<div class="relative aspect-[4/3] overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="A round handcrafted outdoor cedar hot tub steaming at dusk on a stone balcony with panoramic view of the Doon Valley mist below, Himalayan sunset colors in gold and amber." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2Ha__1age5EiHS4jYrvkdIPZ5ecxQUwa5Aul_xXOuYC-1jpZym_V_xmQIuI9mI4Iiljn74KZ7g5da1YpAwwE-qhGojWGs14HG7_NhFl3vODMwoEUCa3tqoHu-C2UMWQEtiHdTStkIL55t_kYto0N4kRQtcKmbcTfIqJuFhcBuhYXUY6s2ESTSqT9pFzAF74H0at7OO1s8ZD9nHJ5G19258smsNtcs2kyleGMtoseUOBAezjyMm7yr_g')"></div>
+<span class="absolute top-4 left-4 px-3 py-1 bg-slate-charcoal/80 backdrop-blur-md rounded-full text-linen-base font-label-sm text-label-sm uppercase tracking-wider">
+                Jala &amp; Springs
+              </span>
+</div>
+<div class="p-6 space-y-3">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-cedar-gold">Hydro Thermal</span>
+<h3 class="font-headline-md text-headline-sm text-slate-charcoal group-hover:text-pine-deep transition-colors">
+                Alpine Cedar Tubs &amp; Mist Springs
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Deep soaking in raw cedarwood tubs scented with fresh rhododendron blossoms and wild mountain mint as sunset clouds drift through the surrounding pines.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2 flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-pine-deep">60 Minutes</span>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm uppercase tracking-wider text-cedar-gold hover:text-pine-deep transition-colors" href="#waitlist">
+              Reserve First <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Stay & Retreat Packages Preview (From original site references) -->
+<section class="w-full py-24 bg-surface-container-low">
+<div class="max-w-[1320px] mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+<span class="font-label-md text-label-md uppercase tracking-widest text-cedar-gold">Holistic Residencies</span>
+<h2 class="font-headline-lg text-headline-lg text-slate-charcoal">
+          Curated Himalayan Retreat Packages
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Complete restorative programs combining our bespoke Mudra and Chakra Suites with curated organic culinary dining at The Glass Box and restorative spa treatments.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Package 1: 5 Days 6 Nights Renewal -->
+<div class="bg-surface-bright rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<span class="px-3.5 py-1 bg-pine-deep/10 text-pine-deep font-label-sm text-label-sm uppercase tracking-wider rounded-full">
+                Most Popular
+              </span>
+<span class="font-label-sm text-label-sm text-cedar-gold uppercase tracking-widest">5 Nights / 6 Days</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-slate-charcoal">The Himalayan Renewal</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-2">
+                A restorative recalibration designed to unburden urban fatigue and reinstate natural circadian rhythms through mountain therapy.
+              </p>
+</div>
+<div class="space-y-3 pt-4 border-t border-linen-border">
+<div class="flex items-start gap-3 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-cedar-gold">check_circle</span>
+<span>Stay in Mudra or Chakra Alpine Suite</span>
+</div>
+<div class="flex items-start gap-3 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-cedar-gold">check_circle</span>
+<span>Full-board organic dining at The Glass Box</span>
+</div>
+<div class="flex items-start gap-3 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-cedar-gold">check_circle</span>
+<span>3 Signature Ayurvedic &amp; Sound Bath Sessions</span>
+</div>
+<div class="flex items-start gap-3 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-cedar-gold">check_circle</span>
+<span>Guided Char Dukan &amp; Pari Tibba trails</span>
+</div>
+</div>
+</div>
+<div class="pt-8">
+<button class="w-full py-3 bg-pine-deep hover:bg-pine-muted text-linen-base font-label-md text-label-md uppercase tracking-wider rounded-lg transition-colors" onclick="selectPackage('5 Days / 6 Nights Himalayan Renewal')">
+              Select Package &amp; Inquire
+            </button>
+</div>
+</div>
+<!-- Package 2: 21 Days Intensive Sacred Prana -->
+<div class="bg-primary text-on-primary rounded-2xl p-8 shadow-xl relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -top-12 -right-12 w-36 h-36 rounded-full bg-cedar-gold/20 blur-2xl"></div>
+<div class="space-y-6 relative z-10">
+<div class="flex items-center justify-between">
+<span class="px-3.5 py-1 bg-cedar-gold text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-bold rounded-full">
+                Signature Immersion
+              </span>
+<span class="font-label-sm text-label-sm text-amber-gold-bright uppercase tracking-widest">21 Days Residential</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-linen-base">Sacred Prana &amp; Chakra Realignment</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container pt-2">
+                A profound transformational residency guided by resident Ayurvedic masters, Tibetan acoustic healers, and personal yogic instructors.
+              </p>
+</div>
+<div class="space-y-3 pt-4">
+<div class="flex items-start gap-3 text-body-sm font-body-sm text-linen-base">
+<span class="material-symbols-outlined text-[18px] text-amber-gold-bright">stars</span>
+<span>Private consultation with Senior Himalayan Vaidya</span>
+</div>
+<div class="flex items-start gap-3 text-body-sm font-body-sm text-linen-base">
+<span class="material-symbols-outlined text-[18px] text-amber-gold-bright">stars</span>
+<span>Daily customized Sattvic seasonal meals</span>
+</div>
+<div class="flex items-start gap-3 text-body-sm font-body-sm text-linen-base">
+<span class="material-symbols-outlined text-[18px] text-amber-gold-bright">stars</span>
+<span>Full access to private meditation attics</span>
+</div>
+<div class="flex items-start gap-3 text-body-sm font-body-sm text-linen-base">
+<span class="material-symbols-outlined text-[18px] text-amber-gold-bright">stars</span>
+<span>Unlimited Himalayan Cedar soaking baths</span>
+</div>
+</div>
+</div>
+<div class="pt-8 relative z-10">
+<button class="w-full py-3 bg-cedar-gold hover:bg-amber-gold-bright text-on-secondary-fixed font-label-md text-label-md uppercase tracking-wider rounded-lg transition-colors font-bold" onclick="selectPackage('21 Days Sacred Prana Realignment')">
+              Reserve Immersion Residency
+            </button>
+</div>
+</div>
+<!-- Package 3: 3 Days 2 Nights Romantic Solitude -->
+<div class="bg-surface-bright rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<span class="px-3.5 py-1 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider rounded-full">
+                Couples Retreat
+              </span>
+<span class="font-label-sm text-label-sm text-cedar-gold uppercase tracking-widest">3 Days / 2 Nights</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-slate-charcoal">Romantic Alpine Solitude</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-2">
+                Designed for partners seeking quiet intimacy amid deodar canopies, candlelit mountain dinners, and synchronized soothing wellness.
+              </p>
+</div>
+<div class="space-y-3 pt-4 border-t border-linen-border">
+<div class="flex items-start gap-3 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-cedar-gold">check_circle</span>
+<span>Duplex Alpine Suite with Valley Balcony</span>
+</div>
+<div class="flex items-start gap-3 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-cedar-gold">check_circle</span>
+<span>Couples Cedarwood &amp; Hot Stone Session</span>
+</div>
+<div class="flex items-start gap-3 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-cedar-gold">check_circle</span>
+<span>Juliet's Balcony Candlelight Degustation</span>
+</div>
+<div class="flex items-start gap-3 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-cedar-gold">check_circle</span>
+<span>Brass telescope clear-sky stargazing</span>
+</div>
+</div>
+</div>
+<div class="pt-8">
+<button class="w-full py-3 bg-pine-deep hover:bg-pine-muted text-linen-base font-label-md text-label-md uppercase tracking-wider rounded-lg transition-colors" onclick="selectPackage('3 Days / 2 Nights Romantic Alpine Solitude')">
+              Select Package &amp; Inquire
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Priority Early Access Waitlist & Personalized Package Request Form (Matches reference structure) -->
+<section class="w-full py-24 bg-linen-base" id="waitlist">
+<div class="max-w-[1320px] mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-surface-bright rounded-3xl p-8 md:p-14 shadow-lg">
+<!-- Left Column: Sanctuary Guarantees & Elevation Coordinates -->
+<div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+<div class="space-y-4">
+<span class="font-label-md text-label-md uppercase tracking-widest text-cedar-gold">Unveiling Solstice 2025</span>
+<h2 class="font-headline-lg text-headline-lg text-slate-charcoal leading-tight">
+              Reserve Your Early Priority Access
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Be among our inaugural retreatants to enter the Himalayan Wellness Sanctuary. Share your personal healing intentions or tailor a custom residential stay.
+            </p>
+</div>
+<div class="space-y-4 py-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-linen-subtle flex items-center justify-center text-pine-deep">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Zero Advance Deposit Required for Waitlist</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-linen-subtle flex items-center justify-center text-pine-deep">
+<span class="material-symbols-outlined text-[18px]">volume_off</span>
+</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Strict 10:00 PM Sanctuary Silence Policy</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-linen-subtle flex items-center justify-center text-pine-deep">
+<span class="material-symbols-outlined text-[18px]">hotel</span>
+</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Complimentary Suite Upgrade Priority</span>
+</div>
+</div>
+<div class="p-6 bg-linen-subtle rounded-xl space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-mist-silver">Retreat Coordinates</span>
+<p class="font-title-md text-title-md text-pine-deep font-bold">30.4598° N, 78.0934° E • 7,500 FT</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Above Char Dukan Ridge, Landour, Mussoorie, Garhwal Himalayas</p>
+</div>
+</div>
+<!-- Right Column: Interactive Form matching reference field specifications -->
+<div class="lg:col-span-7 bg-linen-subtle rounded-2xl p-8 shadow-inner">
+<form class="space-y-6" id="wellness-form" onsubmit="handleWaitlistSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-pine-deep font-semibold">
+                  Full Name <span class="text-cedar-gold">*</span>
+</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-bright text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-pine-deep shadow-sm" placeholder="e.g. Eleanor Vance" required="" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-pine-deep font-semibold">
+                  Email Address <span class="text-cedar-gold">*</span>
+</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-bright text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-pine-deep shadow-sm" placeholder="eleanor@sanctuary.com" required="" type="email">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-pine-deep font-semibold">
+                  Phone / WhatsApp
+                </label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-bright text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-pine-deep shadow-sm" placeholder="+91 98765 43210" type="tel">
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-pine-deep font-semibold">
+                  Intended Number of Days
+                </label>
+<select class="w-full px-4 py-3 rounded-lg bg-surface-bright text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-pine-deep shadow-sm">
+<option value="3-5">3 - 5 Days (Weekend Rejuvenation)</option>
+<option value="6-10">6 - 10 Days (Deep Recalibration)</option>
+<option value="21+">21+ Days (Full Sacred Prana Immersion)</option>
+<option value="day-pass">Single-Day Spa Experience Only</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-pine-deep font-semibold">
+                Preferred Sanctuary Package or Modality
+              </label>
+<select class="w-full px-4 py-3 rounded-lg bg-surface-bright text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-pine-deep shadow-sm" id="package-selector">
+<option value="5-days">5 Days / 6 Nights Himalayan Renewal</option>
+<option value="21-days">21 Days Sacred Prana Realignment</option>
+<option value="3-days">3 Days / 2 Nights Romantic Alpine Solitude</option>
+<option value="custom">Bespoke Custom Wellness Journey</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-pine-deep font-semibold">
+                Paint a picture of what you wish to experience or heal
+              </label>
+<textarea class="w-full px-4 py-3 rounded-lg bg-surface-bright text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-pine-deep shadow-sm resize-none" placeholder="Share your goals: quiet reading, stress decompression, Ayurvedic dosha guidance, deep meditation, or couples healing..." rows="4"></textarea>
+</div>
+<div class="pt-2">
+<button class="w-full py-4 bg-pine-deep hover:bg-pine-muted text-linen-base font-label-lg text-label-lg uppercase tracking-widest rounded-lg transition-all duration-300 shadow-md flex items-center justify-center gap-3" id="submit-waitlist-btn" type="submit">
+<span>Join The Sanctuary Waitlist</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<p class="hidden text-center text-pine-deep font-body-sm text-body-sm pt-3 font-semibold" id="form-feedback"></p>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Historic Cantonment Geography & Walking Sanctuary Proximities -->
+<section class="w-full py-20 bg-surface">
+<div class="max-w-[1320px] mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-8 pb-12">
+<div class="space-y-2">
+<span class="font-label-md text-label-md uppercase tracking-widest text-cedar-gold">Historic Cantonment</span>
+<h2 class="font-headline-md text-headline-md text-slate-charcoal">
+            Trails &amp; Sacred Landmarks
+          </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Steps away from vintage 19th-century church spires, storied tea bakeries, and high ridge walks shrouded in Himalayan mist.
+        </p>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="p-6 bg-linen-subtle rounded-xl flex flex-col justify-between space-y-4">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-cedar-gold text-[28px]">storefront</span>
+<span class="font-label-sm text-label-sm font-mono text-pine-deep">200 Meters</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-slate-charcoal">Historic Char Dukan</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Legendary tea stall, waffles, and alpine stories since 1860.</p>
+</div>
+</div>
+<div class="p-6 bg-linen-subtle rounded-xl flex flex-col justify-between space-y-4">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-cedar-gold text-[28px]">church</span>
+<span class="font-label-sm text-label-sm font-mono text-pine-deep">350 Meters</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-slate-charcoal">St. Paul's Church</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Anglican sanctuary consecrated in 1840 under tall cedar canopies.</p>
+</div>
+</div>
+<div class="p-6 bg-linen-subtle rounded-xl flex flex-col justify-between space-y-4">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-cedar-gold text-[28px]">landscape</span>
+<span class="font-label-sm text-label-sm font-mono text-pine-deep">800 Meters</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-slate-charcoal">Lal Tibba Ridge</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Highest peak in Landour with panoramic telescope views of Kedarnath.</p>
+</div>
+</div>
+<div class="p-6 bg-linen-subtle rounded-xl flex flex-col justify-between space-y-4">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-cedar-gold text-[28px]">local_mall</span>
+<span class="font-label-sm text-label-sm font-mono text-pine-deep">1.2 Kilometers</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-slate-charcoal">Sister's Bazaar</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Prakash peanut butter, handmade cheeses, and pine-cone scented crafts.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript for micro-interactions & package select -->
+<script>
+    function selectPackage(packageName) {
+      const form = document.getElementById('wellness-form');
+      const waitlistSection = document.getElementById('waitlist');
+      const selector = document.getElementById('package-selector');
+
+      if (packageName.includes('5 Days')) {
+        selector.value = '5-days';
+      } else if (packageName.includes('21 Days')) {
+        selector.value = '21-days';
+      } else if (packageName.includes('3 Days')) {
+        selector.value = '3-days';
+      } else {
+        selector.value = 'custom';
+      }
+
+      waitlistSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleWaitlistSubmit(event) {
+      event.preventDefault();
+      const feedback = document.getElementById('form-feedback');
+      const btn = document.getElementById('submit-waitlist-btn');
+
+      btn.disabled = true;
+      btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span><span>Securing Priority Access...</span>';
+
+      setTimeout(() => {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span><span>Waitlist Reserved</span>';
+        btn.classList.add('bg-cedar-gold', 'text-on-secondary-fixed');
+        feedback.innerText = 'Namaste. Your priority allocation has been acknowledged. Our Himalayan sanctuary host will connect personally with preview dates.';
+        feedback.classList.remove('hidden');
+      }, 900);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const audioBtn = document.getElementById('audio-preview-btn');
+      const playIcon = document.getElementById('play-icon');
+      const playbackBar = document.getElementById('playback-bar');
+      let isPlaying = false;
+
+      if (audioBtn) {
+        audioBtn.addEventListener('click', () => {
+          isPlaying = !isPlaying;
+          if (isPlaying) {
+            playIcon.textContent = 'pause';
+            playbackBar.classList.remove('w-2/5');
+            playbackBar.classList.add('w-4/5');
+          } else {
+            playIcon.textContent = 'play_arrow';
+            playbackBar.classList.remove('w-4/5');
+            playbackBar.classList.add('w-2/5');
+          }
+        });
+      }
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface pt-16 pb-12 mt-20"><div class="max-w-[1320px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12"><div class="lg:col-span-2 flex flex-col gap-4"><div class="flex items-center gap-3"><img alt="Image from https://lightoflandour.com/wp-content/uploads/2020/08/light-of-landour-logo-3.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XQzYiqt0Yqab9JRWvFRsn6Dg7pirdLB49SJfx4eeIH2KkleDWLsS2M5Xzw_PBd3CD3_FTuYEOfukpbSm4jON5CEb4fmbuvs2fEa7lJfIVUXvctZBTqMn1NsKuSkqpbx1TNykXowA7dx6RLl57q1WGwMOKC2td_p2XX49htzsqs8-vMlarUBnX5PwLQobjoEosJOEOcaa1A9fCcpwbHdQcHmgsziYN57NOHACWieZgjv7scyssCHZtFOnk8"><span class="font-headline-sm text-headline-sm text-primary">Light of Landour</span></div><p class="text-body-sm font-body-sm text-on-surface-variant max-w-md">An alpine sanctuary nestled high amidst deodar forests in Landour, Mussoorie. A space for deceleration, curated Himalayan living, contemplative literature, and restorative wellness overlooking the Doon Valley.</p><div class="flex flex-col gap-1.5 text-body-sm font-body-sm text-on-surface-variant mt-2"><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">near_me</span>Char Dukan, Upper Mall, Landour, Mussoorie, Uttarakhand 248179</span><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">call</span>+91-9068555303</span><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">mail</span>namaste@lightoflandour.com</span></div></div><div class="flex flex-col gap-3"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">Sanctuary</span><div class="flex flex-col gap-2"><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="accommodation" href="#">Mudra, Chakra &amp; Element Rooms</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="dining" href="#">Glass Box Cafe &amp; LOL Bakery</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="experiences-and-wellness" href="#">Forest Walks &amp; Meditation</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="packages" href="#">Curated Stay Packages</a></div></div><div class="flex flex-col gap-3"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">Guest Information</span><div class="flex flex-col gap-2"><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="location" href="#">Location &amp; Himalayan Reach</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="stay-policies" href="#">Stay &amp; Silence Policies</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservation" href="#">Reservation Guide</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="cancellation-terms" href="#">Cancellation Terms</a></div></div><div class="flex flex-col gap-4"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">The Landour Dispatch</span><p class="text-body-sm font-body-sm text-on-surface-variant">Receive seasonal notes on Himalayan blooms, winter lines, and private retreat offerings.</p><form class="flex flex-col gap-2"><input class="px-3 py-2 text-body-sm font-body-sm bg-surface-container text-on-surface rounded-lg focus:outline-none placeholder:text-outline" placeholder="Your email address" type="email"><button class="px-4 py-2 bg-primary text-on-primary text-label-sm font-label-sm uppercase tracking-wider rounded-lg hover:bg-pine-muted hover:text-on-primary transition-colors" type="button">Subscribe</button></form></div></div><div class="max-w-[1320px] mx-auto px-6 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-on-surface-variant"><p>© 2025 Light of Landour. All rights reserved. Nestled in the Garhwal Himalayas.</p><div class="flex items-center gap-6"><a class="hover:text-on-surface transition-colors" data-path="stay-policies" href="#">Guest Protocol</a><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy</a><a class="hover:text-on-surface transition-colors" data-path="location" href="#">Arrival</a></div></div></footer></body></html>

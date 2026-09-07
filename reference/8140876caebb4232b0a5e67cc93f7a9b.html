@@ -1,0 +1,827 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed": "#251a00",
+          "inverse-surface": "#30312e",
+          "primary-fixed-dim": "#abcfb8",
+          "surface-container": "#efeeea",
+          "on-tertiary-fixed-variant": "#43474b",
+          "surface-bright": "#fbf9f5",
+          "linen-border": "#E5DED5",
+          "on-surface": "#1b1c1a",
+          "surface-tint": "#456553",
+          "on-secondary-container": "#735700",
+          "surface-variant": "#e4e2de",
+          "on-error": "#ffffff",
+          "secondary-fixed-dim": "#eec14b",
+          "linen-base": "#FBF9F5",
+          "on-tertiary-container": "#9a9da1",
+          "on-secondary-fixed-variant": "#5a4300",
+          "surface-container-high": "#eae8e4",
+          "on-error-container": "#93000a",
+          "primary-container": "#1b3b2b",
+          "tertiary-container": "#313538",
+          "on-primary": "#ffffff",
+          "error": "#ba1a1a",
+          "surface-container-low": "#f5f3ef",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed-variant": "#2d4d3c",
+          "tertiary-fixed": "#e0e3e7",
+          "linen-subtle": "#F4EFEA",
+          "on-surface-variant": "#424843",
+          "primary": "#032517",
+          "surface-container-highest": "#e4e2de",
+          "surface-container-lowest": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "background": "#fbf9f5",
+          "pine-deep": "#1B3B2B",
+          "on-tertiary-fixed": "#181c1f",
+          "mist-silver": "#8C928E",
+          "inverse-primary": "#abcfb8",
+          "on-primary-container": "#83a590",
+          "surface-dim": "#dbdad6",
+          "pine-muted": "#2C4C3A",
+          "slate-charcoal": "#161A1D",
+          "secondary-container": "#fece57",
+          "on-primary-fixed": "#002113",
+          "cedar-gold": "#C59B27",
+          "amber-gold-bright": "#D4AF37",
+          "tertiary": "#1c2023",
+          "surface": "#fbf9f5",
+          "inverse-on-surface": "#f2f0ed",
+          "outline": "#727973",
+          "tertiary-fixed-dim": "#c4c7cb",
+          "outline-variant": "#c1c8c2",
+          "primary-fixed": "#c7ebd4",
+          "secondary": "#775a00",
+          "secondary-fixed": "#ffdf98",
+          "on-background": "#1b1c1a",
+          "error-container": "#ffdad6"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-sm": "0.75rem",
+          "space-xs": "0.5rem",
+          "space-4xl": "6rem",
+          "space-3xl": "4.5rem",
+          "space-lg": "1.5rem",
+          "gutter-desktop": "2rem",
+          "space-2xl": "3rem",
+          "space-2xs": "0.25rem",
+          "gutter-tablet": "1.5rem",
+          "space-md": "1rem",
+          "gutter-mobile": "1rem",
+          "container-max": "1320px",
+          "space-xl": "2rem",
+          "space-5xl": "8rem"
+        },
+        "fontFamily": {
+          "headline-md-mobile": [
+            "EB Garamond"
+          ],
+          "headline-md": [
+            "EB Garamond"
+          ],
+          "headline-lg-mobile": [
+            "EB Garamond"
+          ],
+          "title-md": [
+            "Manrope"
+          ],
+          "title-lg": [
+            "Manrope"
+          ],
+          "body-sm": [
+            "Manrope"
+          ],
+          "display-mobile": [
+            "EB Garamond"
+          ],
+          "headline-lg": [
+            "EB Garamond"
+          ],
+          "body-lg": [
+            "EB Garamond"
+          ],
+          "body-md": [
+            "Manrope"
+          ],
+          "display": [
+            "EB Garamond"
+          ],
+          "label-lg": [
+            "Manrope"
+          ],
+          "label-md": [
+            "Manrope"
+          ],
+          "label-sm": [
+            "Manrope"
+          ],
+          "headline-sm": [
+            "EB Garamond"
+          ]
+        },
+        "fontSize": {
+          "headline-md-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "30px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-lg": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-mobile": [
+            "38px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "20px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "display": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.12em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.16em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.2em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      }
+    }
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 inset-x-0 z-50"><div class="bg-primary-container text-on-primary-container text-label-sm font-label-sm uppercase tracking-wider py-2 px-6"><div class="max-w-[1320px] mx-auto flex flex-wrap items-center justify-between gap-4"> <div class="flex flex-wrap items-center gap-6"><span class="flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">call</span>+91-9068555303</span><span class="hidden sm:flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">mail</span>namaste@lightoflandour.com</span><span class="hidden md:flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">location_on</span>Char Dukan, Landour, Mussoorie</span></div><div class="flex items-center gap-4 text-on-primary-container"><span class="hidden lg:inline text-label-sm font-label-sm text-cedar-gold">Sanctuary Elevation: 7,500 FT</span><div class="flex items-center gap-3"><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">photo_camera</span></a><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">travel_explore</span></a><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">share</span></a></div></div></div></div><div class="bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1320px] mx-auto px-6 flex items-center justify-between gap-6"><div class="flex items-center gap-3"><img alt="Image from https://lightoflandour.com/wp-content/uploads/2020/08/light-of-landour-logo-3.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XQzYiqt0Yqab9JRWvFRsn6Dg7pirdLB49SJfx4eeIH2KkleDWLsS2M5Xzw_PBd3CD3_FTuYEOfukpbSm4jON5CEb4fmbuvs2fEa7lJfIVUXvctZBTqMn1NsKuSkqpbx1TNykXowA7dx6RLl57q1WGwMOKC2td_p2XX49htzsqs8-vMlarUBnX5PwLQobjoEosJOEOcaa1A9fCcpwbHdQcHmgsziYN57NOHACWieZgjv7scyssCHZtFOnk8"><span class="font-headline-sm text-headline-sm text-primary tracking-normal">Light of Landour</span></div><nav class="hidden xl:flex items-center gap-1" data-active-classes="bg-primary-container text-on-primary rounded-lg"><a aria-current="page" class="px-3 py-1.5 font-label-lg transition-colors bg-primary-container text-on-primary rounded-lg" data-path="home" href="#">Home</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="accommodation" href="#">Accommodation</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="dining" href="#">Dining</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="experiences-and-wellness" href="#">Experiences &amp; Wellness</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="packages" href="#">Packages</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="location" href="#">Location</a></nav><div class="flex items-center gap-4"><a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-wider rounded-lg hover:bg-pine-muted hover:text-on-primary transition-all" data-path="reservation" href="#">Book Your Stay</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- TOP HERO SHOWCASE -->
+<section class="relative w-full overflow-hidden bg-pine-deep text-on-primary -mt-28 pt-36 pb-20 md:pb-28">
+<div class="absolute inset-0 opacity-25 mix-blend-luminosity pointer-events-none">
+<div class="w-full h-full bg-cover bg-center" data-alt="Expansive panoramic view of high alpine Himalayan peaks surrounded by lush pine trees and morning mist in Landour at sunrise with deep pine green tones and cedar gold lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNXut91JUPA3wNE2A0yt48XcMTATwAe2KnYBh4lNt1T0AfQVABcKaEUpsVFJMRBpPa-WLMS5dC8DrK1hiptLTJcoW_ISuY4F9iJkfKJFo7Ww_OA45g-ZgX48I6gjtqMKbOcoGnE5uq2nyiZWL4VxsKK9uopffpo9M5WgwvBgexLWi8yrrqSb3k6b398sxGp0WnE_yXsTejUnrfMKOW1epdsYbsHqaI7lU4ywsze3PaqqFqYo5qqYcN-g')"></div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-pine-deep/95 to-pine-deep"></div>
+<div class="relative max-w-[1320px] mx-auto px-6 flex flex-col gap-10">
+<!-- Breadcrumb & Elevation Tag -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-surface-container-highest/10 backdrop-blur-md border-0 text-cedar-gold">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">landscape</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest">7,500 FT Elevation • Mountain Gastronomy • Panoramic Doon Ridge</span>
+</div>
+<div class="flex items-center gap-3 text-mist-silver font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-cedar-gold animate-pulse"></span> Kitchens Open Daily</span>
+<span class="text-mist-silver/40">•</span>
+<span>Char Dukan Ridge, Mussoorie</span>
+</div>
+</div>
+<!-- Hero Typography & Photo Grid Overlap -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="overflow-hidden">
+<span class="inline-block text-cedar-gold font-label-md text-label-md uppercase tracking-[0.2em] transform transition-transform duration-700">Light of Landour Dining Sanctuary</span>
+<h1 class="font-display text-display text-on-primary leading-tight mt-1">
+              YOUR SMILE... <br><span class="italic font-normal text-amber-gold-bright">OUR HAPPINESS</span>
+</h1>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary-fixed-dim leading-relaxed">
+            Indulge in a culinary experience that nourishes not just your body but also your soul.
+          </p>
+<p class="font-body-md text-body-md text-on-primary-container leading-relaxed max-w-xl">
+            We believe that good food nourishes the soul, brings deep satisfaction, and creates lasting memories. We believe that food has the power to bring people together, foster a sense of belonging, and create lasting memories. Tucked away in the breathtaking Himalayan mountains, our dining spaces are designed to complement the natural environment. Rustic dining tables and gentle lighting create an ambiance that perfectly harmonises with the gorgeous surroundings. At our resort, we aim to make you not only see and feel but also taste the Himalayas.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center gap-2 px-7 py-3.5 bg-cedar-gold text-slate-charcoal font-label-md text-label-md uppercase tracking-wider rounded-lg shadow-lg hover:bg-secondary-fixed transition-all" href="#reserve-table">
+<span>Reserve a Table</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-7 py-3.5 bg-surface-container-highest/20 text-linen-base font-label-md text-label-md uppercase tracking-wider rounded-lg backdrop-blur-md hover:bg-surface-container-highest/30 transition-all" href="#curated-menu">
+<span>Explore Menu</span>
+<span class="material-symbols-outlined text-[16px]">restaurant_menu</span>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-3.5 text-cedar-gold font-label-md text-label-md uppercase tracking-wider hover:text-secondary-fixed transition-colors" href="#juliet-balcony">
+<span>Experience Juliet's Balcony</span>
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</a>
+</div>
+</div>
+<!-- Featured Conservatory Image from Prompt Reference -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-xl overflow-hidden shadow-2xl bg-tertiary-container group">
+<div class="w-full h-[460px] bg-cover bg-center transform group-hover:scale-105 transition-transform duration-1000" data-alt="A spectacular floor to ceiling transparent glass house conservatory cafe perched on a rugged stone mountain terrace in Landour Mussoorie at sunset, happy patrons seated at rustic timber tables enjoying artisan food with the dramatic Himalayan pine forest and cloudy mountains glowing in warm golden amber dusk light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmm_GthrtENYeoQfhrtEeTIVqHTaiuLkx-zNgjbDcuPEmH_UzYISUDLwl7g1YWaCxnrV0UVcpro-QPDOqDTbeUYa_ihuLDbw_0aidhP-8vEGpsIxmxSOus3ZRpccVDYUaBjT6xUVCXOlb5p0j9p_Gcs65iS9JeXI2Sv0cERI4TzGAZ8UPUwRHzc9Q22ndGa6g2N97xTibJ0qkvN8Kg32qqE10xj9s_fUCht-ymi_gsePXpjOtooqt4Xg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-charcoal/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+<div>
+<span class="text-cedar-gold font-label-sm text-label-sm uppercase tracking-widest block">Signature Conservatory</span>
+<span class="font-headline-sm text-headline-sm text-on-primary">The Glass House of LOL</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-linen-base font-label-sm text-label-sm">Open 07:30 – 22:30</span>
+</div>
+</div>
+<!-- Overlapping Mini Badge -->
+<div class="absolute -bottom-6 -left-6 bg-linen-base text-slate-charcoal p-5 rounded-xl shadow-xl hidden sm:flex items-center gap-4 max-w-xs">
+<div class="w-10 h-10 rounded-full bg-pine-deep text-cedar-gold flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_cafe</span>
+</div>
+<div>
+<p class="font-title-md text-title-md leading-tight text-primary">LOL Artisan Bakery</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Warm apple tarts, mountain honey, single-estate roast</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Metric Badges Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
+<div class="bg-surface-container-highest/10 backdrop-blur-md rounded-xl p-5 flex flex-col gap-1.5 hover:bg-surface-container-highest/15 transition-all">
+<div class="flex items-center gap-2 text-cedar-gold">
+<span class="material-symbols-outlined text-[20px]">window</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Atmosphere</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-primary">Glass Conservatory</span>
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">Open sky glass ceiling &amp; stone warmth</span>
+</div>
+<div class="bg-surface-container-highest/10 backdrop-blur-md rounded-xl p-5 flex flex-col gap-1.5 hover:bg-surface-container-highest/15 transition-all">
+<div class="flex items-center gap-2 text-cedar-gold">
+<span class="material-symbols-outlined text-[20px]">height</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Peak Elevation</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-primary">7,500 FT Above</span>
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">Overlooking Doon valley clouds</span>
+</div>
+<div class="bg-surface-container-highest/10 backdrop-blur-md rounded-xl p-5 flex flex-col gap-1.5 hover:bg-surface-container-highest/15 transition-all">
+<div class="flex items-center gap-2 text-cedar-gold">
+<span class="material-symbols-outlined text-[20px]">eco</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Provenance</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-primary">Farm to Mountain</span>
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">Locally harvested organic Himalayan greens</span>
+</div>
+<div class="bg-surface-container-highest/10 backdrop-blur-md rounded-xl p-5 flex flex-col gap-1.5 hover:bg-surface-container-highest/15 transition-all">
+<div class="flex items-center gap-2 text-cedar-gold">
+<span class="material-symbols-outlined text-[20px]">hotel_class</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Signature Vantage</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-primary">Juliet's Balcony</span>
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">Intimate candlelit ridge dining</span>
+</div>
+</div>
+</div>
+</section>
+<!-- THREE SIGNATURE DINING VENUES -->
+<section class="w-full bg-surface py-24">
+<div class="max-w-[1320px] mx-auto px-6 flex flex-col gap-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-[0.2em] block mb-2">Architectural Spaces of Light &amp; Wood</span>
+<h2 class="font-display text-display text-primary leading-tight">Three Sacred Dining Sanctuaries</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-3">Each space is sculpted to celebrate a distinct altitude, light quality, and mood across the Landour ridge.</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Reservations Recommended For Sunset Dining</span>
+</div>
+</div>
+<!-- Venue 1: The Glass House of LOL -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 bg-linen-subtle rounded-xl p-8 lg:p-12 items-center shadow-md">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded bg-pine-deep text-linen-base font-label-sm text-label-sm uppercase tracking-widest">Venue 01</span>
+<span class="text-cedar-gold font-label-sm text-label-sm uppercase tracking-wider">Glass Conservatory Sanctuary</span>
+</div>
+<h3 class="font-display text-headline-lg text-primary">The Glass House of LOL</h3>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+            Experience the enchanting dance of sunlight in the morning and the mesmerizing twinkle of stars at night through our open glass ceiling. Step into this unique dining venue and embark on a culinary journey that celebrates the beauty of nature, the bliss of being in the mountains, and the sheer joy of indulging in food that nourishes your body, mind, and soul.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Immerse yourself in the breathtaking surroundings as you savour a delectable meal within the embrace of nature. The Glass House offers a captivating dining experience where the boundaries between indoors and outdoors blur, allowing you to connect with Nature.
+          </p>
+<div class="grid grid-cols-3 gap-4 pt-4">
+<div class="p-3 bg-surface rounded-lg">
+<span class="text-primary font-title-md text-title-md block">Panoramic</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">360° Forest Views</span>
+</div>
+<div class="p-3 bg-surface rounded-lg">
+<span class="text-primary font-title-md text-title-md block">Seating</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Indoor Deodar Timber</span>
+</div>
+<div class="p-3 bg-surface rounded-lg">
+<span class="text-primary font-title-md text-title-md block">Hours</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Breakfast to Dinner</span>
+</div>
+</div>
+<div class="pt-2">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-primary hover:text-cedar-gold transition-colors" href="#reserve-table">
+<span>Book Table in Glass House</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="relative rounded-xl overflow-hidden shadow-xl group">
+<div class="w-full h-[400px] bg-cover bg-center transform group-hover:scale-105 transition-transform duration-700" data-alt="Close up table setting inside a rustic Himalayan glass house restaurant looking out at mountain layers and fog with wooden table filled with fresh breakfast avocado toast, berries, artisan bakery croissants, and fresh juice in warm mountain morning light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6XoNEPEFmJGxHccKwxXV6mGPZqV3VgcDfT8dpTJMFZzhjhJHqmTYkrh1HWa_aKxj3r3Ctj93rHmY5xl21IFFF6aI0lqr64JmnzQOf-Y-S877RrfAuO9zyH_akep0juDroM-sHWm6uWPEvHfUSpObDnqYC1OnaDcdcqX6c6QqX8xG9LaCVsd92OOOZpBtXm4nWKv5ZBKFvJkrLtlnSxJB8bVQbiY6sPkf_rXb8neTkqNl3Y3Sbj1krng')"></div>
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md rounded-lg p-3.5 flex items-center justify-between">
+<div>
+<span class="font-title-md text-title-md text-primary block">Breakfast at 7,500 FT</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Served fresh from 07:30 to 11:00 AM</span>
+</div>
+<span class="material-symbols-outlined text-cedar-gold">sunny</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Venue 2: Juliet's Balcony -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 bg-surface-container-high rounded-xl p-8 lg:p-12 items-center shadow-md" id="juliet-balcony">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<div class="relative rounded-xl overflow-hidden shadow-xl group">
+<div class="w-full h-[420px] bg-cover bg-center transform group-hover:scale-105 transition-transform duration-700" data-alt="Romantic intimate couple having candlelit dinner on an ornate iron and stone mountain balcony at dusk overlooking the twinkling distant lights of Dehradun valley and snow peaked Himalayan mountains under starry night sky with wine glasses and warm glowing candles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsqb32t6RzktgvwE7IymnXMCGnPBE3BvEqanY31076CMlbrjzUToyFYCL5dtlfxjyuABanX22R1QBMhq-ethAm1hcCFfWi76NXMF7dM3xOJoGHcWyTEx8aUPD8cwsz-kOohlPX24rSNYplRoGDFdUm9a8Ydvh5wAceuehi5tV66shWpC5PB2-9toVUWLdUIHAexx_GD1wDLtSvirnmepAUfPNEAp1tMtmW1g9ffbqPzIOy12x3XtALCQ')"></div>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-widest">
+              Private Dining Exclusive
+            </div>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded bg-cedar-gold text-on-secondary font-label-sm text-label-sm uppercase tracking-widest">Venue 02</span>
+<span class="text-pine-deep font-label-sm text-label-sm uppercase tracking-wider">Highest Elevation Vantage</span>
+</div>
+<h3 class="font-display text-headline-lg text-primary">JULIET'S BALCONY — The Pinnacle of Landour</h3>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+            This is the highest point in the Property. From this vantage point there is a next level connect with the beauty and vibe of Landour. We also provide special candle light dinners in this space for those who wish a more romantic experience, overlooking the glittering valley lights of Dehradun and the celestial Himalayan starlight.
+          </p>
+<div class="bg-surface/80 rounded-xl p-5 flex flex-col gap-2">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="font-title-md text-title-md text-primary">Private Starlit Romance Experience</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Includes bespoke 5-course chef’s degustation, curated Himalayan winter flowers, private acoustic serenade upon request, and artisan fireside wine pairings.
+            </p>
+</div>
+<div class="pt-2">
+<a class="inline-flex items-center gap-2 px-6 py-3 bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-wider rounded-lg hover:bg-pine-muted transition-all" href="#reserve-table">
+<span>Inquire For Candlelight Reservation</span>
+<span class="material-symbols-outlined text-[16px]">nightlight</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Venue 3: Cafe De Landour & LOL Bakery -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 bg-linen-subtle rounded-xl p-8 lg:p-12 items-center shadow-md">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded bg-pine-deep text-linen-base font-label-sm text-label-sm uppercase tracking-widest">Venue 03</span>
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-wider">The Famous Magical Happy Cafe</span>
+</div>
+<h3 class="font-display text-headline-lg text-primary">Cafe De Landour &amp; LOL Bakery</h3>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+            The famous Magical Happy Cafe, where you can indulge in a truly enchanting dining experience with a spellbinding view. Prepare yourself for great times, create lasting memories, and savor delicious food that will delight your taste buds.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Immerse yourself in the soulful ambiance enhanced by live music, fresh bakery treats from LOL Bakery, artisan roasted coffees, and witness breathtaking sunsets that will leave you in awe. Come and experience a dining adventure like no other, where every moment is filled with magic and wonder.
+          </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-3 py-1 rounded-full bg-surface text-primary font-label-sm text-label-sm">Wood-Fired Pizzas</span>
+<span class="px-3 py-1 rounded-full bg-surface text-primary font-label-sm text-label-sm">Artisan Sourdough</span>
+<span class="px-3 py-1 rounded-full bg-surface text-primary font-label-sm text-label-sm">Himalayan Spiced Bakes</span>
+<span class="px-3 py-1 rounded-full bg-surface text-primary font-label-sm text-label-sm">Sunset Live Sessions</span>
+<span class="px-3 py-1 rounded-full bg-surface text-primary font-label-sm text-label-sm">Pour-Over Bar</span>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="relative rounded-xl overflow-hidden shadow-xl group">
+<div class="w-full h-[380px] bg-cover bg-center transform group-hover:scale-105 transition-transform duration-700" data-alt="Warm cozy alpine bakery cafe counter with freshly baked golden croissants, cinnamon rolls, handmade cookies under brass pendant lamps with a barista preparing pour-over coffee overlooking foggy pine hills" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3mZ6RFSj-k36YcdLMdA853rgFhsiKaeTCQy36UloFpHRFlZW23B1Q9ggX63OOxfWOCj1CVjp1SaS6YQvBndcsitttDPBgTr2AzZXE24GPo0cgnESs7VcmtowKSoTA50pVu5N0aIw6UkbL4-PyS0yjW0MlutBsgdUXrjiR0ZcEA53q47rz4y8rpKufk2OCQHtsOhm069gsyX9MWXOqnSXuOft5ZDkwcZ5ri3uH5VB0ZHIp63uh9M_0sA')"></div>
+<div class="absolute bottom-4 left-4 right-4 bg-primary/95 text-on-primary rounded-lg p-4 flex items-center justify-between">
+<div>
+<span class="font-title-md text-title-md text-amber-gold-bright block">LOL Artisan Bakery</span>
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">Fresh loaves out of the oven every 8:00 AM</span>
+</div>
+<span class="material-symbols-outlined text-[24px] text-cedar-gold">bakery_dining</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CINEMATIC AUDIO-VISUAL DINING TOUR -->
+<section class="w-full bg-slate-charcoal text-linen-base py-20 relative overflow-hidden">
+<div class="max-w-[1320px] mx-auto px-6 flex flex-col gap-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-cedar-gold font-label-md text-label-md uppercase tracking-[0.2em] block mb-2">Sensory Immersion</span>
+<h2 class="font-display text-display text-on-primary leading-tight">The Taste of Solitude</h2>
+<p class="font-body-lg text-body-lg text-tertiary-fixed-dim mt-2">Audio-Visual Culinary Experience high in the Garhwal deodar canopy.</p>
+</div>
+<div class="flex items-center gap-4 bg-tertiary-container/80 px-4 py-2 rounded-lg">
+<span class="material-symbols-outlined text-cedar-gold">graphic_eq</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-linen-base">4K HDR • Pine Forest Acoustics &amp; Morning Mist</span>
+</div>
+</div>
+<!-- Player Frame -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-tertiary-container group">
+<div class="w-full h-[480px] bg-cover bg-center" data-alt="Cinematic wide view of the Glass Box Cafe during a crisp mountain morning with gentle sun rays piercing through towering deodar trees and light mist surrounding the glass architectural dining pavilion in Landour" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgDU7EFQh64DP8euwlPBm4AhBK5ZtpDfBY-wCCy0BTKFBOENjk5q82CrGCIGXbC_62xpd_OEYYssvTzWNsVFjpgwa4lfVF40BWX9RNog_nLaP4VZIYP9yYKD057EY3hPvP-dhKdtE0SL-N3uxDd-EaukUsbzNm5h8mrPTcq0qPt1HxJFEuMEUjfErEhOwtyYfRgtqfWYO9goWcTSK8Hu_vdpjXL5FINfGMaxg7x9JxzxAnCxoxJChZXg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-charcoal via-slate-charcoal/30 to-transparent"></div>
+<!-- Center Play Trigger -->
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="w-20 h-20 rounded-full bg-cedar-gold text-slate-charcoal flex items-center justify-center shadow-2xl hover:scale-110 transition-transform" type="button">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<!-- Bottom Media Controls Bar -->
+<div class="absolute bottom-0 inset-x-0 p-6 flex flex-col gap-3 bg-gradient-to-t from-slate-charcoal to-transparent">
+<div class="w-full h-1 bg-tertiary-container rounded-full overflow-hidden">
+<div class="w-1/3 h-full bg-cedar-gold"></div>
+</div>
+<div class="flex items-center justify-between text-tertiary-fixed-dim font-label-sm text-label-sm">
+<div class="flex items-center gap-3">
+<span class="text-on-primary font-title-md text-title-md">Morning Breakfast &amp; Birdsong at the Glasshouse Conservatory</span>
+<span class="px-2 py-0.5 rounded bg-tertiary text-cedar-gold">01:48 / 03:30</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim hover:text-on-primary cursor-pointer">volume_up</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim hover:text-on-primary cursor-pointer">fullscreen</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CURATED HIMALAYAN MENU HIGHLIGHTS -->
+<section class="w-full bg-surface-bright py-24" id="curated-menu">
+<div class="max-w-[1320px] mx-auto px-6 flex flex-col gap-14">
+<div class="text-center max-w-3xl mx-auto flex flex-col gap-3">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-[0.2em]">Gastronomic Provenance</span>
+<h2 class="font-display text-display text-primary leading-tight">Curated Himalayan Menu Highlights</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Crafted from seasonal wild botanicals, terrace-grown mountain pulses, ancient millets, and time-honored Garhwali spice lore.
+        </p>
+</div>
+<!-- Menu Category Tabs -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-linen-subtle rounded-xl p-6 flex flex-col justify-between gap-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">downloading</span>
+</div>
+<div>
+<span class="text-cedar-gold font-label-sm text-label-sm uppercase tracking-widest block">Dawn to Midday</span>
+<h3 class="font-display text-headline-sm text-primary mt-1">Artisanal Morning &amp; LOL Bakery</h3>
+</div>
+<ul class="flex flex-col gap-3.5 pt-2">
+<li class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Landour Wild Apple Tart</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Flaky puff pastry, local organic cinnamon, churned butter</span>
+</li>
+<li class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Mountain Honey Pancakes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">High-altitude multifloral honey, wild berries, whipped cream</span>
+</li>
+<li class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Hand-Poured Estate Roasts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Single-origin Chikmagalur beans roasted for Himalayan air</span>
+</li>
+</ul>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Served Daily 07:30 – 11:30</span>
+</div>
+<!-- Card 2 -->
+<div class="bg-linen-subtle rounded-xl p-6 flex flex-col justify-between gap-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">ramen_dining</span>
+</div>
+<div>
+<span class="text-cedar-gold font-label-sm text-label-sm uppercase tracking-widest block">Soul Nourishment</span>
+<h3 class="font-display text-headline-sm text-primary mt-1">Himalayan Soul Bowls</h3>
+</div>
+<ul class="flex flex-col gap-3.5 pt-2">
+<li class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Slow-Simmered Pahadi Dal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Black soybean, jakhiya seed tempering, Himalayan ghee</span>
+</li>
+<li class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Forest Nettle &amp; Garlic Broth</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Wild-foraged bichhu buti, crushed garlic, warm barley crisps</span>
+</li>
+<li class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Organic Red Rice &amp; Morel Bowl</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Garhwal mountain red rice, foraged gucchi mushrooms</span>
+</li>
+</ul>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Available for Lunch &amp; Dinner</span>
+</div>
+<!-- Card 3 -->
+<div class="bg-linen-subtle rounded-xl p-6 flex flex-col justify-between gap-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">local_bar</span>
+</div>
+<div>
+<span class="text-cedar-gold font-label-sm text-label-sm uppercase tracking-widest block">Restorative Elixirs</span>
+<h3 class="font-display text-headline-sm text-primary mt-1">Mountain Sips &amp; Tonics</h3>
+</div>
+<ul class="flex flex-col gap-3.5 pt-2">
+<li class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Buransh Rhododendron Cooler</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hand-pressed spring rhododendron flower petals &amp; Himalayan rock salt</span>
+</li>
+<li class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Char Dukan Spiced Kahwa</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Green tea leaves, Kashmiri saffron, slivered almonds, cinnamon</span>
+</li>
+<li class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Wild Mint &amp; Ginger Spritzer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fresh-crushed hill mint, ginger root, sparkling spring water</span>
+</li>
+</ul>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">All-Day Wellness Bar</span>
+</div>
+<!-- Card 4 -->
+<div class="bg-linen-subtle rounded-xl p-6 flex flex-col justify-between gap-6 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">tapas</span>
+</div>
+<div>
+<span class="text-cedar-gold font-label-sm text-label-sm uppercase tracking-widest block">Dusk &amp; Fireside</span>
+<h3 class="font-display text-headline-sm text-primary mt-1">Twilight &amp; Sunset Tapas</h3>
+</div>
+<ul class="flex flex-col gap-3.5 pt-2">
+<li class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Char Dukan Cheese Platter</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Artisanal goat curd, smoked gouda, local walnuts &amp; dried figs</span>
+</li>
+<li class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Cedar-Smoked Flatbreads</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Oven-baked with Himalayan wild thyme, roasted garlic &amp; olive drizzle</span>
+</li>
+<li class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Alpine Herb Roasts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Slow-braised winter root vegetables and tender mountain cuts</span>
+</li>
+</ul>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Evenings 16:30 – 22:30</span>
+</div>
+</div>
+</div>
+</section>
+<!-- TABLE RESERVATION & SPECIAL OCCASION INQUIRY -->
+<section class="w-full bg-primary-container text-on-primary py-24 relative" id="reserve-table">
+<div class="max-w-[1320px] mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left: Sanctuary Guarantee & Context -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<span class="text-cedar-gold font-label-md text-label-md uppercase tracking-[0.2em]">Sanctuary Bookings</span>
+<h2 class="font-display text-display text-on-primary leading-tight">Reserve Your Himalayan Table</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim leading-relaxed">
+            Whether welcoming dawn through the Glass Conservatory, gathering around Cafe De Landour’s acoustic hearth, or seeking an intimate candlelight evening atop Juliet’s Balcony, each seating is paced with quiet contemplation.
+          </p>
+<div class="flex flex-col gap-4 mt-2">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-cedar-gold mt-1">done_all</span>
+<div>
+<span class="font-title-md text-title-md text-on-primary block">Complimentary Table Stargazing Setup</span>
+<span class="font-body-sm text-body-sm text-on-primary-container">Brass celestial telescope available for outdoor diners on clear nights.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-cedar-gold mt-1">schedule</span>
+<div>
+<span class="font-title-md text-title-md text-on-primary block">Private Silence &amp; Mountain Acoustic Window</span>
+<span class="font-body-sm text-body-sm text-on-primary-container">We strictly preserve the acoustic calm of our mountain ridge.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-cedar-gold mt-1">call</span>
+<div>
+<span class="font-title-md text-title-md text-on-primary block">Direct Sanctuary Concierge</span>
+<span class="font-body-sm text-body-sm text-on-primary-container">+91-9068555303 • namaste@lightoflandour.com</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Inquiry Form -->
+<div class="lg:col-span-7 bg-surface text-on-surface rounded-2xl p-8 lg:p-10 shadow-2xl">
+<form class="grid grid-cols-1 sm:grid-cols-2 gap-5" onsubmit="event.preventDefault(); alert('Namaste. Your sanctuary dining reservation request has been received. Our concierge will confirm availability shortly.');">
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Full Name <span class="text-cedar-gold">*</span></label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container text-body-md font-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest" placeholder="Lady or Sir's name" required="" type="text">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Email Address <span class="text-cedar-gold">*</span></label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container text-body-md font-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest" placeholder="contact@domain.com" required="" type="email">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Phone Number <span class="text-cedar-gold">*</span></label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container text-body-md font-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest" placeholder="+91 98765 43210" required="" type="tel">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Preferred Date &amp; Time <span class="text-cedar-gold">*</span></label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container text-body-md font-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest" placeholder="e.g. 15 Oct, 19:30" required="" type="text">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Select Venue <span class="text-cedar-gold">*</span></label>
+<select class="w-full px-4 py-3 rounded-lg bg-surface-container text-body-md font-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest" required="">
+<option value="glass-house">The Glass House of LOL</option>
+<option value="juliet-balcony">Juliet's Balcony (Candlelight)</option>
+<option value="cafe-de-landour">Cafe De Landour &amp; Bakery</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Number of Guests</label>
+<div class="flex items-center gap-3">
+<label class="flex-1 text-center py-2.5 rounded-lg bg-surface-container cursor-pointer font-title-md text-title-md hover:bg-surface-container-high transition-colors">
+<input checked="" class="sr-only" name="guests" type="radio" value="2"> 2 Guests
+                </label>
+<label class="flex-1 text-center py-2.5 rounded-lg bg-surface-container cursor-pointer font-title-md text-title-md hover:bg-surface-container-high transition-colors">
+<input class="sr-only" name="guests" type="radio" value="4"> 3-4 Guests
+                </label>
+<label class="flex-1 text-center py-2.5 rounded-lg bg-surface-container cursor-pointer font-title-md text-title-md hover:bg-surface-container-high transition-colors">
+<input class="sr-only" name="guests" type="radio" value="6+"> 5+ Group
+                </label>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 sm:col-span-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Special Requests &amp; Occasion</label>
+<textarea class="w-full p-4 rounded-lg bg-surface-container text-body-md font-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest" placeholder="Anniversary celebration, vegan requirements, specific vantage table request..." rows="3"></textarea>
+</div>
+<div class="sm:col-span-2 pt-2">
+<button class="w-full py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-widest rounded-lg shadow-lg hover:bg-pine-muted transition-colors" type="submit">
+                Reserve Sanctuary Table
+              </button>
+<p class="font-body-sm text-body-sm text-outline text-center mt-2.5">No immediate deposit required. We will confirm your table allocation within two hours.</p>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- SURROUNDINGS & HERITAGE RIDGE PROXIMITY -->
+<section class="w-full bg-surface-container-low py-20">
+<div class="max-w-[1320px] mx-auto px-6 flex flex-col gap-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-secondary font-label-md text-label-md uppercase tracking-[0.2em] block mb-2">Historic Cantonment Walk</span>
+<h2 class="font-display text-headline-lg text-primary">Within Steps of Our Dining Ridge</h2>
+</div>
+<a class="inline-flex items-center gap-1.5 text-primary font-label-md text-label-md uppercase tracking-wider hover:text-cedar-gold transition-colors" data-path="location" href="#">
+<span>View Landour Walking Route</span>
+<span class="material-symbols-outlined text-[16px]">map</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface rounded-xl p-6 shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-cedar-gold text-[22px]">storefront</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase">200 Metres</span>
+</div>
+<h3 class="font-display text-headline-sm text-primary mt-1">Historic Char Dukan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The iconic four vintage shops serving mountain tea and bun maska since the British cantonment era.</p>
+</div>
+<div class="bg-surface rounded-xl p-6 shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-cedar-gold text-[22px]">church</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase">350 Metres</span>
+</div>
+<h3 class="font-display text-headline-sm text-primary mt-1">St. Paul's Church</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Built in 1839 amidst towering deodars; a silent sanctuary of colonial history and quiet strolls.</p>
+</div>
+<div class="bg-surface rounded-xl p-6 shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-cedar-gold text-[22px]">hiking</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase">800 Metres</span>
+</div>
+<h3 class="font-display text-headline-sm text-primary mt-1">Lal Tibba Viewpoint</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The highest peak of Mussoorie offering Japanese monocular views of Kedarnath, Badrinath, and snowline peaks.</p>
+</div>
+<div class="bg-surface rounded-xl p-6 shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-cedar-gold text-[22px]">shopping_bag</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase">1.2 KM Walk</span>
+</div>
+<h3 class="font-display text-headline-sm text-primary mt-1">Sister's Bazaar</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Famous for Prakash Stores handmade peanut butter, cheese, and vintage hill-station confectionery.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    const radioLabels = document.querySelectorAll('input[name="guests"]');
+    radioLabels.forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        document.querySelectorAll('input[name="guests"]').forEach(el => {
+          el.parentElement.classList.remove('bg-primary', 'text-on-primary');
+          el.parentElement.classList.add('bg-surface-container', 'text-on-surface');
+        });
+        if (e.target.checked) {
+          e.target.parentElement.classList.remove('bg-surface-container', 'text-on-surface');
+          e.target.parentElement.classList.add('bg-primary', 'text-on-primary');
+        }
+      });
+    });
+  })();
+</script></main><footer class="w-full bg-surface-container-low text-on-surface pt-16 pb-12 mt-20"><div class="max-w-[1320px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12"><div class="lg:col-span-2 flex flex-col gap-4"><div class="flex items-center gap-3"><img alt="Image from https://lightoflandour.com/wp-content/uploads/2020/08/light-of-landour-logo-3.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XQzYiqt0Yqab9JRWvFRsn6Dg7pirdLB49SJfx4eeIH2KkleDWLsS2M5Xzw_PBd3CD3_FTuYEOfukpbSm4jON5CEb4fmbuvs2fEa7lJfIVUXvctZBTqMn1NsKuSkqpbx1TNykXowA7dx6RLl57q1WGwMOKC2td_p2XX49htzsqs8-vMlarUBnX5PwLQobjoEosJOEOcaa1A9fCcpwbHdQcHmgsziYN57NOHACWieZgjv7scyssCHZtFOnk8"><span class="font-headline-sm text-headline-sm text-primary">Light of Landour</span></div><p class="text-body-sm font-body-sm text-on-surface-variant max-w-md">An alpine sanctuary nestled high amidst deodar forests in Landour, Mussoorie. A space for deceleration, curated Himalayan living, contemplative literature, and restorative wellness overlooking the Doon Valley.</p><div class="flex flex-col gap-1.5 text-body-sm font-body-sm text-on-surface-variant mt-2"><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">near_me</span>Char Dukan, Upper Mall, Landour, Mussoorie, Uttarakhand 248179</span><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">call</span>+91-9068555303</span><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">mail</span>namaste@lightoflandour.com</span></div></div><div class="flex flex-col gap-3"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">Sanctuary</span><div class="flex flex-col gap-2"><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="accommodation" href="#">Mudra, Chakra &amp; Element Rooms</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="dining" href="#">Glass Box Cafe &amp; LOL Bakery</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="experiences-and-wellness" href="#">Forest Walks &amp; Meditation</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="packages" href="#">Curated Stay Packages</a></div></div><div class="flex flex-col gap-3"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">Guest Information</span><div class="flex flex-col gap-2"><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="location" href="#">Location &amp; Himalayan Reach</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="stay-policies" href="#">Stay &amp; Silence Policies</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservation" href="#">Reservation Guide</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="cancellation-terms" href="#">Cancellation Terms</a></div></div><div class="flex flex-col gap-4"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">The Landour Dispatch</span><p class="text-body-sm font-body-sm text-on-surface-variant">Receive seasonal notes on Himalayan blooms, winter lines, and private retreat offerings.</p><form class="flex flex-col gap-2"><input class="px-3 py-2 text-body-sm font-body-sm bg-surface-container text-on-surface rounded-lg focus:outline-none placeholder:text-outline" placeholder="Your email address" type="email"><button class="px-4 py-2 bg-primary text-on-primary text-label-sm font-label-sm uppercase tracking-wider rounded-lg hover:bg-pine-muted hover:text-on-primary transition-colors" type="button">Subscribe</button></form></div></div><div class="max-w-[1320px] mx-auto px-6 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-on-surface-variant"><p>© 2025 Light of Landour. All rights reserved. Nestled in the Garhwal Himalayas.</p><div class="flex items-center gap-6"><a class="hover:text-on-surface transition-colors" data-path="stay-policies" href="#">Guest Protocol</a><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy</a><a class="hover:text-on-surface transition-colors" data-path="location" href="#">Arrival</a></div></div></footer></body></html>

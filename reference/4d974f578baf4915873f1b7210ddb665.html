@@ -1,0 +1,864 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed": "#251a00",
+          "inverse-surface": "#30312e",
+          "primary-fixed-dim": "#abcfb8",
+          "surface-container": "#efeeea",
+          "on-tertiary-fixed-variant": "#43474b",
+          "surface-bright": "#fbf9f5",
+          "linen-border": "#E5DED5",
+          "on-surface": "#1b1c1a",
+          "surface-tint": "#456553",
+          "on-secondary-container": "#735700",
+          "surface-variant": "#e4e2de",
+          "on-error": "#ffffff",
+          "secondary-fixed-dim": "#eec14b",
+          "linen-base": "#FBF9F5",
+          "on-tertiary-container": "#9a9da1",
+          "on-secondary-fixed-variant": "#5a4300",
+          "surface-container-high": "#eae8e4",
+          "on-error-container": "#93000a",
+          "primary-container": "#1b3b2b",
+          "tertiary-container": "#313538",
+          "on-primary": "#ffffff",
+          "error": "#ba1a1a",
+          "surface-container-low": "#f5f3ef",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed-variant": "#2d4d3c",
+          "tertiary-fixed": "#e0e3e7",
+          "linen-subtle": "#F4EFEA",
+          "on-surface-variant": "#424843",
+          "primary": "#032517",
+          "surface-container-highest": "#e4e2de",
+          "surface-container-lowest": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "background": "#fbf9f5",
+          "pine-deep": "#1B3B2B",
+          "on-tertiary-fixed": "#181c1f",
+          "mist-silver": "#8C928E",
+          "inverse-primary": "#abcfb8",
+          "on-primary-container": "#83a590",
+          "surface-dim": "#dbdad6",
+          "pine-muted": "#2C4C3A",
+          "slate-charcoal": "#161A1D",
+          "secondary-container": "#fece57",
+          "on-primary-fixed": "#002113",
+          "cedar-gold": "#C59B27",
+          "amber-gold-bright": "#D4AF37",
+          "tertiary": "#1c2023",
+          "surface": "#fbf9f5",
+          "inverse-on-surface": "#f2f0ed",
+          "outline": "#727973",
+          "tertiary-fixed-dim": "#c4c7cb",
+          "outline-variant": "#c1c8c2",
+          "primary-fixed": "#c7ebd4",
+          "secondary": "#775a00",
+          "secondary-fixed": "#ffdf98",
+          "on-background": "#1b1c1a",
+          "error-container": "#ffdad6"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-sm": "0.75rem",
+          "space-xs": "0.5rem",
+          "space-4xl": "6rem",
+          "space-3xl": "4.5rem",
+          "space-lg": "1.5rem",
+          "gutter-desktop": "2rem",
+          "space-2xl": "3rem",
+          "space-2xs": "0.25rem",
+          "gutter-tablet": "1.5rem",
+          "space-md": "1rem",
+          "gutter-mobile": "1rem",
+          "container-max": "1320px",
+          "space-xl": "2rem",
+          "space-5xl": "8rem"
+        },
+        "fontFamily": {
+          "headline-md-mobile": [
+            "EB Garamond"
+          ],
+          "headline-md": [
+            "EB Garamond"
+          ],
+          "headline-lg-mobile": [
+            "EB Garamond"
+          ],
+          "title-md": [
+            "Manrope"
+          ],
+          "title-lg": [
+            "Manrope"
+          ],
+          "body-sm": [
+            "Manrope"
+          ],
+          "display-mobile": [
+            "EB Garamond"
+          ],
+          "headline-lg": [
+            "EB Garamond"
+          ],
+          "body-lg": [
+            "EB Garamond"
+          ],
+          "body-md": [
+            "Manrope"
+          ],
+          "display": [
+            "EB Garamond"
+          ],
+          "label-lg": [
+            "Manrope"
+          ],
+          "label-md": [
+            "Manrope"
+          ],
+          "label-sm": [
+            "Manrope"
+          ],
+          "headline-sm": [
+            "EB Garamond"
+          ]
+        },
+        "fontSize": {
+          "headline-md-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "30px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-lg": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-mobile": [
+            "38px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "20px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "display": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.12em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.16em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.2em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      }
+    }
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 inset-x-0 z-50"><div class="bg-primary-container text-on-primary-container text-label-sm font-label-sm uppercase tracking-wider py-2 px-6"><div class="max-w-[1320px] mx-auto flex flex-wrap items-center justify-between gap-4"> <div class="flex flex-wrap items-center gap-6"><span class="flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">call</span>+91-9068555303</span><span class="hidden sm:flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">mail</span>namaste@lightoflandour.com</span><span class="hidden md:flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">location_on</span>Char Dukan, Landour, Mussoorie</span></div><div class="flex items-center gap-4 text-on-primary-container"><span class="hidden lg:inline text-label-sm font-label-sm text-cedar-gold">Sanctuary Elevation: 7,500 FT</span><div class="flex items-center gap-3"><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">photo_camera</span></a><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">travel_explore</span></a><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">share</span></a></div></div></div></div><div class="bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1320px] mx-auto px-6 flex items-center justify-between gap-6"><div class="flex items-center gap-3"><img alt="Image from https://lightoflandour.com/wp-content/uploads/2020/08/light-of-landour-logo-3.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XQzYiqt0Yqab9JRWvFRsn6Dg7pirdLB49SJfx4eeIH2KkleDWLsS2M5Xzw_PBd3CD3_FTuYEOfukpbSm4jON5CEb4fmbuvs2fEa7lJfIVUXvctZBTqMn1NsKuSkqpbx1TNykXowA7dx6RLl57q1WGwMOKC2td_p2XX49htzsqs8-vMlarUBnX5PwLQobjoEosJOEOcaa1A9fCcpwbHdQcHmgsziYN57NOHACWieZgjv7scyssCHZtFOnk8"><span class="font-headline-sm text-headline-sm text-primary tracking-normal">Light of Landour</span></div><nav class="hidden xl:flex items-center gap-1" data-active-classes="bg-primary-container text-on-primary rounded-lg"><a aria-current="page" class="px-3 py-1.5 font-label-lg transition-colors bg-primary-container text-on-primary rounded-lg" data-path="home" href="#">Home</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="accommodation" href="#">Accommodation</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="dining" href="#">Dining</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="experiences-and-wellness" href="#">Experiences &amp; Wellness</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="packages" href="#">Packages</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="location" href="#">Location</a></nav><div class="flex items-center gap-4"><a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-wider rounded-lg hover:bg-pine-muted hover:text-on-primary transition-all" data-path="reservation" href="#">Book Your Stay</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Hero Section with Breadcrumb & Contemplative Headline -->
+<section class="relative w-full bg-surface-container-low px-6 sm:px-10 lg:px-12 py-16 lg:py-24 border-b border-linen-border overflow-hidden">
+<div class="max-w-[1320px] mx-auto flex flex-col items-center text-center relative z-10">
+<!-- Overline Pill -->
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container border border-linen-border mb-6">
+<span class="w-2 h-2 rounded-full bg-cedar-gold animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">The Heart Expression • Mudras Collection</span>
+</div>
+<!-- Main Headline with Literary Typography -->
+<h1 class="font-headline-lg text-headline-lg lg:text-display text-primary max-w-4xl tracking-tight leading-tight mb-6">
+        Cultivate a greater sense of awareness by liberating and balancing your prana.
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl font-serif italic mb-10">
+        Drawing from the ancient sacred mudras of Sanatana Dharma, our Mudra Suites align the elemental currents of the human form with the peaceful silence of Landour's deodar ridges. Each sanctuary features dual levels, private balconies, and bespoke Garhwali craftsmanship.
+      </p>
+<!-- Quick Horizon Meta Metrics -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10 pt-6 border-t border-linen-border/60 text-left max-w-3xl w-full">
+<div>
+<span class="block font-label-sm text-label-sm text-outline uppercase tracking-wider">Sanctuary Altitude</span>
+<span class="font-headline-sm text-headline-sm text-pine-deep">7,500 Feet</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-outline uppercase tracking-wider">Orientation</span>
+<span class="font-headline-sm text-headline-sm text-pine-deep">Snow Crest North</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-outline uppercase tracking-wider">Suite Configuration</span>
+<span class="font-headline-sm text-headline-sm text-pine-deep">Lofts &amp; Attics</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-outline uppercase tracking-wider">Pranic Aura</span>
+<span class="font-headline-sm text-headline-sm text-cedar-gold">Anahata Heart</span>
+</div>
+</div>
+</div>
+<!-- Ambient Himalayan Mist Glow Background Elements -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-cedar-gold/10 blur-3xl pointer-events-none"></div>
+</section>
+<!-- Sticky In-Page Suite Switcher Bar -->
+<nav class="sticky top-20 z-40 bg-surface/90 backdrop-blur-md border-b border-linen-border shadow-sm">
+<div class="max-w-[1320px] mx-auto px-6 py-3 flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-2 sm:gap-3 flex-nowrap shrink-0">
+<a class="px-4 py-2 rounded-full bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-wider transition-all" href="#european-duplex">
+          European Duplex
+        </a>
+<a class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md uppercase tracking-wider transition-all" href="#persian-duplex">
+          Persian Duplex
+        </a>
+<a class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md uppercase tracking-wider transition-all" href="#attic-suite">
+          European Attic
+        </a>
+<a class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md uppercase tracking-wider transition-all" href="#prana-philosophy">
+          Mudra Philosophy
+        </a>
+<a class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md uppercase tracking-wider transition-all" href="#inclusions">
+          Inclusions
+        </a>
+</div>
+<div class="hidden lg:flex items-center gap-2 text-label-md font-label-md text-cedar-gold uppercase tracking-widest shrink-0">
+<span class="material-symbols-outlined text-[16px]">filter_vintage</span>
+        Pure Mountain Sanctuary
+      </div>
+</div>
+</nav>
+<!-- Main Suite Showcases -->
+<div class="max-w-[1320px] mx-auto px-6 py-16 lg:py-24 flex flex-col gap-24">
+<!-- SUITE 1: LUXURY EUROPEAN DUPLEX -->
+<article class="scroll-mt-36 flex flex-col bg-surface-container-low rounded-2xl overflow-hidden border border-linen-border shadow-sm group" id="european-duplex">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<!-- Visual Gallery Side -->
+<div class="lg:col-span-7 flex flex-col">
+<!-- Main Architectural Hero -->
+<div class="relative w-full h-[380px] sm:h-[480px] lg:h-[540px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]" data-alt="Expansive double-height alpine duplex loft at Light of Landour with towering arched floor-to-ceiling stone windows, sweeping vista of snow-dusted Garhwal Himalayan peaks, wooden ceiling beams, cozy leather armchairs by a fieldstone fireplace, warm amber morning sunlight streaming across polished hardwood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKZsxOQ0pzprYoAz0ztnlswjohc1VZThG-9t2DQF-jmRs8HgY8ME7HPze5uUV74BWGsoyA14CgRSS8r-oF4_bmGQJU_q4opBlmpo9CTOAReCMsz_Oa4jA5uGIfcZ9cAOcAEUz6nUKE0A1e-vm1KAKZACu7tUHXP6r4KVvDDktVhiua_MR-xamreHUZA5XWlk1aONP45_TalvVO_scZbOwTPoJt-FUWTJrES_F3wE9hKvoXyM57pweI_Q">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-charcoal/60 via-transparent to-black/10"></div>
+<!-- Badge & Floating Tag -->
+<div class="absolute top-6 left-6 bg-surface-bright/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-linen-border flex items-center gap-2">
+<span class="material-symbols-outlined text-cedar-gold text-[16px]">crown</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Flagship Sanctuary • 4 Guests</span>
+</div>
+<div class="absolute bottom-6 left-6 right-6 text-linen-base">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Dual-Level Grandeur</span>
+<h3 class="font-headline-md text-headline-md text-white font-serif mt-1">Arched Windows &amp; Himalayan Courtyard</h3>
+</div>
+</div>
+<!-- Secondary Property Details Gallery -->
+<div class="grid grid-cols-2 h-44 sm:h-52 gap-px bg-linen-border">
+<div class="relative overflow-hidden group/thumb">
+<img alt="Light of Landour European Duplex interior bedroom details" class="w-full h-full object-cover transition-transform duration-500 group-hover/thumb:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VK7oqO81_xhzre5GeWnZpixaXY0SFighRUdLWmb9ROy13wqjvNkmDPwawC81q4rJmQ2c3ufK-moldhkKbFGSXAUs13bwa0bOLAE_aLN06l2WMnvVBzeWVPKuG6HWSEG10A1yMhPVYDWTXri_zpxkzWOY_dDuFM4yqLFH1HPvkdy99QlVaHk7gmZX3vGYM9z9bJlTJAvhCXW3XnSWko0Ey89_HepZhDsA7f7WSlkDqtGic0bBVpQ7heS75v">
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-white bg-pine-deep/80 px-3 py-1 rounded-full uppercase">Upper Loft Suite</span>
+</div>
+</div>
+<div class="relative overflow-hidden group/thumb">
+<img alt="Interior crafted spaces and sophisticated appointments at Light of Landour" class="w-full h-full object-cover transition-transform duration-500 group-hover/thumb:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1X9tY8YCs4uHQgY-6gRItKQv1YVBbElEdNVQrBW1md70eqJj8P-0vkSopjuggDnr0P5spd_YGZwBuh11q-4t2LFzrdVazCXqGERpY7qAhzEMRU6thrEO8NfqXA-8av2FIMCy_ieh09iu4kEdYJ_QaAele51Q2LeyhLNTLTIm_UUlrqKyzRjahBBHoxhV_zy0QoNMSQ7E32jhWDRIJIMFz2WckeeZodBwl0GPIpL9pGTnpGHq0vfMFkClkU">
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-white bg-pine-deep/80 px-3 py-1 rounded-full uppercase">Salon &amp; Stone Fireplace</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Specifications & Reservation Column -->
+<div class="lg:col-span-5 p-8 sm:p-10 lg:p-12 flex flex-col justify-between bg-surface-container-lowest">
+<div>
+<div class="flex items-center justify-between border-b border-linen-border pb-4 mb-6">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest block">Mudra Architecture</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-serif">Luxury European Duplex</h2>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-pine-deep font-serif">₹14,500</span>
+<span class="font-label-sm text-label-sm text-outline block">/ night + taxes</span>
+</div>
+</div>
+<!-- Authentic Verbatim Narrative -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-8">
+              An inspiring welcome to one of the most beautifully dramatic settings. Our largest and the most private suite, designed with clean-lined stone walls set in European architecture supporting long arc windows, and high ceilings. Offering space, privacy, and uncompromising comfort with a courtyard, and private terrace. Can be shared by family and friends.
+            </p>
+<!-- Key Amenities Grid -->
+<div class="space-y-4 mb-8">
+<h4 class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Sanctuary Specifications</h4>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">stairs</span>
+<span class="font-body-sm text-body-sm text-on-surface">Dual-level loft: master upstairs, salon downstairs</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">window</span>
+<span class="font-body-sm text-body-sm text-on-surface">Long arched windows framing Doon valley &amp; peaks</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">deck</span>
+<span class="font-body-sm text-body-sm text-on-surface">Private courtyard &amp; sun-drenched timber deck</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">shower</span>
+<span class="font-body-sm text-body-sm text-on-surface">Two private ensuite washrooms (one each level)</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">local_cafe</span>
+<span class="font-body-sm text-body-sm text-on-surface">Artisanal pour-over coffee &amp; wild herbal teas</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">fireplace</span>
+<span class="font-body-sm text-body-sm text-on-surface">Traditional stone hearth &amp; heated radiant floors</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Suite Action Buttons -->
+<div class="pt-6 border-t border-linen-border flex flex-col sm:flex-row items-center gap-3">
+<a class="w-full sm:w-auto flex-1 text-center py-3.5 px-6 bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-wider rounded hover:bg-pine-muted transition-colors shadow-sm" href="#inquiry-section">
+              Reserve European Duplex
+            </a>
+<button class="w-full sm:w-auto px-5 py-3.5 border border-linen-border text-on-surface hover:bg-surface-container font-label-md text-label-md uppercase tracking-wider rounded transition-colors flex items-center justify-center gap-1.5" onclick="openModal('european')">
+<span class="material-symbols-outlined text-[18px]">architecture</span>
+              Floor Plan
+            </button>
+</div>
+</div>
+</div>
+</article>
+<!-- SUITE 2: LUXURY PERSIAN DUPLEX -->
+<article class="scroll-mt-36 flex flex-col bg-surface-container-low rounded-2xl overflow-hidden border border-linen-border shadow-sm group" id="persian-duplex">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<!-- Gallery Column (Right on Desktop for Editorial Rhythm) -->
+<div class="lg:col-span-7 lg:order-2 flex flex-col">
+<div class="relative w-full h-[380px] sm:h-[480px] lg:h-[540px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]" data-alt="Himalayan Luxury Persian Duplex retreat bedroom in Landour with turquoise silk cushions, Persian archways looking out to majestic snow-capped Himalayan sunrise, ornate timber ceiling balcony, polished wooden stairs, hand-woven carpets, warm lantern lighting, intimate serene sanctuary mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCie_oV5UCm2KxQi1ct-AgvQkWq13NOo0YHor7j6EGEb-kgsOCXy_MPx884vFmxx4PW5sVVOmJkkCN0qNOB5MpUdWwHyU_PYd9Bzmb2cjEsQpjMNlYSjfyTwA3oBGZ710fiWW5RtnqisbGIuQr4JoPK9HEso4LUSziqq0XFxJncH5FyjSdCC5xqg-e-RgrFZxftQNH6D1miQMo5hIsSLZ3JSmrM0fieoGtO4QY5nY4ChqQb5X3gsst3jA">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-charcoal/60 via-transparent to-black/10"></div>
+<div class="absolute top-6 right-6 bg-surface-bright/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-linen-border flex items-center gap-2">
+<span class="material-symbols-outlined text-cedar-gold text-[16px]">flare</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Royal Persian Echo • 4 Guests</span>
+</div>
+<div class="absolute bottom-6 left-6 right-6 text-linen-base">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Sunrise &amp; Sunset Terraces</span>
+<h3 class="font-headline-md text-headline-md text-white font-serif mt-1">Enveloped in Royal Turquoise Hues</h3>
+</div>
+</div>
+<!-- Authentic Thumbnails -->
+<div class="grid grid-cols-2 h-44 sm:h-52 gap-px bg-linen-border">
+<div class="relative overflow-hidden group/thumb">
+<img alt="Light of Landour Resort exterior mountain view" class="w-full h-full object-cover transition-transform duration-500 group-hover/thumb:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Upi9frb7oxlb9JgIMewiSN9q1clxSb4TYqXQ4kcEFOrotrGNCJY_8lfTFo6i8hTi_HIG_fSrO24cQZYhpmfklC2BNSmzZkRFfhFJdPHpfIWweyf49Gib0muV-721Cq0shEpVtFqjZmRRWcGTYX2DA-kigkARHXVIx9BO0zZGhHnX2ZvQV_YeF8Iq_QOFAuWwoeLBXWKEfRhHJ-5OXEdTu68-NcBnLh_jpi1tE3JFL0INNW42vpP3KbXcUG">
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-white bg-pine-deep/80 px-3 py-1 rounded-full uppercase">Exterior Perch</span>
+</div>
+</div>
+<div class="relative overflow-hidden group/thumb">
+<img alt="Veranda perspective of Himalayan mountain ridges" class="w-full h-full object-cover transition-transform duration-500 group-hover/thumb:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1UTKcheNOtqzpVJIMNp-xxOIiurUJtdsAcHvooiUBUEzrWUfrccT_JWUOnbsixNGmvDD9radxNihQH1RX4gQInxSRHHELdmXHF3Sd04n214z5DdKIohk_ytFWzjdztYVhncgreODViimYHSKlHPBGIvEtLcpMhI1XIOg5a2k6BiTfYLQpCGsaRmS5-SqkTN3YCObbaeWF_Nu2g2tYOC6On2O0I9tKDh8upcylfVBvFVW2y4_-2hJ1ty_W0">
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-white bg-pine-deep/80 px-3 py-1 rounded-full uppercase">Private Balcony</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Specifications & Narrative Column (Left on Desktop) -->
+<div class="lg:col-span-5 lg:order-1 p-8 sm:p-10 lg:p-12 flex flex-col justify-between bg-surface-container-lowest">
+<div>
+<div class="flex items-center justify-between border-b border-linen-border pb-4 mb-6">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest block">Mudra Architecture</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-serif">Luxury Persian Duplex</h2>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-pine-deep font-serif">₹15,800</span>
+<span class="font-label-sm text-label-sm text-outline block">/ night + taxes</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+              The most beautiful natural surrounding enveloped with impossibly romantic royal turquoise hues. Drawing inspiration from Persian domes and intricate geometric style, this suite is built to savor both sunrise and sunset views from its secluded stone courtyard.
+            </p>
+<!-- Philosophy Quote Card inside Suite -->
+<div class="p-5 rounded-xl bg-linen-subtle border-l-2 border-cedar-gold mb-6">
+<span class="font-label-sm text-label-sm text-cedar-gold uppercase tracking-wider block mb-1">Elegance, Peace &amp; Deep Comfort</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic font-serif">
+                "When stress and anxiety seem to lurk around every corner, it just makes sense to add to your wellness toolkit. We invite guests to embark on a journey of opening to possibilities of a greater self. The energy here offers you an ideal secluded experience for more joy, serenity, and calmness."
+              </p>
+</div>
+<!-- Key Amenities Grid -->
+<div class="space-y-4 mb-8">
+<h4 class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Sanctuary Inclusions</h4>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">nature_people</span>
+<span class="font-body-sm text-body-sm text-on-surface">Bedrooms on both levels with private washrooms</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">wb_twilight</span>
+<span class="font-body-sm text-body-sm text-on-surface">Sunrise &amp; sunset viewing terrace courtyard</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">chair</span>
+<span class="font-body-sm text-body-sm text-on-surface">Bespoke Deodar wood daybeds &amp; Persian rugs</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">self_improvement</span>
+<span class="font-body-sm text-body-sm text-on-surface">Singing bowls &amp; meditation floor pillows</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CTAs -->
+<div class="pt-6 border-t border-linen-border flex flex-col sm:flex-row items-center gap-3">
+<a class="w-full sm:w-auto flex-1 text-center py-3.5 px-6 bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-wider rounded hover:bg-pine-muted transition-colors shadow-sm" href="#inquiry-section">
+              Reserve Persian Duplex
+            </a>
+<button class="w-full sm:w-auto px-5 py-3.5 border border-linen-border text-on-surface hover:bg-surface-container font-label-md text-label-md uppercase tracking-wider rounded transition-colors flex items-center justify-center gap-1.5" onclick="openModal('persian')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+              Suite Details
+            </button>
+</div>
+</div>
+</div>
+</article>
+<!-- SUITE 3: EUROPEAN SUITES WITH ATTIC -->
+<article class="scroll-mt-36 flex flex-col bg-surface-container-low rounded-2xl overflow-hidden border border-linen-border shadow-sm group" id="attic-suite">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<!-- Visual Gallery Column -->
+<div class="lg:col-span-7 flex flex-col">
+<div class="relative w-full h-[380px] sm:h-[480px] lg:h-[540px] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]" data-alt="Himalayan attic bedroom suite at Light of Landour under pitched warm wooden timber beams, cozy skylight window looking up at deodar treetops and pine mist, vintage iron twin and queen beds with textured wool throws, reading lamps, serene warm peaceful atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQy3F2HzNv1mtkq9_65M0dHiohS-oGJrH_kTj9D11EfB81FteesKYdlgs1eaNnOr1MufJTyd4TiWHYN5s2jcInnX4HHoiUderka4KCBPy3-cI30IzUeQ_ihgmC-oWSLeQVActE_Ya0gYd8q_iyNIEezuS2XUzBeQ7uW_g2VRWBm-ZX9IYaaEi7ggFZhi9w7LwTlMmaXV-1MQVkQXo6kDbv3rLS-HkIxYn39GNAju6hwRqxY0_t4hyNcQ">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-charcoal/60 via-transparent to-black/10"></div>
+<div class="absolute top-6 left-6 bg-surface-bright/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-linen-border flex items-center gap-2">
+<span class="material-symbols-outlined text-cedar-gold text-[16px]">cabin</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Cozy Timber Attic • 3 Guests</span>
+</div>
+<div class="absolute bottom-6 left-6 right-6 text-linen-base">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Alpine Starlight Views</span>
+<h3 class="font-headline-md text-headline-md text-white font-serif mt-1">Pitched Pine Ceilings &amp; Warm Woolens</h3>
+</div>
+</div>
+<!-- Authentic Thumbnails -->
+<div class="grid grid-cols-2 h-44 sm:h-52 gap-px bg-linen-border">
+<div class="relative overflow-hidden group/thumb">
+<img alt="Attic room bathroom with authentic slate and artisanal daylighting" class="w-full h-full object-cover transition-transform duration-500 group-hover/thumb:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WXn9H6F15gYz-Gk04_fNTBZf4rZo8rn4RrKBOWx4zPOhDwOLBlxknhFyqvLaFjah4H94Bo7bk8ybCxoWez8CksA3v-Tn-H9NUC_0d6aDfyqlUWK3Gnk90VYSAxkvc4sSoPAI9pUpURVPkBMsIrKxRVtq5yMiNM-IlbbAYdo5MZsopM0HWA3hFxDyoaYNC6OD6yhPPFcCZhEQ46fIZM4rpMfEyITaiG7NlG87TDtBulE8FPxIAzp5PRoFU">
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-white bg-pine-deep/80 px-3 py-1 rounded-full uppercase">Artisanal Attic Bath</span>
+</div>
+</div>
+<div class="relative overflow-hidden group/thumb">
+<img alt="Expansive panoramic hill view from Light of Landour windows" class="w-full h-full object-cover transition-transform duration-500 group-hover/thumb:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VF319bJTUVLTH7JdfgO__zVK44M8NPGHaLzcuD8JeU6lZYtkIYULPnIBiOz4x4A8L5swKcP_UNmLjXZT8ssYAXMvCxIYJc--mO06J1GpkMQbcgRhhNwQfPGKETcVh2IRnlbMkADmNCwor0DK-vO2wLbIWjMKcMFMU9K3-EJ0EToXDhGPxJ3u11xbVBPxll_jZ-h6RxqXlVb34l6xUMqll7HEhAlRUkcKT2u24lYWIDCrMIwGw9h_7KEQiS">
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-white bg-pine-deep/80 px-3 py-1 rounded-full uppercase">Canopy Window View</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Specifications & Narrative Column -->
+<div class="lg:col-span-5 p-8 sm:p-10 lg:p-12 flex flex-col justify-between bg-surface-container-lowest">
+<div>
+<div class="flex items-center justify-between border-b border-linen-border pb-4 mb-6">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest block">Mudra Architecture</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-serif">European Suites With Attic</h2>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-pine-deep font-serif">₹9,800</span>
+<span class="font-label-sm text-label-sm text-outline block">/ night + taxes</span>
+</div>
+</div>
+<!-- Authentic Verbatim Narrative -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-8">
+              Feel the magic and mystery which ignites a love for life. Spacious and with clean lines and natural materials, designed to complement the rugged beauty of the Grand Himalayan mountains. The relaxed aesthetic and muted palette is ideal for families with children.
+            </p>
+<!-- Key Amenities Grid -->
+<div class="space-y-4 mb-8">
+<h4 class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Sanctuary Features</h4>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">roofing</span>
+<span class="font-body-sm text-body-sm text-on-surface">Pitched alpine attic ceiling with night sky views</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">bed</span>
+<span class="font-body-sm text-body-sm text-on-surface">Queen master + twin configuration for families</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">forest</span>
+<span class="font-body-sm text-body-sm text-on-surface">Pine-scented natural deodar wall paneling</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">local_florist</span>
+<span class="font-body-sm text-body-sm text-on-surface">Pure organic wool throws &amp; buckwheat pillows</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">wb_sunny</span>
+<span class="font-body-sm text-body-sm text-on-surface">Morning sunshine breakfast nook by the glass</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-cedar-gold text-[20px] shrink-0">bathtub</span>
+<span class="font-body-sm text-body-sm text-on-surface">Skylit slate bathroom with botanical soak amenities</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CTAs -->
+<div class="pt-6 border-t border-linen-border flex flex-col sm:flex-row items-center gap-3">
+<a class="w-full sm:w-auto flex-1 text-center py-3.5 px-6 bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-wider rounded hover:bg-pine-muted transition-colors shadow-sm" href="#inquiry-section">
+              Reserve Attic Suite
+            </a>
+<button class="w-full sm:w-auto px-5 py-3.5 border border-linen-border text-on-surface hover:bg-surface-container font-label-md text-label-md uppercase tracking-wider rounded transition-colors flex items-center justify-center gap-1.5" onclick="openModal('attic')">
+<span class="material-symbols-outlined text-[18px]">architecture</span>
+              Floor Plan
+            </button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Philosophy of Mudras Section (Editorial Depth) -->
+<section class="w-full bg-surface-container py-20 lg:py-28 px-6 sm:px-10 border-y border-linen-border" id="prana-philosophy">
+<div class="max-w-[1320px] mx-auto flex flex-col items-center">
+<span class="font-label-sm text-label-sm text-cedar-gold uppercase tracking-widest mb-3">Vedic Spatial Anatomy</span>
+<h2 class="font-headline-lg text-headline-lg text-primary text-center font-serif max-w-3xl mb-6">
+        The Science of Finger Seals &amp; Alpine Prana
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant text-center max-w-2xl mb-16">
+        In yogic lore, mudras are subtle energetic locks that direct the breath through the subtle nadis. Our architecture is designed upon the same sacred geometry—channeling the stillness of the Himalayas straight into bodily equilibrium.
+      </p>
+<!-- 3 Energy Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+<!-- Mudra 1 -->
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-linen-border shadow-sm flex flex-col">
+<div class="w-12 h-12 rounded-lg bg-linen-subtle flex items-center justify-center mb-6 text-pine-deep">
+<span class="material-symbols-outlined text-[28px]">spa</span>
+</div>
+<span class="font-label-sm text-label-sm text-cedar-gold uppercase tracking-widest mb-2">Consciousness &amp; Stillness</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif mb-3">Chin Mudra</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+            Embodied in our European Duplex's grand arched windows, uniting the finite human spirit with cosmic expanse through sweeping horizons and unobstructed sunlight.
+          </p>
+<div class="mt-auto pt-4 border-t border-linen-border/60 flex items-center gap-2 text-label-sm font-label-sm text-pine-deep">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+            Attunes Vayu (Air) &amp; Agni (Fire)
+          </div>
+</div>
+<!-- Mudra 2 -->
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-linen-border shadow-sm flex flex-col">
+<div class="w-12 h-12 rounded-lg bg-linen-subtle flex items-center justify-center mb-6 text-pine-deep">
+<span class="material-symbols-outlined text-[28px]">air</span>
+</div>
+<span class="font-label-sm text-label-sm text-cedar-gold uppercase tracking-widest mb-2">Vitality &amp; Deodar Breath</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif mb-3">Prana Mudra</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+            Celebrated within the Persian Duplex's dual terraces, invigorating the energetic core with pure 7,500-ft mountain oxygen, dawn dew, and singing bowl vibrations.
+          </p>
+<div class="mt-auto pt-4 border-t border-linen-border/60 flex items-center gap-2 text-label-sm font-label-sm text-pine-deep">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+            Awakens dormant vitality &amp; heart clarity
+          </div>
+</div>
+<!-- Mudra 3 -->
+<div class="p-8 bg-surface-container-lowest rounded-xl border border-linen-border shadow-sm flex flex-col">
+<div class="w-12 h-12 rounded-lg bg-linen-subtle flex items-center justify-center mb-6 text-pine-deep">
+<span class="material-symbols-outlined text-[28px]">terrain</span>
+</div>
+<span class="font-label-sm text-label-sm text-cedar-gold uppercase tracking-widest mb-2">Grounding &amp; Healing</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-serif mb-3">Apana Mudra</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+            Grounds guests within the European Attic's warm pine haven, encouraging cellular release, dreamless deep sleep, and complete nervous system decompression.
+          </p>
+<div class="mt-auto pt-4 border-t border-linen-border/60 flex items-center gap-2 text-label-sm font-label-sm text-pine-deep">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+            Purifies bodily toxins &amp; anchors the mind
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Inclusions & Matrix Section -->
+<section class="w-full py-20 lg:py-24 px-6 sm:px-10 bg-surface" id="inclusions">
+<div class="max-w-[1320px] mx-auto">
+<div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-6">
+<div>
+<span class="font-label-sm text-label-sm text-cedar-gold uppercase tracking-widest mb-2 block">The Himalayan Hospitality Standard</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-serif">Every Mudra Stay Includes</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Uncompromised sanctuary rituals designed to nourish the physical form and tranquilize the racing spirit.
+        </p>
+</div>
+<!-- Feature Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="p-6 rounded-xl bg-surface-container-low border border-linen-border">
+<span class="material-symbols-outlined text-cedar-gold text-[32px] mb-4">restaurant</span>
+<h4 class="font-title-md text-title-md text-primary mb-2">Himalayan Organic Breakfast</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Farm-fresh Garhwali grains, wild forest honey, handmade preserves, and warm bakery viennoiserie served daily at Glass Box Cafe.</p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-low border border-linen-border">
+<span class="material-symbols-outlined text-cedar-gold text-[32px] mb-4">self_improvement</span>
+<h4 class="font-title-md text-title-md text-primary mb-2">Dawn Pranayama &amp; Sound</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Daily 7:30 AM guided breathwork and authentic Tibetan singing bowl resonance facing the high snow peaks.</p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-low border border-linen-border">
+<span class="material-symbols-outlined text-cedar-gold text-[32px] mb-4">hiking</span>
+<h4 class="font-title-md text-title-md text-primary mb-2">Curated Forest Walks</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Guided morning treks through historical Landour pine tracks, Jabarkhet Nature Reserve, and Char Dukan quiet paths.</p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-low border border-linen-border">
+<span class="material-symbols-outlined text-cedar-gold text-[32px] mb-4">wifi_tethering</span>
+<h4 class="font-title-md text-title-md text-primary mb-2">High-Speed Alpine Optical</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dedicated fiber-optic connection paired with serene silence zones, perfect for authors, executives, and remote creatives.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Tailored Stay Inquiry Form & Booking Builder (Verbatim Form Fields) -->
+<section class="w-full bg-surface-container py-20 px-6 sm:px-10 border-t border-linen-border" id="inquiry-section">
+<div class="max-w-[1100px] mx-auto bg-surface-container-lowest rounded-2xl border border-linen-border p-8 sm:p-12 lg:p-16 shadow-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-cedar-gold text-label-sm font-label-sm uppercase tracking-wider mb-4">
+<span class="material-symbols-outlined text-[14px]">edit_calendar</span>
+              Make Your Package
+            </div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-serif mb-4">
+              Design Your Personalized Himalayan Retreat
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+              Whether you are planning an extended contemplative writing sabbatical, a family gathering, or a restorative couple's wellness weekend, our sanctuary hosts curate every facet of your arrival.
+            </p>
+</div>
+<div class="space-y-4 pt-6 border-t border-linen-border">
+<div class="flex items-center gap-3 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-cedar-gold text-[18px]">verified</span>
+<span>Direct Booking Rate Guarantee &amp; Flexible Re-scheduling</span>
+</div>
+<div class="flex items-center gap-3 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-cedar-gold text-[18px]">lock_clock</span>
+<span>Silence Hours strictly observed 10:00 PM – 7:00 AM</span>
+</div>
+<div class="flex items-center gap-3 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-cedar-gold text-[18px]">support_agent</span>
+<span>Direct Concierge: +91-9068555303</span>
+</div>
+</div>
+</div>
+<!-- The Interactive Form -->
+<div class="lg:col-span-7 bg-surface-container-low p-6 sm:p-8 rounded-xl border border-linen-border">
+<form class="space-y-5" onsubmit="handleInquirySubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md uppercase tracking-wider text-primary mb-2">
+                  Name <span class="text-cedar-gold">*</span>
+</label>
+<input class="w-full h-12 px-4 rounded bg-surface-container-lowest border border-linen-border text-on-surface font-body-md text-body-md focus:border-pine-deep focus:outline-none transition-colors" placeholder="e.g. Radhika Sen" required="" type="text">
+</div>
+<div>
+<label class="block font-label-md text-label-md uppercase tracking-wider text-primary mb-2">
+                  Email <span class="text-cedar-gold">*</span>
+</label>
+<input class="w-full h-12 px-4 rounded bg-surface-container-lowest border border-linen-border text-on-surface font-body-md text-body-md focus:border-pine-deep focus:outline-none transition-colors" placeholder="e.g. radhika@sanctuary.com" required="" type="email">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md uppercase tracking-wider text-primary mb-2">
+                  Phone <span class="text-cedar-gold">*</span>
+</label>
+<input class="w-full h-12 px-4 rounded bg-surface-container-lowest border border-linen-border text-on-surface font-body-md text-body-md focus:border-pine-deep focus:outline-none transition-colors" placeholder="+91 98765 43210" required="" type="tel">
+</div>
+<div>
+<label class="block font-label-md text-label-md uppercase tracking-wider text-primary mb-2">
+                  No of days you want to stay <span class="text-cedar-gold">*</span>
+</label>
+<input class="w-full h-12 px-4 rounded bg-surface-container-lowest border border-linen-border text-on-surface font-body-md text-body-md focus:border-pine-deep focus:outline-none transition-colors" max="60" min="1" placeholder="e.g. 4 nights" required="" type="number">
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md uppercase tracking-wider text-primary mb-2">
+                Preferred Mudra Sanctuary
+              </label>
+<select class="w-full h-12 px-4 rounded bg-surface-container-lowest border border-linen-border text-on-surface font-body-md text-body-md focus:border-pine-deep focus:outline-none transition-colors">
+<option value="luxury-european">Luxury European Duplex (₹14,500/night)</option>
+<option value="luxury-persian">Luxury Persian Duplex (₹15,800/night)</option>
+<option value="european-attic">European Suites With Special Attic (₹9,800/night)</option>
+<option value="full-retreat">Private Buyout / Multiple Suites</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md uppercase tracking-wider text-primary mb-2">
+                Paint a Picture of what you want to explore
+              </label>
+<textarea class="w-full p-4 rounded bg-surface-container-lowest border border-linen-border text-on-surface font-body-md text-body-md focus:border-pine-deep focus:outline-none transition-colors" placeholder="Tell us about special dietary requests, sunrise yoga preferences, literature interests, or celebrations..." rows="3"></textarea>
+</div>
+<button class="w-full py-4 bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-widest rounded hover:bg-pine-muted transition-colors flex items-center justify-center gap-2 shadow-md" type="submit">
+<span>Get A Personalized Plan</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Floor Plan & Detail Modal (Accessible via CTAs) -->
+<div class="fixed inset-0 z-50 bg-slate-charcoal/70 backdrop-blur-sm hidden items-center justify-center p-4" id="suite-modal">
+<div class="bg-surface-container-lowest border border-linen-border rounded-2xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl animate-fade-in">
+<button class="absolute top-4 right-4 text-on-surface hover:text-pine-deep w-10 h-10 rounded-full flex items-center justify-center bg-surface-container hover:bg-surface-container-high transition-colors" onclick="closeModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div id="modal-content">
+<!-- Content dynamic via JS -->
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple Modal Handler for Floor Plans and Details
+  const modalData = {
+    european: {
+      title: "Luxury European Duplex — Spatial Layout",
+      dim: "880 Sq. Ft. Loft • Level 1 Salon & Level 2 Master Suite",
+      desc: "Architectural blueprint featuring dual bathrooms, 18-foot stone arches, private garden courtyard, and separate reading balcony facing the Chaukhamba Himalayan range.",
+      features: ["Private Terrace & Courtyard", "Two En-Suite Washrooms", "Living Lounge with Daybed", "Radiant Floor Heating"]
+    },
+    persian: {
+      title: "Luxury Persian Duplex — Spatial Layout",
+      dim: "920 Sq. Ft. Royal Suite • Two En-suite Private Bedrooms",
+      desc: "Inspired by Persian courtyards. Independent master bedrooms on both upper and lower levels guarantee total acoustic privacy for families and companions.",
+      features: ["Dual Sunrise & Sunset Courtyards", "Persian Geometric Arches", "Authentic Stone Fireplace", "Separate Dressing Cloakrooms"]
+    },
+    attic: {
+      title: "European Suite With Attic — Spatial Layout",
+      dim: "640 Sq. Ft. Vaulted Pine Attic • 3 Adults & Child",
+      desc: "Charming alpine rooflines with operable skylight stargazing portals, cedar timber wainscoting, and sunlit private morning breakfast nook.",
+      features: ["Starlight Ceiling Glass", "Natural Pine Woodwork", "Artisanal Slate Rainshower", "Handcrafted Wrought-Iron Beds"]
+    }
+  };
+
+  function openModal(type) {
+    const data = modalData[type] || modalData.european;
+    const content = document.getElementById('modal-content');
+    content.innerHTML = `
+      <span class="font-label-sm text-label-sm text-cedar-gold uppercase tracking-widest block mb-1">Architecture & Blueprint</span>
+      <h3 class="font-headline-md text-headline-md text-primary font-serif mb-2">${data.title}</h3>
+      <p class="font-label-md text-label-md text-outline mb-4">${data.dim}</p>
+      <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">${data.desc}</p>
+      <div class="grid grid-cols-2 gap-3 mb-6">
+        ${data.features.map(f => `
+          <div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+            <span class="material-symbols-outlined text-cedar-gold text-[18px]">check_circle</span>
+            <span>${f}</span>
+          </div>
+        `).join('')}
+      </div>
+      <div class="pt-4 border-t border-linen-border flex justify-end">
+        <a href="#inquiry-section" onclick="closeModal()" class="px-6 py-2.5 bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-wider rounded hover:bg-pine-muted transition-colors">
+          Inquire For This Layout
+        </a>
+      </div>
+    `;
+    document.getElementById('suite-modal').classList.remove('hidden');
+    document.getElementById('suite-modal').classList.add('flex');
+  }
+
+  function closeModal() {
+    document.getElementById('suite-modal').classList.add('hidden');
+    document.getElementById('suite-modal').classList.remove('flex');
+  }
+
+  function handleInquirySubmit(e) {
+    e.preventDefault();
+    alert("Namaste. Your personalized retreat request has been received by our Landour hosts. We will reach out within 4 hours.");
+  }
+</script></main><footer class="w-full bg-surface-container-low text-on-surface pt-16 pb-12 mt-20"><div class="max-w-[1320px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12"><div class="lg:col-span-2 flex flex-col gap-4"><div class="flex items-center gap-3"><img alt="Image from https://lightoflandour.com/wp-content/uploads/2020/08/light-of-landour-logo-3.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XQzYiqt0Yqab9JRWvFRsn6Dg7pirdLB49SJfx4eeIH2KkleDWLsS2M5Xzw_PBd3CD3_FTuYEOfukpbSm4jON5CEb4fmbuvs2fEa7lJfIVUXvctZBTqMn1NsKuSkqpbx1TNykXowA7dx6RLl57q1WGwMOKC2td_p2XX49htzsqs8-vMlarUBnX5PwLQobjoEosJOEOcaa1A9fCcpwbHdQcHmgsziYN57NOHACWieZgjv7scyssCHZtFOnk8"><span class="font-headline-sm text-headline-sm text-primary">Light of Landour</span></div><p class="text-body-sm font-body-sm text-on-surface-variant max-w-md">An alpine sanctuary nestled high amidst deodar forests in Landour, Mussoorie. A space for deceleration, curated Himalayan living, contemplative literature, and restorative wellness overlooking the Doon Valley.</p><div class="flex flex-col gap-1.5 text-body-sm font-body-sm text-on-surface-variant mt-2"><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">near_me</span>Char Dukan, Upper Mall, Landour, Mussoorie, Uttarakhand 248179</span><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">call</span>+91-9068555303</span><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">mail</span>namaste@lightoflandour.com</span></div></div><div class="flex flex-col gap-3"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">Sanctuary</span><div class="flex flex-col gap-2"><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="accommodation" href="#">Mudra, Chakra &amp; Element Rooms</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="dining" href="#">Glass Box Cafe &amp; LOL Bakery</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="experiences-and-wellness" href="#">Forest Walks &amp; Meditation</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="packages" href="#">Curated Stay Packages</a></div></div><div class="flex flex-col gap-3"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">Guest Information</span><div class="flex flex-col gap-2"><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="location" href="#">Location &amp; Himalayan Reach</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="stay-policies" href="#">Stay &amp; Silence Policies</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservation" href="#">Reservation Guide</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="cancellation-terms" href="#">Cancellation Terms</a></div></div><div class="flex flex-col gap-4"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">The Landour Dispatch</span><p class="text-body-sm font-body-sm text-on-surface-variant">Receive seasonal notes on Himalayan blooms, winter lines, and private retreat offerings.</p><form class="flex flex-col gap-2"><input class="px-3 py-2 text-body-sm font-body-sm bg-surface-container text-on-surface rounded-lg focus:outline-none placeholder:text-outline" placeholder="Your email address" type="email"><button class="px-4 py-2 bg-primary text-on-primary text-label-sm font-label-sm uppercase tracking-wider rounded-lg hover:bg-pine-muted hover:text-on-primary transition-colors" type="button">Subscribe</button></form></div></div><div class="max-w-[1320px] mx-auto px-6 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-on-surface-variant"><p>© 2025 Light of Landour. All rights reserved. Nestled in the Garhwal Himalayas.</p><div class="flex items-center gap-6"><a class="hover:text-on-surface transition-colors" data-path="stay-policies" href="#">Guest Protocol</a><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy</a><a class="hover:text-on-surface transition-colors" data-path="location" href="#">Arrival</a></div></div></footer></body></html>

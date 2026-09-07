@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import sharp from 'sharp';
+const root=path.resolve(import.meta.dirname,'..');
+const assets=JSON.parse(fs.readFileSync(path.join(root,'content/assets.json'),'utf8'));
+fs.mkdirSync(path.join(root,'public/assets'),{recursive:true});
+let index=0;const failures=[];
+await Promise.all(Array.from({length:6},async()=>{while(index<assets.length){const {url,file}=assets[index++];const out=path.join(root,'public',file);if(fs.existsSync(out))continue;try{const response=await fetch(url+(url.includes('googleusercontent.com')?'=w1920':''));if(!response.ok)throw Error(String(response.status));const bytes=Buffer.from(await response.arrayBuffer());const image=sharp(bytes);const meta=await image.metadata();const data=await image.resize({width:1920,withoutEnlargement:true}).webp({quality:85}).toBuffer();fs.writeFileSync(out,data);console.log(file,meta.width,meta.height,data.length);}catch(e){failures.push({url,error:String(e)});}}}));
+fs.writeFileSync(path.join(root,'content/asset-errors.json'),JSON.stringify(failures,null,2));
+if(failures.length)process.exitCode=1;

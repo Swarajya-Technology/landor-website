@@ -1,0 +1,789 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed": "#251a00",
+          "inverse-surface": "#30312e",
+          "primary-fixed-dim": "#abcfb8",
+          "surface-container": "#efeeea",
+          "on-tertiary-fixed-variant": "#43474b",
+          "surface-bright": "#fbf9f5",
+          "linen-border": "#E5DED5",
+          "on-surface": "#1b1c1a",
+          "surface-tint": "#456553",
+          "on-secondary-container": "#735700",
+          "surface-variant": "#e4e2de",
+          "on-error": "#ffffff",
+          "secondary-fixed-dim": "#eec14b",
+          "linen-base": "#FBF9F5",
+          "on-tertiary-container": "#9a9da1",
+          "on-secondary-fixed-variant": "#5a4300",
+          "surface-container-high": "#eae8e4",
+          "on-error-container": "#93000a",
+          "primary-container": "#1b3b2b",
+          "tertiary-container": "#313538",
+          "on-primary": "#ffffff",
+          "error": "#ba1a1a",
+          "surface-container-low": "#f5f3ef",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed-variant": "#2d4d3c",
+          "tertiary-fixed": "#e0e3e7",
+          "linen-subtle": "#F4EFEA",
+          "on-surface-variant": "#424843",
+          "primary": "#032517",
+          "surface-container-highest": "#e4e2de",
+          "surface-container-lowest": "#ffffff",
+          "on-tertiary": "#ffffff",
+          "background": "#fbf9f5",
+          "pine-deep": "#1B3B2B",
+          "on-tertiary-fixed": "#181c1f",
+          "mist-silver": "#8C928E",
+          "inverse-primary": "#abcfb8",
+          "on-primary-container": "#83a590",
+          "surface-dim": "#dbdad6",
+          "pine-muted": "#2C4C3A",
+          "slate-charcoal": "#161A1D",
+          "secondary-container": "#fece57",
+          "on-primary-fixed": "#002113",
+          "cedar-gold": "#C59B27",
+          "amber-gold-bright": "#D4AF37",
+          "tertiary": "#1c2023",
+          "surface": "#fbf9f5",
+          "inverse-on-surface": "#f2f0ed",
+          "outline": "#727973",
+          "tertiary-fixed-dim": "#c4c7cb",
+          "outline-variant": "#c1c8c2",
+          "primary-fixed": "#c7ebd4",
+          "secondary": "#775a00",
+          "secondary-fixed": "#ffdf98",
+          "on-background": "#1b1c1a",
+          "error-container": "#ffdad6"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-sm": "0.75rem",
+          "space-xs": "0.5rem",
+          "space-4xl": "6rem",
+          "space-3xl": "4.5rem",
+          "space-lg": "1.5rem",
+          "gutter-desktop": "2rem",
+          "space-2xl": "3rem",
+          "space-2xs": "0.25rem",
+          "gutter-tablet": "1.5rem",
+          "space-md": "1rem",
+          "gutter-mobile": "1rem",
+          "container-max": "1320px",
+          "space-xl": "2rem",
+          "space-5xl": "8rem"
+        },
+        "fontFamily": {
+          "headline-md-mobile": [
+            "EB Garamond"
+          ],
+          "headline-md": [
+            "EB Garamond"
+          ],
+          "headline-lg-mobile": [
+            "EB Garamond"
+          ],
+          "title-md": [
+            "Manrope"
+          ],
+          "title-lg": [
+            "Manrope"
+          ],
+          "body-sm": [
+            "Manrope"
+          ],
+          "display-mobile": [
+            "EB Garamond"
+          ],
+          "headline-lg": [
+            "EB Garamond"
+          ],
+          "body-lg": [
+            "EB Garamond"
+          ],
+          "body-md": [
+            "Manrope"
+          ],
+          "display": [
+            "EB Garamond"
+          ],
+          "label-lg": [
+            "Manrope"
+          ],
+          "label-md": [
+            "Manrope"
+          ],
+          "label-sm": [
+            "Manrope"
+          ],
+          "headline-sm": [
+            "EB Garamond"
+          ]
+        },
+        "fontSize": {
+          "headline-md-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "30px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-lg": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-mobile": [
+            "38px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "20px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "display": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.12em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.16em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.2em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      }
+    }
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 inset-x-0 z-50"><div class="bg-primary-container text-on-primary-container text-label-sm font-label-sm uppercase tracking-wider py-2 px-6"><div class="max-w-[1320px] mx-auto flex flex-wrap items-center justify-between gap-4"> <div class="flex flex-wrap items-center gap-6"><span class="flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">call</span>+91-9068555303</span><span class="hidden sm:flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">mail</span>namaste@lightoflandour.com</span><span class="hidden md:flex items-center gap-1.5 text-on-primary-container"><span class="material-symbols-outlined text-[14px] text-cedar-gold">location_on</span>Char Dukan, Landour, Mussoorie</span></div><div class="flex items-center gap-4 text-on-primary-container"><span class="hidden lg:inline text-label-sm font-label-sm text-cedar-gold">Sanctuary Elevation: 7,500 FT</span><div class="flex items-center gap-3"><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">photo_camera</span></a><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">travel_explore</span></a><a class="hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">share</span></a></div></div></div></div><div class="bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1320px] mx-auto px-6 flex items-center justify-between gap-6"><div class="flex items-center gap-3"><img alt="Image from https://lightoflandour.com/wp-content/uploads/2020/08/light-of-landour-logo-3.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XQzYiqt0Yqab9JRWvFRsn6Dg7pirdLB49SJfx4eeIH2KkleDWLsS2M5Xzw_PBd3CD3_FTuYEOfukpbSm4jON5CEb4fmbuvs2fEa7lJfIVUXvctZBTqMn1NsKuSkqpbx1TNykXowA7dx6RLl57q1WGwMOKC2td_p2XX49htzsqs8-vMlarUBnX5PwLQobjoEosJOEOcaa1A9fCcpwbHdQcHmgsziYN57NOHACWieZgjv7scyssCHZtFOnk8"><span class="font-headline-sm text-headline-sm text-primary tracking-normal">Light of Landour</span></div><nav class="hidden xl:flex items-center gap-1" data-active-classes="bg-primary-container text-on-primary rounded-lg"><a aria-current="page" class="px-3 py-1.5 font-label-lg transition-colors bg-primary-container text-on-primary rounded-lg" data-path="home" href="#">Home</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="accommodation" href="#">Accommodation</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="dining" href="#">Dining</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="experiences-and-wellness" href="#">Experiences &amp; Wellness</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="packages" href="#">Packages</a><a class="px-3 py-1.5 text-label-lg font-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="location" href="#">Location</a></nav><div class="flex items-center gap-4"><a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-wider rounded-lg hover:bg-pine-muted hover:text-on-primary transition-all" data-path="reservation" href="#">Book Your Stay</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Hero Visual Banner -->
+<section class="relative w-full overflow-hidden bg-primary text-linen-base">
+<div class="relative h-[68vh] min-h-[520px] w-full flex items-end">
+<!-- Panoramic Image with subtle ken burns effect -->
+<img alt="Panoramic view of Light of Landour Himalayan Sanctuary at golden hour with morning mist and stone path" class="absolute inset-0 w-full h-full object-cover object-center transform scale-105 transition-transform duration-1000 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-DKZ50YJfnpQCUhkcZ8u6vTe7cbnWQUUVwcOX2X96qeDgMpqX6C0HpQmhj2HwxLCxvPdEWaRLeKT79Mb3vIFgN4XgxgBVkSCtSQbA2TmMV-nyMaP_Nco863UrxpcTEwdWjivgxaQIym_WvDeoVzl9TPcfvVFfK4ltunu4ax9teme0ca2ZUd5v56NrCeBFXi-r7ns-216et_wjVdAh_aX7IFQWI_rhGjZVammrxua0ZJmp9lZUtWdD0g">
+<!-- Atmospheric Gradients: Dark pine fade & amber highlight -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-transparent to-transparent"></div>
+<!-- Hero Content Container -->
+<div class="relative z-10 max-w-[1320px] mx-auto w-full px-6 pb-16 pt-32">
+<div class="max-w-3xl flex flex-col gap-4">
+<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest/15 backdrop-blur-md w-fit">
+<span class="w-2 h-2 rounded-full bg-cedar-gold animate-pulse"></span>
+<span class="text-label-sm font-label-sm uppercase tracking-[0.2em] text-linen-base">Designed for Natural Living</span>
+</div>
+<h1 class="font-display text-display text-linen-base leading-[1.08] tracking-tight">
+            Contact Us &amp; Connect With The Sanctuary
+          </h1>
+<p class="font-body-lg text-body-lg text-linen-subtle/90 max-w-2xl leading-relaxed">
+            Tucked amidst ancient cedar canopies on Char Dukan ridge at 7,500 FT elevation. Whether you seek solitary writing residencies, private Himalayan dining at Juliet's Balcony, or holistic Ayurvedic recalibration, our resident caretakers are here to guide your ascent.
+          </p>
+</div>
+</div>
+</div>
+<!-- Sanctuary Status Strip -->
+<div class="w-full bg-pine-deep text-linen-base/90 py-4 px-6 shadow-md">
+<div class="max-w-[1320px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-body-sm font-body-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cedar-gold text-[20px]">explore</span>
+<div>
+<div class="text-label-sm font-label-sm uppercase text-mist-silver tracking-widest">Sanctuary Coordinates</div>
+<div class="font-medium text-linen-base tracking-wide">30.4598° N, 78.0934° E</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cedar-gold text-[20px]">terrain</span>
+<div>
+<div class="text-label-sm font-label-sm uppercase text-mist-silver tracking-widest">Altitude &amp; Location</div>
+<div class="font-medium text-linen-base tracking-wide">7,500 FT • Char Dukan Ridge</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cedar-gold text-[20px]">phone_in_talk</span>
+<div>
+<div class="text-label-sm font-label-sm uppercase text-mist-silver tracking-widest">Direct Resident Concierge</div>
+<a class="font-medium text-linen-base hover:text-cedar-gold transition-colors tracking-wide" href="tel:+919068555303">+91 9068555303 (Tel &amp; WhatsApp)</a>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cedar-gold text-[20px]">hourglass_top</span>
+<div>
+<div class="text-label-sm font-label-sm uppercase text-mist-silver tracking-widest">Response Window</div>
+<div class="font-medium text-linen-base tracking-wide">Guaranteed within 2 hours</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Interaction Area: Contact Grid & Sanctuary Inquiry Form -->
+<section class="max-w-[1320px] mx-auto w-full px-6 py-20 lg:py-28">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+<!-- Left Column: 4 Channels Cards & Ridge Atmosphere -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="flex flex-col gap-2 mb-2">
+<span class="text-label-sm font-label-sm uppercase tracking-[0.2em] text-cedar-gold">Himalayan Hospitality</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Direct Reach &amp; Enquiries</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Our caretakers are rooted on the ridge throughout all seasons—from golden autumn sunsets to snowbound winter silence. Choose your preferred medium of correspondence.
+          </p>
+</div>
+<!-- Card 1: Resident Phone & WhatsApp -->
+<div class="group p-6 rounded-xl bg-surface-container-low transition-all duration-300 hover:bg-surface-container hover:shadow-md">
+<div class="flex items-start gap-4">
+<div class="w-11 h-11 rounded-lg bg-primary-container text-cedar-gold flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px]">perm_phone_msg</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-label-sm font-label-sm uppercase text-cedar-gold tracking-wider">Voice &amp; WhatsApp</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Resident Concierge</h3>
+<a class="text-title-md font-title-md text-pine-deep hover:text-cedar-gold transition-colors my-1" href="tel:+919068555303">
+                +91-9068555303
+              </a>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                Available 24/7 for ridge navigation assistance, bespoke stay inquiries, and private pick-up coordination from Dehradun or Delhi.
+              </p>
+</div>
+</div>
+</div>
+<!-- Card 2: Sanctuary Desk & Correspondence -->
+<div class="group p-6 rounded-xl bg-surface-container-low transition-all duration-300 hover:bg-surface-container hover:shadow-md">
+<div class="flex items-start gap-4">
+<div class="w-11 h-11 rounded-lg bg-primary-container text-cedar-gold flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px]">mail</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-label-sm font-label-sm uppercase text-cedar-gold tracking-wider">Formal Correspondence</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Sanctuary Desk</h3>
+<a class="text-title-md font-title-md text-pine-deep hover:text-cedar-gold transition-colors my-1" href="mailto:namaste@lightoflandour.com">
+                namaste@lightoflandour.com
+              </a>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                For wellness package curations, artist residency proposals, Himalayan photography permits, and private event reservations.
+              </p>
+</div>
+</div>
+</div>
+<!-- Card 3: Authentic Physical Address -->
+<div class="group p-6 rounded-xl bg-surface-container-low transition-all duration-300 hover:bg-surface-container hover:shadow-md">
+<div class="flex items-start gap-4">
+<div class="w-11 h-11 rounded-lg bg-primary-container text-cedar-gold flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px]">location_on</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-label-sm font-label-sm uppercase text-cedar-gold tracking-wider">Sanctuary Address</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Ridge Landmark</h3>
+<p class="font-body-md text-body-md text-on-surface font-medium my-1">
+                Property 35, Adjacent St. Paul's Church, Cantonment, Char Dukan, Landour, Mussoorie, Uttarakhand 248179
+              </p>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                Located right on the historic Char Dukan ridge, 200 meters from historic tea stalls and colonial trails.
+              </p>
+</div>
+</div>
+</div>
+<!-- Card 4: Social Community & Digital Hearth -->
+<div class="group p-6 rounded-xl bg-surface-container-low transition-all duration-300 hover:bg-surface-container hover:shadow-md">
+<div class="flex items-start gap-4">
+<div class="w-11 h-11 rounded-lg bg-primary-container text-cedar-gold flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px]">hub</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-label-sm font-label-sm uppercase text-cedar-gold tracking-wider">Alpine Chronicles</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Digital Hearth</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed my-1">
+                Follow our seasonal vignettes, winter snowfall updates, and deodar mist chronicles on Instagram (<span class="text-pine-deep font-semibold">@lightoflandour</span>), Facebook, and YouTube.
+              </p>
+<div class="flex items-center gap-3 pt-2">
+<a class="px-3 py-1 rounded bg-surface-container text-label-sm font-label-sm text-primary hover:bg-cedar-gold hover:text-linen-base transition-colors" href="#">Instagram</a>
+<a class="px-3 py-1 rounded bg-surface-container text-label-sm font-label-sm text-primary hover:bg-cedar-gold hover:text-linen-base transition-colors" href="#">Facebook</a>
+<a class="px-3 py-1 rounded bg-surface-container text-label-sm font-label-sm text-primary hover:bg-cedar-gold hover:text-linen-base transition-colors" href="#">YouTube</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Concierge Form -->
+<div class="lg:col-span-7 bg-linen-subtle p-8 sm:p-10 lg:p-12 rounded-xl shadow-lg relative overflow-hidden">
+<!-- Subtle botanical accent in corner -->
+<div class="absolute -right-8 -top-8 w-44 h-44 rounded-full bg-cedar-gold/5 blur-2xl pointer-events-none"></div>
+<div class="flex flex-col gap-3 mb-8">
+<div class="inline-flex items-center gap-2 text-label-sm font-label-sm uppercase tracking-widest text-cedar-gold">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+            Direct Caretaker Dispatch
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-primary">
+            Plan Your Himalayan Sojourn
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Share your dates and intention. Whether seeking solitary contemplation or a celebratory family mountain repast, we personally orchestrate each arrival.
+          </p>
+</div>
+<form class="flex flex-col gap-6" id="sanctuaryContactForm" onsubmit="event.preventDefault(); handleFormSubmit();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<!-- Full Name -->
+<div class="flex flex-col gap-2">
+<label class="text-label-md font-label-md uppercase tracking-wider text-pine-deep" for="fullName">
+                Full Name <span class="text-cedar-gold">*</span>
+</label>
+<input class="w-full h-12 px-4 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm transition-all focus:outline-none focus:bg-linen-base" id="fullName" name="fullName" placeholder="e.g. Alistair Sterling" required="" type="text">
+</div>
+<!-- Email Address -->
+<div class="flex flex-col gap-2">
+<label class="text-label-md font-label-md uppercase tracking-wider text-pine-deep" for="email">
+                Email Address <span class="text-cedar-gold">*</span>
+</label>
+<input class="w-full h-12 px-4 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm transition-all focus:outline-none focus:bg-linen-base" id="email" name="email" placeholder="e.g. alistair@sanctuary.org" required="" type="email">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<!-- Phone / WhatsApp -->
+<div class="flex flex-col gap-2">
+<label class="text-label-md font-label-md uppercase tracking-wider text-pine-deep" for="phone">
+                Phone / WhatsApp <span class="text-cedar-gold">*</span>
+</label>
+<input class="w-full h-12 px-4 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm transition-all focus:outline-none focus:bg-linen-base" id="phone" name="phone" placeholder="+91 98765 43210" required="" type="tel">
+</div>
+<!-- Planned Month / Dates of Visit -->
+<div class="flex flex-col gap-2">
+<label class="text-label-md font-label-md uppercase tracking-wider text-pine-deep" for="travelDates">
+                Planned Dates or Month
+              </label>
+<input class="w-full h-12 px-4 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm transition-all focus:outline-none focus:bg-linen-base" id="travelDates" name="travelDates" placeholder="e.g. Late October / 3 Nights" type="text">
+</div>
+</div>
+<!-- Area of Interest Dropdown -->
+<div class="flex flex-col gap-2">
+<label class="text-label-md font-label-md uppercase tracking-wider text-pine-deep" for="interest">
+              Area of Interest
+            </label>
+<div class="relative">
+<select class="w-full h-12 px-4 pr-10 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm appearance-none transition-all focus:outline-none focus:bg-linen-base" id="interest" name="interest">
+<option value="mudra">Mudra Duplex Suites (Valley &amp; Snow Range Views)</option>
+<option value="chakra">Chakra Rooms &amp; Romantic Cedar Attic</option>
+<option value="element">Element Cottages (Private Garden &amp; Fireplace)</option>
+<option value="dining">The Glass Box Dining &amp; Juliet's Balcony Experience</option>
+<option value="wellness">Spa, Sound Healing &amp; Ayurvedic Retreat</option>
+<option value="packages">Curated 3N/4D Himalayan Stay Packages</option>
+<option value="residency">Writing &amp; Creative Resident Inquiries</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-3.5 top-3.5 text-outline text-[20px]">
+                expand_more
+              </span>
+</div>
+</div>
+<!-- Message / Story -->
+<div class="flex flex-col gap-2">
+<label class="text-label-md font-label-md uppercase tracking-wider text-pine-deep" for="message">
+              How Can We Help You? / Paint a Picture of Your Himalayan Stay
+            </label>
+<textarea class="w-full p-4 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm transition-all focus:outline-none focus:bg-linen-base resize-none" id="message" name="message" placeholder="Tell us about special dietary preferences, quiet working desk needs, porterage requests, or romantic setups..." rows="4"></textarea>
+</div>
+<!-- CTA and Guarantees -->
+<div class="flex flex-col gap-4 pt-2">
+<button class="group relative w-full sm:w-auto self-start flex items-center justify-center gap-3 px-9 py-3.5 rounded bg-pine-deep text-linen-base font-label-md text-label-md uppercase tracking-[0.16em] hover:bg-pine-muted transition-all duration-300 shadow-md hover:shadow-lg" id="submitBtn" type="submit">
+<span>Send Sanctuary Message</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">send</span>
+</button>
+<!-- Success Feedback Notice (Hidden by default) -->
+<div class="hidden p-4 rounded bg-pine-deep text-linen-base text-body-sm font-body-sm items-center gap-3" id="formFeedback">
+<span class="material-symbols-outlined text-cedar-gold text-[20px]">check_circle</span>
+<span>Namaste. Your sanctuary note has reached our resident caretaker desk. We shall revert via WhatsApp and email within 2 hours.</span>
+</div>
+<!-- Sanctuary Guarantees -->
+<div class="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-cedar-gold text-[16px]">verified</span>
+<span class="text-label-sm font-label-sm uppercase">Direct Rate Privilege</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-cedar-gold text-[16px]">bedtime</span>
+<span class="text-label-sm font-label-sm uppercase">10 PM Silence Policy</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-cedar-gold text-[16px]">security</span>
+<span class="text-label-sm font-label-sm uppercase">Zero Spam Pledge</span>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Cinematic Audio-Visual Sanctuary Module -->
+<section class="w-full bg-slate-charcoal text-linen-base py-20 lg:py-24">
+<div class="max-w-[1320px] mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left: Context & Audio Metadata -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-linen-base/10 w-fit text-label-sm font-label-sm uppercase tracking-widest text-cedar-gold">
+<span class="material-symbols-outlined text-[15px] animate-spin">graphic_eq</span>
+            The Sounds of the Ridge
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-linen-base leading-tight">
+            Audio-Visual Guide to Landour Heights
+          </h2>
+<p class="font-body-md text-body-md text-mist-silver leading-relaxed">
+            Pause and listen. The acoustic atmosphere at 7,500 FT is defined by wind whistling through deodar pine needles, morning temple chimes from Char Dukan, and distant Himalayan snow thaws.
+          </p>
+<div class="p-5 rounded-lg bg-white/5 backdrop-blur-sm flex flex-col gap-3">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-mist-silver">Acoustic Signature</span>
+<span class="text-cedar-gold font-medium">432Hz Himalayan Wind &amp; Singing Chimes</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-cedar-gold rounded-full w-[45%] transition-all duration-300" id="audioProgressBar"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-mist-silver">
+<span id="timeDisplay">02:10</span>
+<span>04:45</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-3 px-6 py-3 rounded bg-cedar-gold text-slate-charcoal font-label-md text-label-md uppercase tracking-wider hover:bg-secondary-fixed transition-colors" id="audioToggleBtn" onclick="toggleRidgeAudio()">
+<span class="material-symbols-outlined text-[20px]" id="audioIcon">pause</span>
+<span id="audioBtnText">Pause Soundscape</span>
+</button>
+<span class="text-body-sm font-body-sm text-mist-silver">Binaural Mountain Stereo</span>
+</div>
+</div>
+<!-- Right: Video Frame with Backdrop -->
+<div class="lg:col-span-7">
+<div class="relative aspect-video rounded-xl overflow-hidden shadow-2xl group">
+<img alt="Landour terrace overlooking snow peaks with meditators in early morning sun" class="w-full h-full object-cover transform group-hover:scale-102 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1XVmzHhP-Oe_R1s9vAj0VExdv4_kvmWwSJnuPavWkJYhRE_R-zxFD8Pdn9OMBzccH-gMB6rTmtHSkAfJ2jvFI3DN64m-fkASIQ9cHi5Kc7I12lKe0O7I7lCjIvEgolVCJS_HGMQSAv_BNifdjNEoOWxtib_7y1_gYglOn8OK5DHeUO2HGqfxhwZyb20HWuGPRIaAnqBxEtZep0-w23fFXdBSsxBWda4KPIJbUr03uzIf-FX3RLJkvmraFs">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-charcoal via-slate-charcoal/30 to-transparent"></div>
+<!-- Center Play Button Overlay -->
+<div class="absolute inset-0 flex items-center justify-center">
+<button aria-label="Play Himalayan Audio Tour" class="w-20 h-20 rounded-full bg-linen-base/90 text-primary flex items-center justify-center backdrop-blur-md shadow-xl hover:scale-110 hover:bg-cedar-gold hover:text-linen-base transition-all duration-300" onclick="toggleRidgeAudio()">
+<span class="material-symbols-outlined text-[36px] ml-1" id="playOverlayIcon">volume_up</span>
+</button>
+</div>
+<!-- Bottom Left Badge -->
+<div class="absolute bottom-6 left-6 right-6 flex items-center justify-between pointer-events-none">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded bg-slate-charcoal/80 backdrop-blur-md text-linen-base text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+<span>Live Audio Feed • Char Dukan Weather Station</span>
+</div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-cedar-gold bg-slate-charcoal/80 px-2.5 py-1 rounded backdrop-blur-md">
+                12°C Crisp
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How to Reach & Ridge Navigation Itinerary -->
+<section class="max-w-[1320px] mx-auto w-full px-6 py-20 lg:py-28">
+<div class="flex flex-col gap-4 text-center max-w-2xl mx-auto mb-16">
+<span class="text-label-sm font-label-sm uppercase tracking-[0.2em] text-cedar-gold">Himalayan Approach</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">How to Reach Our Sanctuary</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Ascending to Landour is a poetic transition from the bustling Doon plains into pristine deodar woodlands. Here are authentic route calculations and walking distances.
+      </p>
+</div>
+<!-- 2 Column Split: Key Transit Hubs & Walking Trails from the Ridge -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-16">
+<!-- Box 1: Regional Connectivity & Drives -->
+<div class="p-8 rounded-xl bg-surface-container-low flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-pine-deep text-linen-base flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">directions_car</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">By Air &amp; Rail</h3>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Regional transfers to 7,500 FT</span>
+</div>
+</div>
+<div class="flex flex-col gap-4 divide-y divide-linen-border/60">
+<div class="pt-3 first:pt-0 flex items-start justify-between gap-4">
+<div>
+<div class="font-title-md text-title-md text-on-surface">Jolly Grant Airport, Dehradun (DED)</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Nonstop flights from Delhi, Mumbai, Bengaluru, and Jaipur</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-semibold text-pine-deep text-title-md">64 KM</span>
+<div class="text-label-sm font-label-sm text-cedar-gold">2.5 Hrs Scenic Drive</div>
+</div>
+</div>
+<div class="pt-4 flex items-start justify-between gap-4">
+<div>
+<div class="font-title-md text-title-md text-on-surface">Dehradun Railway Station</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Vande Bharat, Shatabdi &amp; overnight express coaches</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-semibold text-pine-deep text-title-md">38 KM</span>
+<div class="text-label-sm font-label-sm text-cedar-gold">1.5 Hrs Ascent</div>
+</div>
+</div>
+<div class="pt-4 flex items-start justify-between gap-4">
+<div>
+<div class="font-title-md text-title-md text-on-surface">Mussoorie Mall Road (Picture Palace / Library)</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Main hill station center; ascent via Upper Mall road</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-semibold text-pine-deep text-title-md">3.3 KM</span>
+<div class="text-label-sm font-label-sm text-cedar-gold">15 Mins Drive</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Box 2: Ridge & Local Heritage Walking Reach -->
+<div class="p-8 rounded-xl bg-surface-container-low flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-pine-deep text-linen-base flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">hiking</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Ridge Strolls &amp; Landmarks</h3>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Walking from our doorstep</span>
+</div>
+</div>
+<div class="flex flex-col gap-4 divide-y divide-linen-border/60">
+<div class="pt-3 first:pt-0 flex items-start justify-between gap-4">
+<div>
+<div class="font-title-md text-title-md text-on-surface">St. Paul's Church (Built 1839)</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Historic stone Anglican sanctuary under towering pines</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-semibold text-pine-deep text-title-md">Adjacent</span>
+<div class="text-label-sm font-label-sm text-cedar-gold">1 Min Walk</div>
+</div>
+</div>
+<div class="pt-4 flex items-start justify-between gap-4">
+<div>
+<div class="font-title-md text-title-md text-on-surface">Char Dukan Vintage Tea Stalls</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Legendary ginger lemon tea, cinnamon waffles &amp; mountain lore</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-semibold text-pine-deep text-title-md">200 M</span>
+<div class="text-label-sm font-label-sm text-cedar-gold">2 Mins Walk</div>
+</div>
+</div>
+<div class="pt-4 flex items-start justify-between gap-4">
+<div>
+<div class="font-title-md text-title-md text-on-surface">Lal Tibba Highest Viewpoint</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Telescopic Himalayan snow peak vistas (Bandarpunch, Kedarnath)</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-semibold text-pine-deep text-title-md">800 M</span>
+<div class="text-label-sm font-label-sm text-cedar-gold">10 Mins Stroll</div>
+</div>
+</div>
+<div class="pt-4 flex items-start justify-between gap-4">
+<div>
+<div class="font-title-md text-title-md text-on-surface">Sister's Bazaar &amp; Prakash Store</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Handcrafted cheeses, peanut butter &amp; colonial bakery goods</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-semibold text-pine-deep text-title-md">1.2 KM</span>
+<div class="text-label-sm font-label-sm text-cedar-gold">15 Mins Walk</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pedestrian Cantonment Note -->
+<div class="p-6 rounded-xl bg-surface-container flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cedar-gold text-[28px]">nature_people</span>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md text-primary">Cantonment vehicular protocol</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">
+            Landour Cantonment strictly maintains quiet pedestrian tranquility. Complimentary guest porterage and reserved parking spaces are arranged directly at Char Dukan upon arrival.
+          </span>
+</div>
+</div>
+<a class="shrink-0 px-5 py-2.5 rounded bg-primary text-linen-base text-label-sm font-label-sm uppercase tracking-wider hover:bg-pine-muted transition-colors" href="tel:+919068555303">
+        Request Ridge Escort
+      </a>
+</div>
+<!-- Interactive Interactive Map Container -->
+<div class="mt-12 rounded-xl overflow-hidden shadow-lg">
+<div class="w-full h-80 sm:h-96 bg-cover bg-center" data-location="Char Dukan, Landour, Mussoorie, Uttarakhand 248179" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQLsmkbvR8OSOdkEAa83vKkF-1_pAlCAVhQaeAPk_ATXXVg6lporz5302kkfYpXy8LqNatmoTCT0kEjvZxUvfg0DOouiifHPxCKqKz78wfkaJLUTZkgEC8M6JNnmCj9TEeAogJcT1f2XsA12WY8ohiHrmG6oELGeSih6bYieV0eIkDg7s2CPVOgE8Tp95EERVgFKB2LsDEPGFzy8oTJPFVf0VYQ3644nUh_WfERU7sw07FLp1c1zGzOw')"></div>
+</div>
+</section>
+<!-- Immediate Inquiries / Direct Hotline Floating Banner -->
+<section class="w-full bg-primary-container text-linen-base py-12 px-6">
+<div class="max-w-[1320px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+<div class="flex flex-col gap-1 text-center sm:text-left">
+<span class="text-label-sm font-label-sm uppercase tracking-widest text-cedar-gold">Immediate Ridge Assistance</span>
+<h3 class="font-headline-md text-headline-md text-linen-base">Traveling up today or seeking same-day dining?</h3>
+<p class="text-body-sm font-body-sm text-linen-subtle/80">Call our direct Char Dukan gate line for weather conditions, winter road clearance, or private valley transfers.</p>
+</div>
+<div class="flex items-center gap-4 shrink-0">
+<a class="px-6 py-3 rounded bg-cedar-gold text-slate-charcoal font-label-md text-label-md uppercase tracking-wider hover:bg-secondary-fixed transition-colors flex items-center gap-2" href="https://wa.me/919068555303" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+          WhatsApp Caretaker
+        </a>
+<a class="px-6 py-3 rounded bg-linen-base/10 text-linen-base font-label-md text-label-md uppercase tracking-wider hover:bg-linen-base/20 transition-colors flex items-center gap-2" href="tel:+919068555303">
+<span class="material-symbols-outlined text-[18px]">call</span>
+          +91 9068555303
+        </a>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple state machine for simulated Ridge Audio preview
+  let isRidgeAudioPlaying = true;
+  let progressInterval = null;
+  let currentProgress = 45;
+
+  function toggleRidgeAudio() {
+    isRidgeAudioPlaying = !isRidgeAudioPlaying;
+    const audioIcon = document.getElementById('audioIcon');
+    const audioBtnText = document.getElementById('audioBtnText');
+    const playOverlayIcon = document.getElementById('playOverlayIcon');
+    const progressBar = document.getElementById('audioProgressBar');
+
+    if (isRidgeAudioPlaying) {
+      if (audioIcon) audioIcon.textContent = 'pause';
+      if (audioBtnText) audioBtnText.textContent = 'Pause Soundscape';
+      if (playOverlayIcon) playOverlayIcon.textContent = 'volume_up';
+      
+      startProgressLoop();
+    } else {
+      if (audioIcon) audioIcon.textContent = 'play_arrow';
+      if (audioBtnText) audioBtnText.textContent = 'Resume Soundscape';
+      if (playOverlayIcon) playOverlayIcon.textContent = 'play_arrow';
+      
+      clearInterval(progressInterval);
+    }
+  }
+
+  function startProgressLoop() {
+    clearInterval(progressInterval);
+    progressInterval = setInterval(() => {
+      currentProgress += 0.4;
+      if (currentProgress > 100) currentProgress = 0;
+      const bar = document.getElementById('audioProgressBar');
+      if (bar) bar.style.width = currentProgress + '%';
+    }, 1000);
+  }
+
+  // Handle Form Submission Micro-interaction
+  function handleFormSubmit() {
+    const submitBtn = document.getElementById('submitBtn');
+    const feedback = document.getElementById('formFeedback');
+    
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span>
+        <span>Relaying to Ridge...</span>
+      `;
+    }
+
+    setTimeout(() => {
+      if (submitBtn) {
+        submitBtn.classList.add('hidden');
+      }
+      if (feedback) {
+        feedback.classList.remove('hidden');
+        feedback.classList.add('flex');
+      }
+    }, 900);
+  }
+
+  // Initialize loop
+  startProgressLoop();
+</script></main><footer class="w-full bg-surface-container-low text-on-surface pt-16 pb-12 mt-20"><div class="max-w-[1320px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12"><div class="lg:col-span-2 flex flex-col gap-4"><div class="flex items-center gap-3"><img alt="Image from https://lightoflandour.com/wp-content/uploads/2020/08/light-of-landour-logo-3.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XQzYiqt0Yqab9JRWvFRsn6Dg7pirdLB49SJfx4eeIH2KkleDWLsS2M5Xzw_PBd3CD3_FTuYEOfukpbSm4jON5CEb4fmbuvs2fEa7lJfIVUXvctZBTqMn1NsKuSkqpbx1TNykXowA7dx6RLl57q1WGwMOKC2td_p2XX49htzsqs8-vMlarUBnX5PwLQobjoEosJOEOcaa1A9fCcpwbHdQcHmgsziYN57NOHACWieZgjv7scyssCHZtFOnk8"><span class="font-headline-sm text-headline-sm text-primary">Light of Landour</span></div><p class="text-body-sm font-body-sm text-on-surface-variant max-w-md">An alpine sanctuary nestled high amidst deodar forests in Landour, Mussoorie. A space for deceleration, curated Himalayan living, contemplative literature, and restorative wellness overlooking the Doon Valley.</p><div class="flex flex-col gap-1.5 text-body-sm font-body-sm text-on-surface-variant mt-2"><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">near_me</span>Char Dukan, Upper Mall, Landour, Mussoorie, Uttarakhand 248179</span><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">call</span>+91-9068555303</span><span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-cedar-gold">mail</span>namaste@lightoflandour.com</span></div></div><div class="flex flex-col gap-3"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">Sanctuary</span><div class="flex flex-col gap-2"><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="accommodation" href="#">Mudra, Chakra &amp; Element Rooms</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="dining" href="#">Glass Box Cafe &amp; LOL Bakery</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="experiences-and-wellness" href="#">Forest Walks &amp; Meditation</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="packages" href="#">Curated Stay Packages</a></div></div><div class="flex flex-col gap-3"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">Guest Information</span><div class="flex flex-col gap-2"><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="location" href="#">Location &amp; Himalayan Reach</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="stay-policies" href="#">Stay &amp; Silence Policies</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservation" href="#">Reservation Guide</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="cancellation-terms" href="#">Cancellation Terms</a></div></div><div class="flex flex-col gap-4"><span class="text-label-md font-label-md uppercase tracking-widest text-primary">The Landour Dispatch</span><p class="text-body-sm font-body-sm text-on-surface-variant">Receive seasonal notes on Himalayan blooms, winter lines, and private retreat offerings.</p><form class="flex flex-col gap-2"><input class="px-3 py-2 text-body-sm font-body-sm bg-surface-container text-on-surface rounded-lg focus:outline-none placeholder:text-outline" placeholder="Your email address" type="email"><button class="px-4 py-2 bg-primary text-on-primary text-label-sm font-label-sm uppercase tracking-wider rounded-lg hover:bg-pine-muted hover:text-on-primary transition-colors" type="button">Subscribe</button></form></div></div><div class="max-w-[1320px] mx-auto px-6 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-on-surface-variant"><p>© 2025 Light of Landour. All rights reserved. Nestled in the Garhwal Himalayas.</p><div class="flex items-center gap-6"><a class="hover:text-on-surface transition-colors" data-path="stay-policies" href="#">Guest Protocol</a><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy</a><a class="hover:text-on-surface transition-colors" data-path="location" href="#">Arrival</a></div></div></footer></body></html>
