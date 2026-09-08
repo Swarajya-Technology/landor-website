@@ -32,14 +32,14 @@ for (const [slug,id] of Object.entries(mapping)) {
   document.querySelectorAll('script,style').forEach(s=>s.remove());
   // Prototype modals are replaced by one keyboard-accessible React dialog.
   document.querySelectorAll('[id*="modal" i]').forEach(e=> {if(e.tagName==='DIV' && e.className.includes('fixed'))e.remove();});
-  document.querySelectorAll('*').forEach(e=>{for(const a of [...e.attributes])if(/^on/i.test(a.name))e.removeAttribute(a.name);});
+  document.querySelectorAll('*').forEach(e=>{for(const a of e.attributes)if(/^on/i.test(a.name))e.removeAttribute(a.name);});
   document.querySelectorAll('img').forEach((img,i)=>{
     const original=img.getAttribute('src');if(original)img.setAttribute('src',asset(original));
     img.setAttribute('loading',i<2?'eager':'lazy');img.setAttribute('decoding','async');
     if(i===1)img.setAttribute('fetchpriority','high');
     const alt=img.getAttribute('alt')||'';if(alt.startsWith('Image from'))img.setAttribute('alt',alt.includes('logo')?'Light of Landour':alt.split('/').pop().replace(/[-_]/g,' ').replace(/\.[a-z]+$/,''));
   });
-  document.querySelectorAll('[style]').forEach(e=>e.setAttribute('style',e.getAttribute('style').replace(/url\(['"]?(https?:[^'"\)]+)['"]?\)/g,(_,url)=>`url('${asset(url)}')`)));
+  document.querySelectorAll('[style]').forEach(e=>e.setAttribute('style',e.getAttribute('style').replace(/url\(['"]?(https?:[^'")]+)['"]?\)/g,(_,url)=>`url('${asset(url)}')`)));
   document.querySelectorAll('video').forEach(v=>{
     const poster=v.getAttribute('poster');if(poster)v.setAttribute('poster',asset(poster));
     v.removeAttribute('autoplay');v.setAttribute('preload','none');v.setAttribute('playsinline','');
@@ -48,7 +48,7 @@ for (const [slug,id] of Object.entries(mapping)) {
     v.querySelectorAll('source').forEach(s=>s.remove());
     v.setAttribute('aria-label','Sanctuary visual tour');
   });
-  document.querySelectorAll('iframe').forEach((e,i)=>{e.setAttribute('title',e.getAttribute('title')||'Light of Landour location map');e.setAttribute('loading','lazy');});
+  document.querySelectorAll('iframe').forEach(e=>{e.setAttribute('title',e.getAttribute('title')||'Light of Landour location map');e.setAttribute('loading','lazy');});
   document.querySelectorAll('a').forEach(a=>{
     const key=a.getAttribute('data-path');if(routes[key])a.setAttribute('href',routes[key]);
     if(a.getAttribute('href')==='#') {a.setAttribute('data-demo-info',a.textContent.trim());a.setAttribute('href','#inquiry');}
