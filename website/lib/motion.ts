@@ -109,6 +109,141 @@ function markTargets(root: HTMLElement) {
   if (footer) add(footer);
 }
 
+function parseTranslateX(transform: string) {
+  if (!transform || transform === 'none') return 0;
+  const translate = transform.match(/translate3d\(\s*([-\d.]+)px/);
+  if (translate) return Number(translate[1]) || 0;
+  const matrix3d = transform.match(/^matrix3d\((.+)\)$/);
+  if (matrix3d) return Number(matrix3d[1].split(',')[12]) || 0;
+  const matrix = transform.match(/^matrix\((.+)\)$/);
+  if (matrix) return Number(matrix[1].split(',')[4]) || 0;
+  return 0;
+}
+
+function animationDurationSeconds(track: HTMLElement) {
+  const raw = getComputedStyle(track).animationDuration || '54s';
+  const value = Number.parseFloat(raw);
+  if (!Number.isFinite(value) || value <= 0) return 54;
+  return raw.includes('ms') ? value / 1000 : value;
+}
+
+function wrapMarqueeOffset(offset: number, loopWidth: number) {
+  if (loopWidth <= 0) return offset;
+  let wrapped = offset % loopWidth;
+  if (wrapped > 0) wrapped -= loopWidth;
+  return wrapped;
+}
+
+/** Pointer drag + optional pause for duplicated CSS marquee rails. */
+export function bindMarqueeRail({
+  viewport,
+  track,
+  pauseButton = null,
+}: {
+  viewport: HTMLElement;
+  track: HTMLElement;
+  pauseButton?: HTMLButtonElement | null;
+}): MotionCleanup {
+  const controller = new AbortController();
+  const { signal } = controller;
+  const dragSurface = viewport.classList.contains('traveler-carousel')
+    ? (viewport.querySelector<HTMLElement>('.traveler-window') ?? viewport)
+    : viewport;
+  let dragging = false;
+  let pointerId = -1;
+  let startX = 0;
+  let origin = 0;
+  let current = 0;
+  let loopWidth = Math.max(track.scrollWidth / 2, 1);
+
+  const measure = () => {
+    loopWidth = Math.max(track.scrollWidth / 2, 1);
+  };
+
+  const setPausedLabel = (paused: boolean) => {
+    if (!pauseButton) return;
+    pauseButton.setAttribute('aria-pressed', String(paused));
+    pauseButton.textContent = paused ? 'Resume movement' : 'Pause movement';
+  };
+
+  const freezeAt = (offset: number) => {
+    track.style.animation = 'none';
+    track.style.transform = `translate3d(${offset}px,0,0)`;
+  };
+
+  const resumeFrom = (offset: number) => {
+    const wrapped = wrapMarqueeOffset(offset, loopWidth);
+    const progress = Math.min(Math.max(-wrapped / loopWidth, 0), 0.9999);
+    const duration = animationDurationSeconds(track);
+    freezeAt(wrapped);
+    void track.offsetWidth;
+    track.style.removeProperty('transform');
+    track.style.removeProperty('animation');
+    track.style.setProperty('animation-delay', `-${progress * duration}s`, 'important');
+  };
+
+  const onPointerDown = (event: PointerEvent) => {
+    if (event.button !== 0) return;
+    const target = event.target as Element;
+    if (target.closest('a, button, input, select, textarea, label, [data-motion-control], .ridge-controls, .traveler-controls')) {
+      return;
+    }
+    measure();
+    dragging = true;
+    pointerId = event.pointerId;
+    startX = event.clientX;
+    origin = parseTranslateX(getComputedStyle(track).transform);
+    current = origin;
+    freezeAt(origin);
+    viewport.classList.add('is-dragging');
+    event.preventDefault();
+    dragSurface.setPointerCapture(event.pointerId);
+  };
+
+  const onPointerMove = (event: PointerEvent) => {
+    if (!dragging || event.pointerId !== pointerId) return;
+    current = wrapMarqueeOffset(origin + (event.clientX - startX), loopWidth);
+    track.style.transform = `translate3d(${current}px,0,0)`;
+  };
+
+  const onPointerUp = (event: PointerEvent) => {
+    if (!dragging || event.pointerId !== pointerId) return;
+    dragging = false;
+    pointerId = -1;
+    viewport.classList.remove('is-dragging');
+    resumeFrom(current);
+    if (dragSurface.hasPointerCapture(event.pointerId)) {
+      dragSurface.releasePointerCapture(event.pointerId);
+    }
+  };
+
+  dragSurface.style.touchAction = 'pan-y';
+  dragSurface.addEventListener('pointerdown', onPointerDown, { signal });
+  dragSurface.addEventListener('pointermove', onPointerMove, { signal });
+  dragSurface.addEventListener('pointerup', onPointerUp, { signal });
+  dragSurface.addEventListener('pointercancel', onPointerUp, { signal });
+  window.addEventListener('resize', measure, { signal, passive: true });
+
+  if (pauseButton) {
+    pauseButton.addEventListener(
+      'click',
+      () => {
+        const paused = !viewport.classList.contains('is-paused');
+        viewport.classList.toggle('is-paused', paused);
+        setPausedLabel(paused);
+      },
+      { signal },
+    );
+    setPausedLabel(viewport.classList.contains('is-paused'));
+  }
+
+  return () => {
+    viewport.classList.remove('is-dragging');
+    delete viewport.dataset.marqueeBound;
+    controller.abort();
+  };
+}
+
 /** Turn the original Stitch testimonial grid into a seamless, duplicated ridge rail. */
 function upgradeRidgeVoices(root: HTMLElement) {
   const grid = [...root.querySelectorAll<HTMLElement>('div.grid')].find((candidate) =>
@@ -160,10 +295,35 @@ function upgradeRidgeVoices(root: HTMLElement) {
     duplicate.dataset.motionStatic = 'true';
     track.appendChild(duplicate);
   });
-  grid.replaceChildren(track);
+
+  const controls = document.createElement('div');
+  controls.className = 'ridge-controls';
+  const pause = document.createElement('button');
+  pause.type = 'button';
+  pause.className = 'ridge-pause';
+  pause.dataset.motionControl = 'carousel';
+  pause.setAttribute('aria-pressed', 'false');
+  pause.textContent = 'Pause movement';
+  controls.appendChild(pause);
+
+  grid.replaceChildren(track, controls);
   grid.className = 'ridge-viewport';
   grid.dataset.ridgeRail = 'true';
-  grid.setAttribute('aria-label', 'Continuously moving Voices From The Ridge');
+  grid.setAttribute('aria-label', 'Voices From The Ridge — drag or swipe to browse, or use pause');
+}
+
+function enhanceMarqueeRails(root: HTMLElement, cleanups: Array<() => void>) {
+  if (prefersReducedMotion()) return;
+
+  root.querySelectorAll<HTMLElement>('.ridge-viewport, .traveler-carousel').forEach((viewport) => {
+    const track = viewport.querySelector<HTMLElement>('.ridge-track, .traveler-track');
+    if (!track || viewport.dataset.marqueeBound === 'true') return;
+    viewport.dataset.marqueeBound = 'true';
+    const pauseButton = viewport.classList.contains('ridge-viewport')
+      ? viewport.querySelector<HTMLButtonElement>('.ridge-pause')
+      : null;
+    cleanups.push(bindMarqueeRail({ viewport, track, pauseButton }));
+  });
 }
 
 function enhanceInteractive(root: HTMLElement) {
@@ -188,13 +348,17 @@ export function initPageMotion(root: HTMLElement): MotionCleanup {
   upgradeRidgeVoices(root);
   markTargets(root);
   enhanceInteractive(root);
+  enhanceMarqueeRails(root, cleanups);
 
   const nodes = [...root.querySelectorAll<HTMLElement>(`.${RISE}, .scroll-reveal, [data-transition="sentence"]`)];
 
   if (reduced) {
     nodes.forEach((el) => el.classList.add('is-visible', 'revealed'));
     root.querySelectorAll('.word-inner').forEach((el) => el.classList.add('is-visible'));
-    return () => controller.abort();
+    return () => {
+      cleanups.forEach((fn) => fn());
+      controller.abort();
+    };
   }
 
   const hero = root.querySelector<HTMLElement>(

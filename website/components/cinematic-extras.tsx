@@ -87,7 +87,7 @@ export function CinematicExtras({ page = 'home' }: { page?: string }) {
       <div className="flip-moments" aria-label="Interactive sanctuary moments">
         {visibleMoments.map((moment, index) => <FlipMomentCard key={moment.title} moment={moment} index={index} />)}
       </div>
-      <div className={`traveler-carousel ${paused ? 'is-paused' : ''}`} data-motion-static="true" aria-label="Continuously moving traveler notes">
+      <div className={`traveler-carousel ${paused ? 'is-paused' : ''}`} data-motion-static="true" aria-label="Traveler notes — drag or swipe to browse, or use pause">
         <div className="traveler-carousel-heading"><span>TRAVELER NOTES</span><span className="traveler-line" /></div>
         <section className="traveler-window" aria-label="Traveler notes moving from right to left" aria-live="off"><div className="traveler-track">
           {[...stories, ...stories].map(([quote, name, context], index) => (
